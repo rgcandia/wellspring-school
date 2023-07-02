@@ -1,34 +1,34 @@
 export const getLinks = [
     {
-        href:'',
+        href:'/institucional',
         label:'INSTITUCIONAL'
     },
     {
-        href:'',
+        href:'/datos-utiles',
         label:'DATOS UTILES'
     },
     {
-        href:'',
+        href:'/niveles',
         label:'NIVELES'
     },
     {
-        href:'',
+        href:'/examenes',
         label:'EXAMENES'
     },
     {
-        href:'',
+        href:'/viajes',
         label:'VIAJES DE ESTUDIO'
     },
     {
-        href:'',
+        href:'/proyeccion',
         label:'PROYECCION COMUNITARIA'
     },
     {
-        href:'',
+        href:'/admision',
         label:'ADMISION'
     },
     {
-        href:'',
+        href:'/contacto',
         label:'CONTACTO'
     }
 ]
