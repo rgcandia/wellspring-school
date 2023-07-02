@@ -17,7 +17,8 @@ const router = createBrowserRouter([
     {
       path:'/institucional',
       element:<Institucional/>
-    },{
+    },
+    {
       path:'/datos-utiles',
       element:<DatosUtiles/>
     },
