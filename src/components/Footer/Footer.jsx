@@ -1,12 +1,28 @@
-import { Container , Typography} from "@mui/material";
-export default function Footer(){
+import { AppBar, Typography, Toolbar } from "@mui/material";
+import theme from '../../theme.js'
+import styles from './Footer.module.css'
 
-    return(
-        <Container
-         sx={{position: "fixed", bottom: 0, width: "100%"}}
-        >
-        <Typography variant="body2" align="center" color="textSecondary">
+export default function Footer() {
+  const main = theme.palette.primary.main;
+  const main2 = theme.palette.secondary.main;
+
+  return (
+    <AppBar
+      component='footer'
+      position="static"
+      className={styles.footer}
+    >
+      <Toolbar >
+        <Typography variant="body2" align="center" color={main2}>
           Este es el contenido del footer.
+          
         </Typography>
-        </Container>)
+        
+      </Toolbar>
+      
+      <Toolbar>
+        Contenido adicional del footer
+      </Toolbar>
+    </AppBar>
+  );
 }
