@@ -77,3 +77,19 @@
         font-size: 2rem !important;
     }
 }
+@media(max-width:400px){
+
+    .iconButton{
+     font-size: 1rem !important;
+    }
+    .logo{
+     width: 10rem;
+     height: auto;
+    }
+ 
+    .drawer{
+     width: 70vh !important;
+     background: black !important;
+    }
+ 
+ }
