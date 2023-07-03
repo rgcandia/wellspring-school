@@ -50,6 +50,7 @@ export default function Navbar(){
             <Toolbar className={styles.toolbar2} sx={{justifyContent:'center'}}>
                 {getLinks.map(e=>{
                     return(<Button 
+                        href={e.href}
                         key={e.label}
                         variant='text'
                         color="secondary"

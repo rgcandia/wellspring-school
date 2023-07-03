@@ -12,7 +12,7 @@ import App from "./App.jsx";
 const router = createBrowserRouter([
     {
         path: "/",
-      element: <App/>,
+      element:<App/>,
       
       children:[ {
         element:<Index/>,
