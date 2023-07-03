@@ -77,13 +77,15 @@
         font-size: 2rem !important;
     }
 }
-@media(max-width:400px){
-
+@media(max-width:300px){
+    .toolbar1{
+        padding: 0 !important;
+    }
     .iconButton{
-     font-size: 1rem !important;
+     font-size: 1.5rem !important;
     }
     .logo{
-     width: 10rem;
+     width: 11rem;
      height: auto;
     }
  
