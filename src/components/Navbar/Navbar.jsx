@@ -19,12 +19,14 @@ export default function Navbar(){
                         <MenuIcon className={styles.iconButton}  />
                     </IconButton>
                 </Box>
-                <Box className={styles.box2} >
+                <Box className={styles.box2}  >
+                    <a href="/">
                     <img
                     className={styles.logo}
                     src={logo}
                     alt={logo.substring(30)}
                     />
+                    </a>
                 </Box>
                 <Box className={styles.box3}>
                     {getIcons.map(e=>{

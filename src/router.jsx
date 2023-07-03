@@ -8,43 +8,49 @@ import ViajesEstudio from './components/ViajesEstudio/ViajesEstudio.jsx'
 import Proyeccion from './components/Proyeccion/Proyeccion.jsx'
 import Admision from "./components/Admision/Admision.jsx";
 import Contacto from './components/Contacto/Contacto.jsx'
+import App from "./App.jsx";
 const router = createBrowserRouter([
     {
         path: "/",
-      element: <Index/>,
-    
+      element: <App/>,
+      
+      children:[ {
+        element:<Index/>,
+        index: true,
+      },
+      {
+        path:'institucional',
+        element:<Institucional/>
+      },
+      {
+        path:'datos-utiles',
+        element:<DatosUtiles/>
+      },
+      {
+        path:'niveles',
+        element:<Niveles/>
+      },
+      {
+        path:'examenes',
+        element:<Examenes/>
+      },{
+        path:'viajes',
+        element:<ViajesEstudio/>,
+      },
+      {
+        path:'proyeccion',
+        element:<Proyeccion/>
+      },
+      {
+        path:'admision',
+        element:<Admision/>
+      },
+      {
+        path:'contacto',
+        element:<Contacto/>
+      }
+  ]
     },
-    {
-      path:'/institucional',
-      element:<Institucional/>
-    },
-    {
-      path:'/datos-utiles',
-      element:<DatosUtiles/>
-    },
-    {
-      path:'/niveles',
-      element:<Niveles/>
-    },
-    {
-      path:'/examenes',
-      element:<Examenes/>
-    },{
-      path:'/viajes',
-      element:<ViajesEstudio/>,
-    },
-    {
-      path:'/proyeccion',
-      element:<Proyeccion/>
-    },
-    {
-      path:'/admision',
-      element:<Admision/>
-    },
-    {
-      path:'/contacto',
-      element:<Contacto/>
-    }
-
+   
 ]);
 export default router;
