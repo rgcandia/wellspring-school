@@ -7,13 +7,14 @@ import Examenes from "./components/Examenes/Examenes.jsx";
 import ViajesEstudio from './components/ViajesEstudio/ViajesEstudio.jsx'
 import Proyeccion from './components/Proyeccion/Proyeccion.jsx'
 import Admision from "./components/Admision/Admision.jsx";
-import Contacto from './components/Contacto/Contacto.jsx'
+import Contacto from './components/Contacto/Contacto.jsx';
+import Error404 from "./components/Error404/Error404.jsx";
 import App from "./App.jsx";
 const router = createBrowserRouter([
     {
         path: "/",
       element:<App/>,
-      
+      errorElement:<Error404/>,
       children:[ {
         element:<Index/>,
         index: true,
