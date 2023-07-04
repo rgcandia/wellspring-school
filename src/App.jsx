@@ -8,13 +8,15 @@ import Loader from "./components/Loader/Loader.jsx"
 function App() {
   const [load,setLoad] = useState(true)
   useEffect(()=>{
-    window.addEventListener('load', function() {
-      setTimeout(function() {
+    document.addEventListener('readystatechange', function() {
+      if (document.readyState === 'complete') {
+        setTimeout(function() {
        
-        setLoad(false)
-      }, 1500); 
-    
+          setLoad(false)
+        }, 1500); 
+      }
     });
+   
   },[])
 
   return (
