@@ -3,3 +3,25 @@
     align-items: center;
   
 }
+.toolbar2{
+    
+    width: 100%;
+    display: grid !important;
+    grid-template-columns: 1fr 1fr 1fr;
+
+   
+}
+.toolbar1{
+    width: 100%;
+    display: grid !important;
+    grid-template-columns: 1fr 1fr 1fr 1fr; 
+}
+.box1 img{
+    width: 70%;
+    height: auto;
+}
+.box2 {
+    width: 70%;
+    height: auto;
+}
+

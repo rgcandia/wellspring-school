@@ -1,7 +1,7 @@
-import { AppBar, Typography, Toolbar } from "@mui/material";
+import { AppBar, Typography, Toolbar, Box, Button } from "@mui/material";
 import theme from '../../theme.js'
 import styles from './Footer.module.css'
-
+import {getRedes, getIconsFooter} from './services.js'
 export default function Footer() {
   const main = theme.palette.primary.main;
   const main2 = theme.palette.secondary.main;
@@ -12,16 +12,35 @@ export default function Footer() {
       position="static"
       className={styles.footer}
     >
-      <Toolbar >
-        <Typography variant="body2" align="center" color={main2}>
-          Este es el contenido del footer.
-          
-        </Typography>
-        
+      <Toolbar className={styles.toolbar1} >
+       
+    {
+      getIconsFooter.map(e=>{
+        return(
+          <Box
+          className={styles.box1}
+          >
+            <img src={e.path}/>
+          </Box>
+        )
+      })
+    }
+       
       </Toolbar>
       
-      <Toolbar>
-        Contenido adicional del footer
+      <Toolbar  className={styles.toolbar2}>
+      
+        {getRedes.map(e=>{
+          return(
+            <Box 
+            key={e.path} className={styles.box2}> 
+              <img src={e.path}/>
+            </Box>
+           
+        
+          )
+        })}
+       
       </Toolbar>
     </AppBar>
   );

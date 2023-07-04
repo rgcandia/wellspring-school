@@ -8,8 +8,7 @@ import Loader from "./components/Loader/Loader.jsx"
 function App() {
   const [load,setLoad] = useState(true)
 useEffect(()=>{
-  setTimeout(function() {
-       
+  setTimeout(function() {   
     setLoad(false)
   }, 1500); 
 },[])
@@ -19,11 +18,7 @@ useEffect(()=>{
     maxWidth='xl'
     className={styles.container}
     >
-     
-
      <Loader load={load} /> 
-     
-      
      <Navbar/> 
      <Outlet/>
       <Footer/>
