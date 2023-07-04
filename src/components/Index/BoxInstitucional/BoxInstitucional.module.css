@@ -8,6 +8,7 @@
 }
 
 .box1 p{
+    margin-top:10px ;
  margin-bottom: 10px;
  font-size: 16px;
 }
@@ -21,12 +22,6 @@
  @media(max-width:270px){
     .box1 p{
         font-size: 12px;
-        
-    }
- }
- @media(max-width:220px){
-    .box1 p{
-        font-size: 10px;
         
     }
  }
