@@ -7,17 +7,12 @@ import { useEffect, useState } from 'react';
 import Loader from "./components/Loader/Loader.jsx"
 function App() {
   const [load,setLoad] = useState(true)
-  useEffect(()=>{
-    document.addEventListener('readystatechange', function() {
-      if (document.readyState === 'complete') {
-        setTimeout(function() {
+useEffect(()=>{
+  setTimeout(function() {
        
-          setLoad(false)
-        }, 1500); 
-      }
-    });
-   
-  },[])
+    setLoad(false)
+  }, 1500); 
+},[])
 
   return (
     <Container 
