@@ -18,6 +18,7 @@ export default function Footer() {
       getIconsFooter.map(e=>{
         return(
           <Box
+          key={e.path}
           className={styles.box1}
           >
             <img src={e.path}/>
@@ -28,8 +29,16 @@ export default function Footer() {
        
       </Toolbar>
       
-      <Toolbar  className={styles.toolbar2}>
-      
+      <Toolbar  
+      className={styles.toolbar2}>
+       <Typography 
+       className={styles.text}
+       variant='text'
+        color="secondary"
+       sx={{fontWeight:'200', margin:'10px'}}
+       >
+        Seguinos en:
+       </Typography >
         {getRedes.map(e=>{
           return(
             <Box 

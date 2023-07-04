@@ -26,9 +26,9 @@ export const getIconsFooter = [
         path:essarp
     },
     {
-        path:handing
+        path:microsof
     },
     {
-        path:microsof
+        path:handing
     }
 ]
