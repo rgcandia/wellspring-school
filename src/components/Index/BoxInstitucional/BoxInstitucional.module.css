@@ -24,3 +24,9 @@
         
     }
  }
+ @media(max-width:220px){
+    .box1 p{
+        font-size: 10px;
+        
+    }
+ }
