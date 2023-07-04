@@ -1,4 +1,4 @@
-import {  Box, Container, Typography } from "@mui/material"
+import {  Container } from "@mui/material"
 import Navbar from './components/Navbar/Navbar.jsx'
 import Footer from "./components/Footer/Footer.jsx"
 import {Outlet} from 'react-router-dom'
@@ -10,9 +10,9 @@ function App() {
   useEffect(()=>{
     window.addEventListener('load', function() {
       setTimeout(function() {
-        // Código a ejecutar después del tiempo especificado
+       
         setLoad(false)
-      }, 1500); // 3000 milisegundos (3 segundos)
+      }, 1500); 
     
     });
   },[])
