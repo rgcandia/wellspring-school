@@ -1,10 +1,11 @@
 .container{
-    display: grid;
-    grid-template-rows: 4fr 1fr 1fr 1fr 1fr;
+display: flex;
+flex-direction:column
+
 }
 .box1{
     display: flex;
-    height: 70vh;
+    height: 60vh;
     
 }
 .box1 img{
@@ -15,7 +16,7 @@
 }
 .box2{
     display: flex;
-    height: 10vh;
+    height: 20vh;
 }
 
 @media(max-width:865px){
@@ -26,5 +27,13 @@
 @media(max-width:600px){
     .box1{
         height: 30vh;
+       
     }
 }
+@media(max-width:400px){
+    .box1{
+        height: 20vh;
+        
+    }
+}
+
