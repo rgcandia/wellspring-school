@@ -1,6 +1,7 @@
 import styles from './Index.module.css'
 import image from '../../images/aerea_ws.jpg'
 import BoxInstitucional from './BoxInstitucional/BoxInstitucional'
+import DatosUtiles from './DatosUtiles/DatosUtiles.jsx'
 export default function Index (){
     return(<div className={styles.container}>
 
@@ -10,7 +11,9 @@ export default function Index (){
 <div className={styles.box2}>
    <BoxInstitucional/>
 </div>
-<div className={styles.box3}>Datos Utiles</div>
+<div className={styles.box3}>
+    <DatosUtiles/>
+</div>
 <div className={styles.box4}>K - P - S</div>
 <div className={styles.box5}>MAPA - FORM</div>
 
