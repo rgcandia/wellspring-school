@@ -5,7 +5,7 @@ export default function DatosUtiles (){
         <Typography>DATOS UTILES</Typography>
          <Box>
             {getIcons.map(e=>{
-                return<img alt={e.path} src={e.path}/>
+                return<img key={e.path} alt={e.path} src={e.path}/>
             })}
          </Box>
     </Box>)
