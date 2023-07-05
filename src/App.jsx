@@ -8,9 +8,18 @@ import Loader from "./components/Loader/Loader.jsx"
 function App() {
   const [load,setLoad] = useState(true)
 useEffect(()=>{
-  setTimeout(function() {   
-    setLoad(false)
-  }, 1500); 
+  const  handleLoad = ()=>{
+    setTimeout(function() {   
+      setLoad(false)
+    }, 1500); 
+  }
+  if (document.readyState === "complete") {
+    handleLoad()
+  } else {
+    window.addEventListener('load', handleLoad);
+   
+  }
+ 
 },[])
 
   return (

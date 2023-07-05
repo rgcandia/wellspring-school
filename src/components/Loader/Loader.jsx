@@ -6,7 +6,7 @@ export default function Loader({load}) {
   return (
    <div className={`${load ? styles.loaderOn : styles.loaderOff}`}>
     <Box className={styles.spiner}>
-     <CircularProgress />
+     < CircularProgress  />
    </Box>
    </div>
     
