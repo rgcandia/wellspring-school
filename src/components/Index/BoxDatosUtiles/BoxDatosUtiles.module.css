@@ -1,0 +1,11 @@
+.container{
+    height: 15vh;
+    margin-left: 15%;
+    margin-right: 15%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    padding-top: 10px;
+}
+.image{
+    width: 4rem;
+}
