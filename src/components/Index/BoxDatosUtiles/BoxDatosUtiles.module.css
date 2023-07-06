@@ -1,11 +1,35 @@
 .container{
-    height: 15vh;
     margin-left: 15%;
     margin-right: 15%;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     padding-top: 10px;
+    
 }
 .image{
-    width: 4rem;
+    width: 2rem;
+}
+.box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 10px;
+}
+@media(max-width:500px){
+    .label{
+        font-size: 8px !important;
+    }
+}
+
+@media(max-width:500px){
+    .label{
+        display: none;
+    }
+}
+
+@media(max-width:230){
+    .imageContainer{
+        display: none !important;
+    }
 }

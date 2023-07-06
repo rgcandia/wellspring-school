@@ -2,20 +2,21 @@ import styles from './Index.module.css'
 import image from '../../images/aerea_ws.jpg'
 import BoxInstitucional from './BoxInstitucional/BoxInstitucional'
 import BoxDatosUtiles from './BoxDatosUtiles/BoxDatosUtiles.jsx'
+import { Box } from '@mui/material'
 export default function Index (){
-    return(<div className={styles.container}>
+    return(<Box className={styles.container}>
 
-<div className={styles.box1}>
+<Box className={styles.box1}>
     <img className={styles.image}  alt={image} src={image}/>
-</div>
-<div className={styles.box2}>
+</Box>
+<Box className={styles.box2}>
    <BoxInstitucional/>
-</div>
-<div className={styles.box3}>
+</Box>
+<Box className={styles.box3}>
    <BoxDatosUtiles/>
-</div>
-<div className={styles.box4}>K - P - S</div>
-<div className={styles.box5}>MAPA - FORM</div>
+</Box>
+<Box className={styles.box4}>K - P - S</Box>
+<Box className={styles.box5}>MAPA - FORM</Box>
 
-</div>)
+</Box>)
 }
