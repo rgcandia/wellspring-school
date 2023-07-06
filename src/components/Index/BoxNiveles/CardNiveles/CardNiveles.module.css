@@ -22,3 +22,26 @@
     padding: 5px;
     font-weight:900;
 }
+
+@media(max-width:865px){
+
+        .box p{
+            font-size: 14px ;
+            gap: 5px;
+        }
+}
+@media(max-width:500px){
+    .box{
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    .card{
+        grid-template-columns: 1fr;
+        padding-left: 10%;
+        padding-right: 10%;
+        gap: 10px;
+    }
+    .box p{
+        font-size: 12px ;
+    }
+}
