@@ -3,6 +3,7 @@
     grid-template-columns: 1fr 1fr 1fr;
     padding: 0;
     margin: 0;
+    gap: 20px;
 }
 .box{
     display: flex;
@@ -19,4 +20,5 @@
 }
 .box p{
     padding: 5px;
+    font-weight:900;
 }
