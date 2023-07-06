@@ -6,6 +6,7 @@
     padding-top: 10px;
     
 }
+
 .image{
     width: 2rem;
 }
@@ -16,20 +17,51 @@
     justify-content: center;
     padding-bottom: 10px;
 }
-@media(max-width:500px){
-    .label{
-        font-size: 8px !important;
-    }
-}
 
 @media(max-width:500px){
+    
+
     .label{
         display: none;
     }
+
+     .box:hover .imageContainer {
+        position: relative;
+        transition: opacity 0.3s;
+        display:none ;
+       
+      }
+      .box:hover .label{
+        
+        display:block ;
+      }
+      .label:hover{
+        cursor: pointer;
+      }
+      
+      
+      /* .imageContainer {
+        position: relative;
+        transition: opacity 0.3s;
+      }
+      
+      .imageContainer:hover {
+        opacity: 0;
+        
+      }
+     */
+
+
 }
 
-@media(max-width:230){
-    .imageContainer{
-        display: none !important;
-    }
+
+
+@media(max-width:300px){
+.container{
+    margin-left: 0%;
+    margin-right: 0%;
+}
+.label{
+    font-size: 10px !important ;
+}
 }
