@@ -22,6 +22,10 @@ flex-direction:column
     /* height: 25vh; */
     
 }
+.box5{
+    display: grid !important;
+    grid-template-columns: 1fr 1fr;
+}
 /* 
 @media(max-width:865px){
  .box1{
