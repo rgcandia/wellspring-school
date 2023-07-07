@@ -4,6 +4,7 @@ import BoxInstitucional from './BoxInstitucional/BoxInstitucional'
 import BoxDatosUtiles from './BoxDatosUtiles/BoxDatosUtiles.jsx'
 import BoxNiveles from './BoxNiveles/BoxNiveles.jsx'
 import { Box } from '@mui/material'
+import Mapa from './Mapa/Mapa'
 export default function Index (){
     return(<Box className={styles.container}>
 
@@ -19,7 +20,10 @@ export default function Index (){
 <Box className={styles.box4}>
     <BoxNiveles/>
 </Box>
-<Box className={styles.box5}>MAPA - FORM</Box>
+<Box className={styles.box5}>
+  <Mapa/>
+    MAPA - FORM
+    </Box>
 
 </Box>)
 }
