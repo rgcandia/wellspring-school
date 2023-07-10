@@ -2,7 +2,7 @@ import { Box, Typography } from "@mui/material";
 import icon from '../../../images/index-13.png'
 import styles from './BoxInstitucional.module.css'
 export default function BoxInstitucional(){
-    return(<Box >
+    return(<Box sx={{marginBottom:'10px'}}>
         <Box
         className={styles.box1}
         >

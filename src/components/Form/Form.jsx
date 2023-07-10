@@ -12,6 +12,7 @@ export default function Form() {
             <Typography
           component='p' 
           variant='h5'
+          fontStyle='italic'
            >CONTACTO</Typography>
             </Box>
            
