@@ -6,7 +6,6 @@ export default function Form() {
     
     return (
         <Box 
-        
         className={styles.form}
         component='form'> 
             <Box sx={{textAlign:'center'}}>

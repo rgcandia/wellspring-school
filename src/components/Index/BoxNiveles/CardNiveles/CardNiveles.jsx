@@ -10,7 +10,7 @@ export default function CardNiveles(){
     ]
     return <Box className={styles.card}>
         {getImage.map(e=>{
-            return<Box key={e.label} className={styles.box} >
+            return<Box key={e.label} className={styles.box} sx={{backgroundColor:'secondary.main'}} >
                
             
                 <img  alt={e.label} src={e.path}/>
