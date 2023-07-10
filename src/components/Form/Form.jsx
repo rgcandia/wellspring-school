@@ -9,10 +9,13 @@ export default function Form() {
         
         className={styles.form}
         component='form'> 
-         
-           <Typography
-           variant='body2'
+            <Box sx={{textAlign:'center'}}>
+            <Typography
+          component='p' 
+          variant='h5'
            >CONTACTO</Typography>
+            </Box>
+           
            <TextField
            id="nombre"
            type='text'
@@ -39,11 +42,15 @@ export default function Form() {
            multiline
            rows={6}  
            />
-       <Button
+           <Box sx={{textAlign:'center'}}>
+           <Button
        type='submit'
        variant='contained'
 
        >Enviar</Button>
+
+           </Box>
+    
        
           
       

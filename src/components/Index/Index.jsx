@@ -7,7 +7,8 @@ import { Box } from '@mui/material'
 import Mapa from './Mapa/Mapa'
 import Form from '../Form/Form'
 export default function Index() {
-    return (<Box className={styles.container}>
+    return (<Box
+     className={styles.container}>
 
         <Box className={styles.box1}>
             <img className={styles.image} alt={image} src={image} />
@@ -21,7 +22,8 @@ export default function Index() {
         <Box className={styles.box4}>
             <BoxNiveles />
         </Box>
-        <Box className={styles.box5}>
+        <Box 
+        className={styles.box5}>
             <Mapa />
             <Form />
         </Box>
