@@ -1,33 +1,52 @@
-import { Container,Typography,TextField,Button} from "@mui/material";
-
+import { Box,Typography,TextField,Button} from "@mui/material";
+import styles from './Form.module.css'
 
 export default function Form() {
+
+    
     return (
-        <Container>
+        <Box 
+        
+        className={styles.form}
+        component='form'> 
          
            <Typography
            variant='body2'
            >CONTACTO</Typography>
            <TextField
+           id="nombre"
+           type='text'
            label='Nombre'
            fullWidth
-           margin='dense'           />
+           margin='dense'  
+           required
+               />
            <TextField
+           id="email"
+           type='email'
            label='Email'
            fullWidth
-           margin='dense'     
+           margin='dense'  
+           required   
            />
            <TextField
+           required
+           id="comentarios"
+           type='text'
            label='Comentario'
            fullWidth
            margin='dense'
            multiline
            rows={6}  
            />
-           <Button
-           variant='contained'
-           >Enviar</Button>
+       <Button
+       type='submit'
+       variant='contained'
+
+       >Enviar</Button>
+       
+          
       
-        </Container>
+        </Box>
     )
 }
