@@ -1,3 +1,7 @@
+.texto{
+    padding: 15px;
+}
+
 @media(max-width:600px){
     .texto h3{
         font-size: 2rem;
