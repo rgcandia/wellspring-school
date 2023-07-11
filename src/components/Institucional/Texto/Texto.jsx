@@ -4,7 +4,7 @@ export default function Texto (){
     return(<Box className={styles.texto}>
    
 
-    <Typography component='h3' variant='h2' textAlign='center'>INSTITUCIONAL</Typography>
+    <Typography className={styles.titulo} component='h3' variant='h2' textAlign='center' >INSTITUCIONAL</Typography>
     
 
 
