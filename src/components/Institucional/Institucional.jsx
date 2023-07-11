@@ -31,8 +31,8 @@ export default function Institucional (){
 </Box>
 <Box className={styles.container}>
     <Box>
-        <Button onClick={handlePropuesta}>PROPUESTA EDUCATIVA</Button>
-        <Button onClick={handleOrientacion}>DEPARTAMENTO DE ORIENTACION</Button>
+        <Button variant='text' onClick={handlePropuesta}>PROPUESTA EDUCATIVA</Button>
+        <Button variant='text' onClick={handleOrientacion}>DEPARTAMENTO DE ORIENTACION</Button>
     </Box>
     <Box>
         {orientacion&&<Orientacion/>}

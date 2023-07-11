@@ -1,0 +1,11 @@
+@media(max-width:600px){
+    .texto h3{
+        font-size: 2rem;
+    }
+    .texto h6{
+        font-size: 1rem;
+    }
+    .texto p{
+        font-size: 0.8rem;
+    }
+}
