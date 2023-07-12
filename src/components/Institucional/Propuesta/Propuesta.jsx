@@ -2,7 +2,7 @@ import { Typography,Box } from "@mui/material";
 import styles from './Propuesta.module.css'
 export default function Propuesta(){
     return(<Box className={styles.propuesta} sx={{backgroundColor:'secondary.main'}}>
-        <Box sx={{paddingBottom:'30px'}}>
+        <Box sx={{paddingBottom:'15px'}}>
         <Typography component='h6' variant='body1'> OBJETIVOS</Typography>
         <Typography component='p' variant='body2'>
  Trabajamos para desarrollar estrategias que fomentan en el alumno el pensamiento crítico y la toma de decisiones,
@@ -11,7 +11,7 @@ export default function Propuesta(){
    su colaboración en las distintas etapas por las que vayan atravesando sus hijos.
  </Typography>
         </Box>
- <Box sx={{paddingBottom:'30px'}}>
+ <Box sx={{paddingBottom:'15px'}}>
  <Typography component='h6' variant='body1'> VALORES </Typography>
  <Typography component='p' variant='body2'>
  Formamos a nuestros alumnos trabajando el valor de la honestidad, la solidaridad, 
@@ -19,7 +19,7 @@ export default function Propuesta(){
  y en el derecho personal de expresarlos libremente, con el objeto de superar las actitudes individualistas, promoviendo las prácticas solidarias.
  </Typography>
  </Box>
- <Box sx={{paddingBottom:'30px'}}>
+ <Box sx={{paddingBottom:'15px'}}>
  <Typography component='h6' variant='body1'> MODELO PEDAGOGICO </Typography>
  <Typography component='p' variant='body2'>
  El proyecto bilingüe de Wellspring School aspira a desarrollar y consolidar una formación integral desde el nivel Inicial hasta el egreso en la Escuela Secundaria. La propuesta educativa se enfoca en el uso correcto del idioma nacional y desarrollar la capacidad del uso bilingüe de la lengua inglesa.
