@@ -1,4 +1,5 @@
 import { Typography ,Box} from "@mui/material";
+import orientacion from '../../../images/institucional/departamento_orientacion.jpg'
 import styles from './Orientacion.module.css'
 export default function Orienctacion (){
     return(< Box className={styles.orientacion}sx={{backgroundColor:'secondary.main'}}>
@@ -28,6 +29,9 @@ export default function Orienctacion (){
         <Typography component='p' variant='body2'>
         De esta manera se puede realizar un adecuado seguimiento y acompañamiento.
         </Typography>
+        </Box>
+        <Box className={styles.image}>
+            <img src={orientacion} alt='imagen de maestra de inicial, rodeada de alumnos  atentos a la explicación'/>
         </Box>
     </Box>)
 }

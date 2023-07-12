@@ -1,4 +1,5 @@
 import { Typography,Box } from "@mui/material";
+import propuesta from '../../../images/institucional/propuesta_educativa.jpg'
 import styles from './Propuesta.module.css'
 export default function Propuesta(){
     return(<Box className={styles.propuesta} sx={{backgroundColor:'secondary.main'}}>
@@ -30,6 +31,8 @@ export default function Propuesta(){
  Juntos formamos una comunidad en la que el diálogo, la solidaridad y el respeto son el medio de comunicación y de interacción.
  </Typography>
  </Box>
- 
+ <Box className={styles.image}>
+       <img src={propuesta} alt="imagen propuesta educativa" />
+ </Box>
   </Box>)
 }
