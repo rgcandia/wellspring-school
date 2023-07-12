@@ -43,8 +43,8 @@ export default function Institucional (){
         {orientacion&&<Orientacion/>}
         {propuesta&&<Propuesta/>}
     </Box> */} 
-     <Box className={styles.box1} sx={{ borderBottom: 1, borderColor: 'divider' }}>
-    <Tabs  value={value} onChange={handleChange} aria-label="basic tabs example">
+     <Box  className={styles.box1} sx={{ borderBottom: 1, borderColor: 'divider' }}>
+    <Tabs centered={true} value={value} onChange={handleChange} aria-label="basic tabs example">
         <Tab label='PROPUESTA EDUCATIVA' value='1'/>
         <Tab label='DEPARTAMENTO DE ORIENTACION' value='2'/>
     </Tabs>
