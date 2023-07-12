@@ -1,6 +1,7 @@
 .container{
     margin-bottom: 50px;
 }
+
 .institucional{
     
    display: flex;
@@ -17,13 +18,19 @@
     height:auto;
     object-fit: cover;
 }
+.box2{
+    display: none !important;
+}
 @media(max-width:600px){
     .container button {
         font-size: 0.8rem;
     }
 }
 @media(max-width:450px){
-    .container button {
-        font-size: 0.5rem;
-    }
+ .box1{
+    display: none !important;
+ }
+ .box2{
+    display: block !important;
+ }
 }

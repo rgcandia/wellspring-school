@@ -42,9 +42,16 @@ export default function Institucional (){
     <Box>
         {orientacion&&<Orientacion/>}
         {propuesta&&<Propuesta/>}
-    </Box> */}
-     <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
-    <Tabs value={value} onChange={handleChange} aria-label="basic tabs example">
+    </Box> */} 
+     <Box className={styles.box1} sx={{ borderBottom: 1, borderColor: 'divider' }}>
+    <Tabs  value={value} onChange={handleChange} aria-label="basic tabs example">
+        <Tab label='PROPUESTA EDUCATIVA' value='1'/>
+        <Tab label='DEPARTAMENTO DE ORIENTACION' value='2'/>
+    </Tabs>
+   
+    </Box>
+    <Box className={styles.box2}  sx={{ borderBottom: 1, borderColor: 'divider' }} >
+    <Tabs  orientation='vertical' value={value} onChange={handleChange} aria-label="basic tabs example">
         <Tab label='PROPUESTA EDUCATIVA' value='1'/>
         <Tab label='DEPARTAMENTO DE ORIENTACION' value='2'/>
     </Tabs>
