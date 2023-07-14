@@ -1,4 +1,4 @@
-import { AppBar,   Button, Drawer, IconButton, Toolbar, Box } from "@mui/material";
+import { AppBar,   Button, Drawer, IconButton, Toolbar, Box, Typography } from "@mui/material";
 import { useState } from "react";
 import NavListDrawer from "../NavListDrawer/NavListDrawer";
 import MenuIcon from '@mui/icons-material/Menu'
@@ -56,14 +56,14 @@ export default function Navbar(){
                 {getLinks.map(e=>{
                     return(
                     <Link to={e.href} key={e.label}>
-                    <Button 
-                        
-                        variant='text'
-                        color="secondary"
-                        sx={{fontWeight:'200', margin:'10px'}}
-                        >
+                        <Box sx={{color:'secondary.main'}} >
+
+                    <Typography className={styles.enlaces}>
+
                         {e.label}
-                    </Button>
+                    </Typography>
+                    
+                        </Box>
                             </Link>)
                 })}
             </Toolbar>

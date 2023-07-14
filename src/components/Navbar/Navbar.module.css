@@ -33,7 +33,13 @@
   }
 
 
+  .enlaces {
+    text-decoration: none; /* Elimina la decoración del enlace */
+    display: inline-block; /* Permite establecer anchos y altos */
+   padding: 10px;
 
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+  }
 
 @media(max-width:1200px){
  
