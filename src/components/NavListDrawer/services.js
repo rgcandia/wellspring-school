@@ -30,5 +30,6 @@ export const getLinks = [
     {
         href:'contacto',
         label:'CONTACTO'
-    }
+    },
+    
 ]
