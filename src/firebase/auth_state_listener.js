@@ -7,6 +7,7 @@ export function authListener(){
           // https://firebase.google.com/docs/reference/js/auth.user
           
           console.log('usuario conectado')
+          console.log(user.email)
           // ...
         } else {
           // User is signed out
