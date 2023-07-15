@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Box, Button, TextField } from "@mui/material";
+import { Box, Button, TextField, Typography } from "@mui/material";
 import SendIcon from '@mui/icons-material/Send';
 import {login} from '../../../firebase/auth_signin_password.js'
 import styles from './Login.module.css';
@@ -27,6 +27,9 @@ export default function Login() {
 
   return (
     <Box className={styles.login}>
+       <Typography variant='h2' color='primary' sx={{textAlign:'center'}}>
+            Login
+        </Typography>
       <TextField
         required
         id="Usuario"

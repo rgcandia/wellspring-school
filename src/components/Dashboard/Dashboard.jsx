@@ -1,22 +1,25 @@
 import { Box, Typography } from "@mui/material";
 import styles from './Dashboard.module.css';
-import {authListener} from '../../firebase/auth_state_listener.js'
 import {useEffect} from 'react'
 import Login from "./Login/Login";
-import Navdashboard from "./NavDashboard/NavDashboard";
+import { useSelector,useDispatch } from "react-redux";
+import { initListener } from "../../services";
 export default function Dashboard (){
+    const dispatch =useDispatch();
+    const {user} = useSelector(state=>state.value)
 useEffect(()=>{
-    authListener();
+    initListener(dispatch)
 
-},[])
+},[user]);
 return(<Box className={styles.dashboard}>
-        
-        <Typography variant='h2' color='primary'>
-            Login
-        </Typography>
-        <Box className={styles.containerLogin}>
 
-        <Login/>
-        </Box>
+       {!user&&<Login/>}
+       {user&&<>
+       
+       <Typography variant='h3'>
+        Bienvenido {user}
+       </Typography>
+       </>}
+        
     </Box>)
 }
