@@ -57,6 +57,7 @@ export default function Footer() {
         <Typography
         className={styles.personal}
         variant='body2'
+        sx={{fontWeight:'100',fontSize:'0.7rem'}}
         >
           Ingreso personal autorizado
           </Typography>

@@ -4,7 +4,7 @@ import Login from "./Login/Login";
 export default function Dashboard (){
     return(<Box className={styles.dashboard}>
         <Typography variant='h2' color='primary'>
-            Ingresar
+            Login
         </Typography>
         <Box className={styles.containerLogin}>
 
