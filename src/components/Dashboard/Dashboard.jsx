@@ -1,8 +1,15 @@
 import { Box, Typography } from "@mui/material";
 import styles from './Dashboard.module.css';
+import {authListener} from '../../firebase/auth_state_listener.js'
+import {useEffect} from 'react'
 import Login from "./Login/Login";
 export default function Dashboard (){
-    return(<Box className={styles.dashboard}>
+useEffect(()=>{
+    authListener();
+
+},[])
+return(<Box className={styles.dashboard}>
+
         <Typography variant='h2' color='primary'>
             Login
         </Typography>

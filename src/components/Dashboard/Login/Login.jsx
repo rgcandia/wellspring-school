@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Box, Button, TextField } from "@mui/material";
 import SendIcon from '@mui/icons-material/Send';
+import {login} from '../../../firebase/auth_signin_password.js'
 import styles from './Login.module.css';
 
 export default function Login() {
@@ -21,6 +22,7 @@ export default function Login() {
     // a la API
     console.log("Usuario:", usuario);
     console.log("Password:", password);
+    login(usuario,password);
   };
 
   return (
