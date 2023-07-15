@@ -2,6 +2,7 @@ import { AppBar, Typography, Toolbar, Box, Button } from "@mui/material";
 import theme from '../../theme.js'
 import styles from './Footer.module.css'
 import {getRedes, getIconsFooter} from './services.js'
+import { Link } from "react-router-dom";
 export default function Footer() {
   const main = theme.palette.primary.main;
   const main2 = theme.palette.secondary.main;
@@ -51,6 +52,16 @@ export default function Footer() {
         })}
        
       </Toolbar>
+      <Toolbar>
+        <Link to='dashboard'>
+        <Typography
+        className={styles.personal}
+        variant='body2'
+        >
+          Ingreso personal autorizado
+          </Typography>
+          </Link>
+        </Toolbar>
     </AppBar>
   );
 }

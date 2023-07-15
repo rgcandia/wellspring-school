@@ -10,6 +10,7 @@ import Admision from "./components/Admision/Admision.jsx";
 import Contacto from './components/Contacto/Contacto.jsx';
 import Error404 from "./components/Error404/Error404.jsx";
 import App from "./App.jsx";
+import Dashboard from './components/Dashboard/Dashboard.jsx'
 const router = createBrowserRouter([
     {
         path: "/",
@@ -49,6 +50,10 @@ const router = createBrowserRouter([
       {
         path:'contacto',
         element:<Contacto/>
+      },
+      {
+        path:'dashboard',
+        element:<Dashboard/>
       }
   ]
     },

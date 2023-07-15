@@ -30,6 +30,24 @@
     width: 50%;
     height: auto;
 }
+.personal {
+    color: white;
+    text-decoration: none; /* Elimina la decoración del enlace */
+    display: inline-block; /* Permite establecer anchos y altos */
+   padding: 10px;
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    text-decoration: none; /* Elimina la decoración de enlace por defecto */
+    position: relative; /* Permite posicionar el pseudo-elemento */
+  }
+.personal:hover::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -1px; /* Ajusta la posición de la línea */
+    width: 100%;
+    height: 1px; /* Ancho y grosor de la línea */
+    background-color: white; /* Color de la línea */
+  }
 
 @media(max-width:1150px){
     .toolbar1{

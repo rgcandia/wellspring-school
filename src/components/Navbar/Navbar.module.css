@@ -45,9 +45,9 @@
     content: "";
     position: absolute;
     left: 0;
-    bottom: -3px; /* Ajusta la posición de la línea */
+    bottom: -1px; /* Ajusta la posición de la línea */
     width: 100%;
-    height: 3px; /* Ancho y grosor de la línea */
+    height: 1px; /* Ancho y grosor de la línea */
     background-color: white; /* Color de la línea */
   }
 @media(max-width:1200px){
