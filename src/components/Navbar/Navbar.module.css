@@ -40,7 +40,8 @@
     cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
     text-decoration: none; /* Elimina la decoración de enlace por defecto */
     position: relative; /* Permite posicionar el pseudo-elemento */
-  }
+    font-weight: 100 !important;
+}
 .enlaces:hover::before {
     content: "";
     position: absolute;
