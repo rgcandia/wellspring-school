@@ -4,6 +4,7 @@ import {useEffect} from 'react'
 import Login from "./Login/Login";
 import { useSelector,useDispatch } from "react-redux";
 import { initListener } from "../../services";
+import Unlog from "./Unlog/Unlog";
 export default function Dashboard (){
     const dispatch =useDispatch();
     const {user} = useSelector(state=>state.value)
@@ -14,12 +15,7 @@ useEffect(()=>{
 return(<Box className={styles.dashboard}>
 
        {!user&&<Login/>}
-       {user&&<>
-       
-       <Typography variant='body2'>
-        Bienvenido {user}
-       </Typography>
-       </>}
+       {user&&<Unlog/>}
         
     </Box>)
 }
