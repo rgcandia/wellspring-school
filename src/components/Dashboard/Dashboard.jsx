@@ -16,7 +16,7 @@ return(<Box className={styles.dashboard}>
        {!user&&<Login/>}
        {user&&<>
        
-       <Typography variant='h3'>
+       <Typography variant='body2'>
         Bienvenido {user}
        </Typography>
        </>}
