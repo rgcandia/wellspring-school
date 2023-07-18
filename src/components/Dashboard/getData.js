@@ -18,9 +18,12 @@ export const myData =[
     },
     {
       "id": "3",
-      "label": "Color favorito",
+      "label": "Indicar Sector",
       "type": "select",
-      "options": ["Rojo", "Azul", "Verde"],
-      "defaultValue": "Azul"
+      "options": ["Kinder", "Primaria", "Secundaria","Administración","Otro"],
+      "defaultValue": "Otro"
+    },
+    {
+      
     }
   ];

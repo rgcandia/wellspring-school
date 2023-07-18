@@ -1,7 +1,7 @@
-import { TextField, Typography } from "@mui/material";
+import { TextField, Typography, FormGroup, MenuItem } from "@mui/material";
 
 export default function ItemForm({ item }) {
-  const { id, label, type } = item;
+  const { id, label, type, options } = item;
 
   const getItem = () => {
     switch (type) {
@@ -25,18 +25,37 @@ export default function ItemForm({ item }) {
             variant="outlined"
           />
         );
-       case 'title':
-        return(<Typography>
+      case "select":
+        return (
+          <FormGroup>
+            <TextField
+              id={id}
+              select
+              label={label}
+              name={label}
+              variant="outlined"
+            >
+              {options.map((value) => (
+                <MenuItem key={value} value={value}>
+                  {value}
+                </MenuItem>
+              ))}
+            </TextField>
+          </FormGroup>
+        );
+      case "title":
+        return (
+          <Typography variant="h6" component="div">
             {label}
-        </Typography>)
+          </Typography>
+        );
       default:
-        return <p>no se encontro type</p>;
+        return <p>No se encontró el tipo</p>;
     }
   };
 
   return getItem();
 }
-
   
   
   
