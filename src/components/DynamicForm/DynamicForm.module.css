@@ -1,0 +1,10 @@
+
+  /* DynamicForm.module.css */
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .form button{
+    max-width: 150px;
+  }

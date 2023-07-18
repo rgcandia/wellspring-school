@@ -1,7 +1,7 @@
 import { useRef } from "react";
 import { Box, Button } from "@mui/material";
 import ItemForm from "./ItemForm/ItemForm";
-
+import styles from './DynamicForm.module.css'
 export default function DynamicForm({ data }) {
   const formRef = useRef(null);
 
@@ -19,7 +19,7 @@ export default function DynamicForm({ data }) {
   };
 
   return (
-    <Box  component="form" ref={formRef} onSubmit={handleSubmit}>
+    <Box className={styles.form} component="form" ref={formRef} onSubmit={handleSubmit}>
       {data ? (
         <>
           {data.map((e) => {

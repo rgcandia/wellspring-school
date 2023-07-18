@@ -21,7 +21,7 @@ export const myData =[
       "label": "Indicar Sector",
       "type": "select",
       "options": ["Kinder", "Primaria", "Secundaria","Administración","Otro"],
-      "defaultValue": "Otro"
+      
     },
     {
       "id":"4",
@@ -33,6 +33,13 @@ export const myData =[
       "label":"Nombre del Evento",
       "type":"text"
 
+    },
+    {
+      "id": "6",
+      "label": "Lugar",
+      "type": "check",
+      "options": ["Teatro", "Tinglado", "Campo de deporte","Otro"],
+    
     },
    
   ];
