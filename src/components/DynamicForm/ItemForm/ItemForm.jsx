@@ -17,6 +17,7 @@ export default function ItemForm({ item }) {
           <div className={styles.itemformcontainer}>
             <label className={styles.label} htmlFor={id}>{label}</label>
             <TextField
+            required
               id={id}
               type="email"
               name={label}
@@ -30,6 +31,7 @@ export default function ItemForm({ item }) {
           <div className={styles.itemformcontainer}>
             <label className={styles.label} htmlFor={id}>{label}</label>
             <TextField
+              required
               id={id}
               type="text"
               name={label}
@@ -44,6 +46,7 @@ export default function ItemForm({ item }) {
             <label className={styles.label} htmlFor={id}>{label}</label>
             <FormGroup>
               <TextField
+               required
                 id={id}
                 select
                 value={selectedValue}
@@ -88,6 +91,7 @@ export default function ItemForm({ item }) {
           <div className={styles.itemformcontainer}>
             <label className={styles.label} htmlFor={id}>{label}</label>
             <TextField
+            required
               id={id}
               type="date"
               name={label}

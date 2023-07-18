@@ -6,16 +6,20 @@ export default function DynamicForm({ data }) {
   const formRef = useRef(null);
 
   const handleSubmit = (event) => {
+    const arrayForm = [];
     event.preventDefault();
 
     // Accede a los valores del formulario utilizando la referencia
     const formData = new FormData(formRef.current);
-    console.log(formData);
+  
     for (let [name, value] of formData) {
-      const inputElement = formRef.current.elements[name];
-      console.log("Name:", name);
-      console.log("Value:", value);
+     arrayForm.push({
+      name,value
+     })
     }
+    // se ejeciuta fetch a la API con el form en el body
+  
+
   };
 
   return (
