@@ -11,6 +11,7 @@ import Contacto from './components/Contacto/Contacto.jsx';
 import Error404 from "./components/Error404/Error404.jsx";
 import App from "./App.jsx";
 import Dashboard from './components/Dashboard/Dashboard.jsx'
+import DynamicForm from "./components/DynamicForm/DynamicForm.jsx";
 const router = createBrowserRouter([
     {
         path: "/",
@@ -54,6 +55,10 @@ const router = createBrowserRouter([
       {
         path:'dashboard',
         element:<Dashboard/>
+      },
+      {
+        path:'formulario/:id',
+        element:<DynamicForm/>
       }
   ]
     },

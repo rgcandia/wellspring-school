@@ -1,4 +1,4 @@
-import { Box, Button } from "@mui/material";
+import { Box, Button, Typography } from "@mui/material";
 import {disconect} from '../../../firebase/auth_sign_out.js'
 import { useDispatch } from "react-redux";
 import {uploadUser} from '../../../redux/slice.js'
@@ -13,6 +13,7 @@ export default function Unlog(){
         <Button variant='outlined' color='primary' onClick={handleClick}>
        Cerrar sesion
         </Button>
+        
      
     </Box>)
 }

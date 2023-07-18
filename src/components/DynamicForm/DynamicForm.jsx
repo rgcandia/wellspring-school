@@ -1,24 +1,35 @@
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
+import { useSelector } from "react-redux";
+import { useParams } from "react-router-dom";
 import { Box, Button } from "@mui/material";
 import ItemForm from "./ItemForm/ItemForm";
-import styles from './DynamicForm.module.css'
-export default function DynamicForm({ data }) {
+import styles from "./DynamicForm.module.css";
+
+export default function DynamicForm() {
   const formRef = useRef(null);
+  const { id } = useParams();
+  const { modelforms } = useSelector((state) => state.value.values);
+
+  useEffect(()=>{},)
+  const data = modelforms?.find((item) => item.id === "1");
+
 
   const handleSubmit = (event) => {
-    const arrayForm = [];
     event.preventDefault();
+    const arrayForm = [];
 
     // Accede a los valores del formulario utilizando la referencia
     const formData = new FormData(formRef.current);
-  
+
     for (let [name, value] of formData) {
-     arrayForm.push({
-      name,value
-     })
+      arrayForm.push({
+        name,
+        value,
+      });
     }
-    // se ejeciuta fetch a la API con el form en el body
-  
+
+    // Ejecutar fetch a la API con el formulario en el body
+    // ...
 
   };
 
