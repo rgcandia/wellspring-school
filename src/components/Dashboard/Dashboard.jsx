@@ -5,6 +5,8 @@ import Login from "./Login/Login";
 import { useSelector,useDispatch } from "react-redux";
 import { initListener } from "../../services";
 import Unlog from "./Unlog/Unlog";
+import DynamicForm from "../DynamicForm/DynamicForm";
+import {myData} from "./getData.js";
 export default function Dashboard (){
     const dispatch =useDispatch();
     const {user} = useSelector(state=>state.value)
@@ -16,6 +18,7 @@ return(<Box className={styles.dashboard}>
 
        {!user&&<Login/>}
        {user&&<Unlog/>}
+       {user&&<DynamicForm data={myData}/>}
         
     </Box>)
 }
