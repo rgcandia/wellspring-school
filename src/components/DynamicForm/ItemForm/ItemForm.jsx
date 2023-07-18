@@ -49,6 +49,19 @@ export default function ItemForm({ item }) {
             {label}
           </Typography>
         );
+      case "fecha":
+        return (
+          <TextField
+            id={id}
+            label={label}
+            type="date"
+            name={label}
+            variant="outlined"
+            InputLabelProps={{
+              shrink: true,
+            }}
+          />
+        );
       default:
         return <p>No se encontró el tipo</p>;
     }
@@ -56,7 +69,4 @@ export default function ItemForm({ item }) {
 
   return getItem();
 }
-  
-  
-  
   

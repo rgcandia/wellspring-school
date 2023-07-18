@@ -8,7 +8,7 @@ export const myData =[
       "id": "1",
       "label": "Nombre",
       "type": "text",
-      "defaultValue": ""
+      
     },
     {
       "id": "2",
@@ -24,6 +24,15 @@ export const myData =[
       "defaultValue": "Otro"
     },
     {
-      
-    }
+      "id":"4",
+      "label":"Fecha",
+      "type":"fecha"
+    },
+    {
+      "id":"5",
+      "label":"Nombre del Evento",
+      "type":"text"
+
+    },
+   
   ];
