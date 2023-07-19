@@ -9,7 +9,7 @@ import styles from "./DynamicForm.module.css";
 export default function DynamicForm() {
   const formRef = useRef(null);
   const { id } = useParams();
-  const { values } = useSelector((state) => state.value);
+  const { values,user } = useSelector((state) => state.value);
   const data = values?.find((item) => item.id == id);
  const {model} = data;
 
@@ -29,7 +29,7 @@ export default function DynamicForm() {
 
     // Ejecutar fetch a la API con el formulario en el body
     // ...
-    updateForm({id,form:arrayForm})
+    updateForm({id,form:arrayForm,user})
   };
 
   return (
