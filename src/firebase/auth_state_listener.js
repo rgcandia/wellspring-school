@@ -13,7 +13,7 @@ export function authListener(dispatch,action){
           dispatch(action(user.email))
           //Me conecto al server socket. si hay user
           // y escucho los eventos.
-          initSocket(user)
+          initSocket(user.email)
           // ...
         } else {
           // User is signed out

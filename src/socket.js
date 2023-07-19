@@ -20,12 +20,19 @@ export const getForms = (dispatch,action)=>{
 }
 
 export const setForm = (email)=>{
+
   if(!socket) return null;
-  socket.emit('setForm',email);
+  socket.emit("setForm",email);
+  
 }
 
 export const listenersocket = (email,dispatch,action)=>{
   socket.on(email,(value)=>{
   dispatch(action(value))
   })
+}
+
+
+export const updateForm = ({id,form})=>{
+socket.emit('updateForm',{id,form})
 }

@@ -1,9 +1,12 @@
+import { Box, Typography } from "@mui/material";
 import React from "react";
 import { Link } from "react-router-dom";
 
 export function TableForms({ forms }) {
   return (
-    <table>
+  <Box>
+    <Typography variant='h5' component='p'>Tus formularios</Typography>
+      <table>
       <thead>
         <tr>
           <th>ID</th>
@@ -21,5 +24,6 @@ export function TableForms({ forms }) {
         ))}
       </tbody>
     </table>
+  </Box>
   );
 }
