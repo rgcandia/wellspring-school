@@ -3,8 +3,8 @@ let socket;
 
 // inicia socket con el usuario en el evento join
 export const initSocket = (user)=>{
-    socket = io('https://wellspring-api.adaptable.app/',{transports:['websocket']})
-    // socket = io('http://localhost:4001/',{transports:['websocket']})
+    // socket = io('https://wellspring-api.adaptable.app/',{transports:['websocket']})
+    socket = io('http://localhost:4001/',{transports:['websocket']})
     console.log('Connecting socket...')
     if (socket && user) {
         socket.emit("join", user);
@@ -14,6 +14,8 @@ export const initSocket = (user)=>{
 export const getForms = (dispatch,action)=>{
   if (!socket) return null;
   socket.on('forms',(value)=>{
+
+    console.log("llega formulario")
     return dispatch(action(value))
   })
 
@@ -33,6 +35,6 @@ export const listenersocket = (email,dispatch,action)=>{
 }
 
 
-export const updateForm = ({id,form,email})=>{
-socket.emit('updateForm',{id,form,email})
+export const updateForm = ({id,form,user})=>{
+socket.emit('updateForm',{id,form,user})
 }

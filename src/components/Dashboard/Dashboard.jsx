@@ -10,7 +10,7 @@ import DashHome from "./DashHome/DashHome";
 import styles from './Dashboard.module.css';
 export default function Dashboard (){
     const dispatch =useDispatch();
-    const {user} = useSelector(state=>state.value)
+    const {user,values} = useSelector(state=>state.value)
     useEffect(()=>{
         initListener(dispatch)
         getForms(dispatch,uploadValues)
