@@ -8,11 +8,7 @@ export function initListener(dispatch){
 }
 
 export  function getForms (user,dispatch){
-  fetch(`https://wellspring-api.vercel.app/formulario/${user}`)
-  .then(response=>response.json())
-  .then(data=>
-    dispatch(uploadValues(data))
-    )
 
+ 
 
 }
