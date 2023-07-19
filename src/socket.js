@@ -9,3 +9,11 @@ export const initSocket = (user)=>{
         socket.emit("join", user);
       }
 }
+
+export const getForms = (dispatch,action)=>{
+  if (!socket) return true;
+  socket.on('forms',(value)=>{
+    return dispatch(action(value))
+  })
+
+}
