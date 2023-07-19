@@ -1,8 +1,9 @@
 import { Box, Typography } from "@mui/material";
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 
 export function TableForms({ forms }) {
+  useEffect(()=>{},[forms])
   return (
   <Box>
     <Typography variant='h5' component='p'>Tus formularios</Typography>
