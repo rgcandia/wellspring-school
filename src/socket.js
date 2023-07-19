@@ -12,9 +12,20 @@ export const initSocket = (user)=>{
 }
 
 export const getForms = (dispatch,action)=>{
-  if (!socket) return true;
+  if (!socket) return null;
   socket.on('forms',(value)=>{
     return dispatch(action(value))
   })
 
+}
+
+export const setForm = (email)=>{
+  if(!socket) return null;
+  socket.emit('setForm',email);
+}
+
+export const listenersocket = (email,dispatch,action)=>{
+  socket.on(email,(value)=>{
+  dispatch(action(value))
+  })
 }

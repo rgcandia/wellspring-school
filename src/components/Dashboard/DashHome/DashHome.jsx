@@ -1,23 +1,20 @@
 import { useSelector } from "react-redux";
+import SendForm from './SendForm/SendForm.jsx'
 import styles from './DashHome.module.css'
-import { TableForms } from "./TableForms/TableForms";
+import { useEffect } from "react";
+
 
 export default function DashHome() {
-  const { values } = useSelector(state => state.value);
-
-  const renderModelForms = () => {
-    if (values && values.modelforms && values.modelforms.length > 0) {
-      return (
-        <TableForms forms={values.modelforms} />
-      );
-    } else {
-      return null;
-    }
-  }
-
+  const { values ,user} = useSelector(state => state.value);
+  const admin = "admin@wellspring.edu.ar"
+                                             
   return (
     <div className={styles.dashhome}>
-      {renderModelForms()}
+      
+    {user===admin?<SendForm/>:null}
+
+
+      
     </div>
   );
 }
