@@ -23,7 +23,7 @@ export default function Dashboard (){
 return(<Box className={styles.dashboard}>
        
        {!user&&<Login/>}
-       {user&&<Unlog/>}    
+       {user&&<Unlog/>}   
        <Outlet/> 
     </Box>)
 }

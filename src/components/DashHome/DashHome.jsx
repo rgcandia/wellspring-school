@@ -1,10 +1,11 @@
 import { useDispatch, useSelector } from "react-redux";
 import SendForm from './SendForm/SendForm.jsx'
-import styles from './DashHome.module.css'
 import { useEffect } from "react";
 import { TableForms } from "./TableForms/TableForms.jsx";
 import { getForms } from "../../socket.js";
 import { uploadValues } from "../../redux/slice.js";
+import LoaderDash from './LoaderDash/LoaderDash.jsx'
+import styles from './DashHome.module.css'
 
 
 export default function DashHome() {
@@ -18,10 +19,9 @@ export default function DashHome() {
   return (
     <div className={styles.dashhome}>
       
-    {user===admin?<SendForm/>:null}
+    {user===admin && values?<SendForm/>:null}
     {values&&<TableForms forms={values}/>}
-
-      
+     {!values&&<LoaderDash/>} 
     </div>
   );
 }
