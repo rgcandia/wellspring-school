@@ -5,13 +5,17 @@ import { Link } from "react-router-dom";
 import styles from "./TableForms.module.css";
 
 export function TableForms({ forms }) {
-  useEffect(() => {}, [forms]);
+ 
+  useEffect(() => {
+  
+  }, [forms]);
 
   return (
     <Box className={styles.tablecontainer}>
-      <Typography variant='h5' component='p' className={styles.tabletitle}>
-        Tus formularios
-      </Typography>
+      
+        {forms.length?<>
+        <Typography variant="h5" component="p" className={styles.tabletitle}>
+        Tus formularios</Typography>
       <table className={styles.table}>
         <thead>
           <tr>
@@ -20,18 +24,30 @@ export function TableForms({ forms }) {
           </tr>
         </thead>
         <tbody>
-          {forms.map((form) => (
-            <tr key={form.id}>
-              <td>
-                <Link to={`formulario/${form.id}`} className={styles.link}>
-                  {form.id}
-                </Link>
-              </td>
-              <td>{form.pending ? "Yes" : "No"}</td>
-            </tr>
-          ))}
+          {forms.map((form) => {
+          
+            return (
+              <tr
+              key={form.id}
+                className={form.pending ? styles.pendingRow : null}
+                >
+                <td>
+                  <Link
+                    to={`formulario/${form.id}`}
+                    className={styles.link}
+                    >
+                    {form.id}
+                  </Link>
+                </td>
+                <td>{form.pending ? "Yes" : "No"}</td>
+              </tr>
+            )
+          })}
         </tbody>
-      </table>
+          
+      </table> </> :null
+     }
+     {!forms.length ?<Typography>No tienes formularios en la base de datos</Typography>:null}
     </Box>
   );
 }

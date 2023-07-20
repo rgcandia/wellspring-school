@@ -1,6 +1,7 @@
 .dashhome{
     width: 100%;
-   display: grid;
-   grid-template-columns: 1fr;
- 
+    height: 100%;
+    padding-left: 10%;
+    padding-right: 10%;
+    overflow-y:auto;
 }
