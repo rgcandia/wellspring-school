@@ -1,6 +1,7 @@
 import  { useState } from "react";
-import { Typography, TextField, Button } from "@mui/material";
-import {setForm} from '../../../../socket.js'
+import { Typography, TextField, Button, Box } from "@mui/material";
+import {setForm} from '../../../socket.js'
+import styles from './SendForm.module.css'
 export default function Formulario() {
   const [email, setEmail] = useState("");
 
@@ -17,6 +18,9 @@ export default function Formulario() {
   };
 
   return (
+    <Box className={styles.sendform}>
+
+    
     <form onSubmit={handleSubmit}>
       <Typography variant="h4" gutterBottom>
         Enviar formulario
@@ -35,5 +39,6 @@ export default function Formulario() {
         Enviar
       </Button>
     </form>
+    </Box>
   );
 }
