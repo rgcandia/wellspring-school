@@ -16,8 +16,10 @@ export default function Dashboard (){
         initListener(dispatch)
         getForms(dispatch,uploadValues)
         user?listenersocket(user,dispatch,uploadValues):null
-    
         },[user]);
+     useEffect(()=>{
+        window.scrollTo(0, 0);
+     },[])   
 return(<Box className={styles.dashboard}>
        
        {!user&&<Login/>}
