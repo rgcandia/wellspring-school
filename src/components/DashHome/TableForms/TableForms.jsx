@@ -21,7 +21,7 @@ export function TableForms({ forms }) {
           <tr>
             <th>ID</th>
             <th>Pending</th>
-            <th>Fecha de creación</th>
+            <th>Creation date</th>
           </tr>
         </thead>
         <tbody>

@@ -21,7 +21,7 @@ export default function DashHome() {
       
     {user===admin && values?<SendForm/>:null}
     {values&&<TableForms forms={values}/>}
-     {!values&&<LoaderDash/>} 
+     {(!values&&user)&&<LoaderDash/>} 
     </div>
   );
 }
