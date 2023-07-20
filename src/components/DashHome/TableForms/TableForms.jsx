@@ -7,7 +7,7 @@ import styles from "./TableForms.module.css";
 export function TableForms({ forms }) {
  
   useEffect(() => {
-  
+ 
   }, [forms]);
 
   return (
@@ -47,7 +47,8 @@ export function TableForms({ forms }) {
           
       </table> </> :null
      }
-     {!forms.length ?<Typography>No tienes formularios en la base de datos</Typography>:null}
+     {!forms.length  ?<Typography>No tienes formularios en la base de datos</Typography>:null}
+    
     </Box>
   );
 }

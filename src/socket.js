@@ -14,8 +14,7 @@ export const initSocket = (user)=>{
 export const getForms = (dispatch,action)=>{
   if (!socket) return null;
   socket.on('forms',(value)=>{
-
-    console.log("llega formulario")
+    if(!value)return dispatch(action([]))
     return dispatch(action(value))
   })
 
