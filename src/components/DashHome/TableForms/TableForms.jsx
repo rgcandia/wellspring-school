@@ -21,6 +21,7 @@ export function TableForms({ forms }) {
           <tr>
             <th>ID</th>
             <th>Pending</th>
+            <th>Fecha de creación</th>
           </tr>
         </thead>
         <tbody>
@@ -40,6 +41,7 @@ export function TableForms({ forms }) {
                   </Link>
                 </td>
                 <td>{form.pending ? "Yes" : "No"}</td>
+                <td>{form.createdAt.split("T")[0]}</td>
               </tr>
             )
           })}
