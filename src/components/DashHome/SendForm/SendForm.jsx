@@ -1,9 +1,11 @@
 import  { useState } from "react";
-import { Typography, TextField, Button, Box } from "@mui/material";
-import {setForm} from '../../../socket.js'
+import { Typography, TextField, Button, Box} from "@mui/material";
+import {setForm} from '../../../socket.js';
+import {alertSendFormOk} from '../../../services.js'
 import styles from './SendForm.module.css'
 export default function Formulario() {
   const [email, setEmail] = useState("");
+
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -11,34 +13,37 @@ export default function Formulario() {
     setForm(email);
     // Limpia el campo de email después de enviar el formulario
     setEmail("");
+    alertSendFormOk()
   };
 
   const handleEmailChange = (event) => {
     setEmail(event.target.value);
   };
 
+
+
   return (
     <Box className={styles.sendform}>
+      <form onSubmit={handleSubmit}>
+        <Typography variant="h4" gutterBottom>
+          Enviar formulario
+        </Typography>
+        <TextField
+          type="email"
+          label="Email"
+          value={email}
+          onChange={handleEmailChange}
+          variant="outlined"
+          fullWidth
+          margin="normal"
+          required
+        />
+        <Button type="submit" variant="contained" color="primary">
+          Enviar
+        </Button>
+      </form>
 
-    
-    <form onSubmit={handleSubmit}>
-      <Typography variant="h4" gutterBottom>
-        Enviar formulario
-      </Typography>
-      <TextField
-        type="email"
-        label="Email"
-        value={email}
-        onChange={handleEmailChange}
-        variant="outlined"
-        fullWidth
-        margin="normal"
-        required
-      />
-      <Button type="submit" variant="contained" color="primary">
-        Enviar
-      </Button>
-    </form>
+      
     </Box>
   );
 }
