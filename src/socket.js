@@ -1,10 +1,15 @@
 import io from "socket.io-client";
 let socket;
-
+const apiUrlDeploy = import.meta.env.VITE_URL_API_DEPLOY;
+const apiUrlDev = import.meta.env.VITE_URL_API_DEV;
+const apiUrl = import.meta.env.PROD ? apiUrlDeploy : apiUrlDev;
+console.log( import.meta.env.VITE_URL_API_DEV)
 // inicia socket con el usuario en el evento join
 export const initSocket = (user)=>{
-    socket = io('https://wellspring-api.adaptable.app/',{transports:['websocket']})
-    //socket = io('http://localhost:4001/',{transports:['websocket']})
+
+   
+
+    socket = io(apiUrl,{transports:['websocket']})
     console.log('Connecting socket...')
     if (socket && user) {
         socket.emit("join", user);
