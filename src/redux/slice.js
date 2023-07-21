@@ -2,7 +2,8 @@ import { createSlice } from '@reduxjs/toolkit'
 
 const initialState = {
   user: null,
-  values:null
+  values:null,
+  models:null,
 }
 
 export const stateSlice = createSlice({
@@ -15,10 +16,13 @@ export const stateSlice = createSlice({
     },
     uploadValues:(state,action)=>{
       state.values=action.payload
+    },
+    uploadModels:(state,action)=>{
+      state.models=action.payload
     }
   },
 })
 
 // Action creators are generated for each case reducer function
-export const { uploadUser,uploadValues } = stateSlice.actions
+export const { uploadUser,uploadValues,uploadModels } = stateSlice.actions
 export default stateSlice.reducer

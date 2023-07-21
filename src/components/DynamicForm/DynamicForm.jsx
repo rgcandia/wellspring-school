@@ -11,9 +11,11 @@ export default function DynamicForm() {
   const navigate = useNavigate();
   const formRef = useRef(null);
   const { id } = useParams();
-  const { values,user } = useSelector((state) => state.value);
+  const { values,user,models } = useSelector((state) => state.value);
   const data = values?.find((item) => item.id == id);
- const model = data?.model;
+ const modelId = data?.model;
+ const modelForm =  models?.find((e)=>e.id==modelId);
+const model =  modelForm?.data;
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -50,16 +52,18 @@ export default function DynamicForm() {
         <Typography variant='h6' color='primary'>Volver</Typography>
       </Link>
      </Box>
+    {model&&
      <Box className={styles.form} component="form" ref={formRef} onSubmit={handleSubmit}>
-      {model ? (
-        <>
-          {model.map((e) => {
-            return <ItemForm key={e.id} item={e} />;
-          })}
-        </>
-      ) : null}
-      <Button type="submit" variant="contained">Enviar</Button>
-    </Box>
+     {model ? (
+       <>
+         {model.map((e) => {
+           return <ItemForm key={e.id} item={e} />;
+         })}
+       </>
+     ) : null}
+     <Button type="submit" variant="contained">Enviar</Button>
+   </Box>
+    }
    </Box>
   );
 }
