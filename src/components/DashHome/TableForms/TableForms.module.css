@@ -48,4 +48,11 @@
     font-weight: bold;
   }
   
-  
+  @media(max-width:865px){
+   
+    .tablecontainer{
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+  }
