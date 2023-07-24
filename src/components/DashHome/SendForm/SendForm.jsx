@@ -7,6 +7,7 @@ import {
   Box,
   MenuItem, // Importa MenuItem desde MUI
 } from "@mui/material";
+import InsertDriveFileIcon from '@mui/icons-material/InsertDriveFile';
 import { setForm } from "../../../socket.js";
 import { alertSendFormOk } from "../../../services.js";
 import styles from "./SendForm.module.css";
@@ -39,9 +40,14 @@ export default function Formulario() {
   return (
     <Box className={styles.sendform}>
       <form onSubmit={handleSubmit}>
-        <Typography variant="h4" gutterBottom>
+        <Box sx={{display:'flex'}}>
+      <InsertDriveFileIcon/>
+      <Typography variant='body1'>
+          
           Enviar formulario
         </Typography>
+        </Box>
+        
         <TextField
           type="email"
           label="Email"
