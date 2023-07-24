@@ -32,7 +32,7 @@ export default function Propuesta(){
  </Typography>
  </Box>
  <Box className={styles.image}>
-       <img src={propuesta} alt="imagen propuesta educativa" />
+       <img src={propuesta} alt="imagen propuesta educativa" loading='lazy' />
  </Box>
   </Box>)
 }

@@ -31,7 +31,7 @@ export default function Orienctacion (){
         </Typography>
         </Box>
         <Box className={styles.image}>
-            <img src={orientacion} alt='imagen de maestra de inicial, rodeada de alumnos  atentos a la explicación'/>
+            <img src={orientacion} alt='imagen de maestra de inicial, rodeada de alumnos  atentos a la explicación' loading='lazy'/>
         </Box>
     </Box>)
 }

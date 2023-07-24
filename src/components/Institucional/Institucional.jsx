@@ -28,6 +28,7 @@ export default function Institucional (){
   <img
   src={background}
   alt='background cabecera institucional'
+  loading='lazy'
   />
  
 </Box>

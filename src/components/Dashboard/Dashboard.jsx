@@ -11,7 +11,7 @@ import {Outlet} from 'react-router-dom'
 import styles from './Dashboard.module.css';
 export default function Dashboard (){
     const dispatch =useDispatch();
-    const {user} = useSelector(state=>state.value)
+    const {user,values} = useSelector(state=>state.value)
     useEffect(()=>{
         initListener(dispatch)
         getForms(dispatch,uploadValues,uploadModels)
@@ -19,11 +19,12 @@ export default function Dashboard (){
         },[user]);
      useEffect(()=>{
         window.scrollTo(0, 0);
-     },[])   
+     },[values])   
 return(<Box className={styles.dashboard}>
        
        {!user&&<Login/>}
-       {user&&<Unlog/>}   
+       {user&&<Unlog/>} 
+     
        <Outlet/> 
     </Box>)
 }

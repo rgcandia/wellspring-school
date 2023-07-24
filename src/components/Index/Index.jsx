@@ -11,7 +11,7 @@ export default function Index() {
      className={styles.container}>
 
         <Box className={styles.box1}>
-            <img className={styles.image} alt={image} src={image} />
+            <img className={styles.image} alt={image} src={image} loading='lazy'/>
         </Box>
         <Box className={styles.box2}>
             <BoxInstitucional />
