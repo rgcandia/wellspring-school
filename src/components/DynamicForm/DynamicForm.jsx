@@ -3,8 +3,10 @@ import { useSelector } from "react-redux";
 import { Link, useParams, Navigate, useNavigate } from "react-router-dom";
 import { Box, Button, Typography } from "@mui/material";
 import ItemForm from "./ItemForm/ItemForm";
+import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import {updateForm} from '../../socket.js'
 import {alertSendFormOk} from '../../services.js'
+import Body from "./Body/Body";
 import styles from "./DynamicForm.module.css";
 
 export default function DynamicForm() {
@@ -47,10 +49,12 @@ const model =  modelForm?.data;
    <Box className={styles.containerForm}>
      <Box>
       <Link to='/dashboard' style={{textDecoration:'none'}}>
-        <Typography variant='h6' color='primary'>Volver</Typography>
+        <Typography variant='h6' color='primary'>  <ArrowBackIcon/> Volver</Typography>
       </Link>
      </Box>
-    {model&&
+    {data&&<Body data={data}/>}
+    
+    {/* {model&&
      <Box className={styles.form} component="form" ref={formRef} onSubmit={handleSubmit}>
      {model ? (
        <>
@@ -61,7 +65,7 @@ const model =  modelForm?.data;
      ) : null}
      <Button type="submit" variant="contained">Enviar</Button>
    </Box>
-    }
+    } */}
    </Box>
   );
 }
