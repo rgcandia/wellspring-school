@@ -7,11 +7,13 @@ import ItemForm from '../ItemForm/ItemForm';
 import { updateForm } from '../../../socket';
 import { alertSendFormOk } from '../../../services';
 import { useNavigate } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 const Transition = React.forwardRef(function Transition(props, ref) {
     return <Slide direction="up" ref={ref} {...props} />;
   });
 export default function Body({ model, data }) {
     const navigate =  useNavigate();
+    const {user} = useSelector(state=>state.value)
   const { id, email, pending, createdAt, updatedAt } = data;
   const formRef = useRef(null)
   // Formatear la fecha de creación y actualización para mostrar solo la fecha y hora
@@ -44,6 +46,7 @@ export default function Body({ model, data }) {
     // Ejecutar fetch a la API con el formulario en el body
     // ...
     updateForm({id,form:arrayForm,user})
+    setOpen(false)
     alertSendFormOk()
     .then((result)=>{
       if(result.isConfirmed){
@@ -98,7 +101,7 @@ export default function Body({ model, data }) {
             </Toolbar>
         </AppBar>
           {model&&
-     <Box className={styles.form} component="form" ref={formRef} onSubmit={()=>{}}>
+     <Box className={styles.form} component="form" ref={formRef} onSubmit={handleSubmit}>
      {model ? (
        <>
          {model.map((e) => {
