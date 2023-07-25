@@ -100,18 +100,21 @@ export default function Body({ model, data }) {
                 </IconButton>
             </Toolbar>
         </AppBar>
+        <Box sx={{display:'flex',justifyContent:'center',alignContent:'center'}}>
+
           {model&&
      <Box className={styles.form} component="form" ref={formRef} onSubmit={handleSubmit}>
      {model ? (
        <>
          {model.map((e) => {
            return <ItemForm key={e.id} item={e} />;
-         })}
+          })}
        </>
      ) : null}
      <Button type="submit" variant="contained">Enviar</Button>
    </Box>
     }
+    </Box>
      </Dialog>
     </Box>
   );

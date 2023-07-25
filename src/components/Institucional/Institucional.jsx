@@ -12,16 +12,7 @@ export default function Institucional (){
     const handleChange = (event, newValue) => {
         setValue(newValue);
       };
-    // const [orientacion,setOrientacion] =  useState(false)
-    // const [propuesta,setPropuesta] = useState(true)
-    // const handlePropuesta = ()=>{
-    //     setPropuesta(!propuesta)
-    //     setOrientacion(!orientacion)
-    // }
-    // const handleOrientacion = ()=>{
-    //     setPropuesta(!propuesta)
-    //     setOrientacion(!orientacion)
-    // }
+
     return(<Box className={styles.institucional}>
 
 <Box className={styles.image}>
@@ -36,14 +27,7 @@ export default function Institucional (){
     <Texto/>
 </Box>
 <Box className={styles.container}>
-    {/* <Box>
-        <Button variant='text' onClick={handlePropuesta}>PROPUESTA EDUCATIVA</Button>
-        <Button variant='text' onClick={handleOrientacion}>DEPARTAMENTO DE ORIENTACION</Button>
-    </Box>
-    <Box>
-        {orientacion&&<Orientacion/>}
-        {propuesta&&<Propuesta/>}
-    </Box> */} 
+
      <Box  className={styles.box1} sx={{ borderBottom: 1, borderColor: 'divider' }}>
     <Tabs centered={true} value={value} onChange={handleChange} aria-label="basic tabs example">
         <Tab label='PROPUESTA EDUCATIVA' value='1'/>

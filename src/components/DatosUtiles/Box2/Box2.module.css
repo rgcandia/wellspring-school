@@ -1,8 +1,7 @@
-.dashboard{
-    height: 100%;
+.box2{
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 10px;
-    
+    padding-left: 20%;
+    padding-right: 20%;
 }
