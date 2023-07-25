@@ -1,16 +1,4 @@
 
-  /* DynamicForm.module.css */
-.form {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    width: 100%;
-    
-  }
-  .form button{
-    max-width: 150px;
-  }
-
   .containerForm{
     margin: 20px;
     display: flex;

@@ -16,3 +16,30 @@
   flex-direction: row;
   gap: 10px;
 }
+
+  /* DynamicForm.module.css */
+  .form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+    padding-right: 10%;
+    padding-left: 10%;
+    padding-top: 2%;
+    
+  }
+  .form button{
+    max-width: 150px;
+  }
+
+  .containerForm{
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    padding-right: 10%;
+    padding-left: 10%;
+    max-width: 1000px;
+  }
