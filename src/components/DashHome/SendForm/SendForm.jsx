@@ -22,6 +22,7 @@ export default function Formulario() {
     event.preventDefault();
     // Aquí puedes realizar la acción que desees con el email y el modelo ingresado
     setForm(email, selectedModel);
+    console.log(selectedModel)
     // Limpia los campos después de enviar el formulario
     setEmail("");
     setSelectedModel("");

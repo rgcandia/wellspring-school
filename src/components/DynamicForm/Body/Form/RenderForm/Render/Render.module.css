@@ -1,0 +1,38 @@
+/* DynamicForm.module.css */
+.containerForm{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 50px;
+    
+    
+    }
+    .form {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        width: 70%;
+        padding-right: 10%;
+        padding-left: 10%;
+        padding-top: 2%;
+        
+        
+      }
+      .form button{
+        max-width: 150px;
+      }
+    
+
+
+  @media(max-width:800px){
+    .form{
+      width: 100%;
+    }
+  }
+  @media(max-width:500px){
+    .form{
+      padding-right: 1%;
+      padding-left: 1%;
+    }
+  }

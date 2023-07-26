@@ -7,7 +7,7 @@ import styles from "./DynamicForm.module.css";
 
 export default function DynamicForm() {
   const { id } = useParams();
-  const { values,models } = useSelector((state) => state.value);
+  const { values,models,user } = useSelector((state) => state.value);
   const data = values?.find((item) => item.id == id);
  const modelId = data?.model;
  const modelForm =  models?.find((e)=>e.id==modelId);
@@ -21,7 +21,7 @@ const model =  modelForm?.data;
         <Typography variant='h6' color='primary'>  <ArrowBackIcon/> Volver</Typography>
       </Link>
      </Box>
-    {data&&<Body data={data} model={model}/>}
+    {data&&<Body data={data} model={model} user={user}/>}
 
    </Box>
   );
