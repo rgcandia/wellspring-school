@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
 import { Box, Button, Typography, TextField, MenuItem, FormControlLabel, Checkbox, FormGroup } from '@mui/material';
+import {updateForm} from '../../../../../socket.js'
 import styles from './RenderForm.module.css'; // Importar los estilos
 import { useSelector } from 'react-redux';
-
-export default function RenderForm() {
-  const { selectedForm } = useSelector((state) => state.data);
-  const { id, email } = selectedForm;
-
+import {alertSendFormOk} from '../../../../../services.js'
+import { useNavigate } from 'react-router-dom';
+export default function RenderForm({handleClose}) {
+  const navigate = useNavigate()
+  const {user,selectedForm} = useSelector(state=>state.data)
   const [formData, setFormData] = useState({
     nombre: '',
     correo: '',
@@ -100,11 +101,24 @@ export default function RenderForm() {
   const handleSubmit = (event) => {
     event.preventDefault();
     // Aquí puedes enviar los datos del formulario a donde desees
-    console.log({ ...formData, lugar: Object.keys(checkedOptions).filter((key) => checkedOptions[key]) });
-    console.log("section2")
-    console.log({...formData2,section1:Object.keys(checkedOptionsSelect1).filter((key) => checkedOptionsSelect1[key]),
+    
+    const form = [{
+      id:'main',
+      data:{ ...formData, lugar: Object.keys(checkedOptions).filter((key) => checkedOptions[key]) }
+    },
+  {
+    id:'teatro',
+    data:{...formData2,section1:Object.keys(checkedOptionsSelect1).filter((key) => checkedOptionsSelect1[key]),
       section2:Object.keys(checkedOptionsSelect2).filter((key) => checkedOptionsSelect2[key]),
-      section3:Object.keys(checkedOptionsSelect3).filter((key) => checkedOptionsSelect3[key]) })
+      section3:Object.keys(checkedOptionsSelect3).filter((key) => checkedOptionsSelect3[key]) }
+  }
+]
+
+//envio la data
+updateForm({id:selectedForm.id,form,user});
+handleClose();
+alertSendFormOk();
+
   };
 
   const options = ['Teatro', 'Tinglado', 'Campo de deporte', 'Otro'];

@@ -8,7 +8,6 @@ const Transition = React.forwardRef(function Transition(props, ref) {
   });
 export default function Form({isOpen,handleClose}){
    
-    const [form,setForm] = useState(null)
    
     const handlerExit = ()=>{
        handleClose(false)
@@ -32,7 +31,7 @@ TransitionComponent={Transition}
         </IconButton>
     </Toolbar>
 </AppBar>
-<RenderForm />
+<RenderForm handleClose={handlerExit}/>
 </Dialog> 
     )
 }
