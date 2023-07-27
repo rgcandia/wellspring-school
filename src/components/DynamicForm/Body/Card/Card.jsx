@@ -8,8 +8,10 @@ export default function Card ({handleOpen}){
   const { id } = useParams();
 const {forms} = useSelector(state=>state.data)
 const selectedForm = forms?.find(e=>e.id==id)
-
     const [data , setData] =  useState(selectedForm);
+    useEffect(() => {
+      setData(selectedForm);
+    }, [selectedForm]);
     const {email,pending,formattedCreatedAt,formattedUpdatedAt} =  data;
 
     function compareStrings(string1, string2) {

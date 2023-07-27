@@ -25,7 +25,7 @@ const {forms} = useSelector(state=>state.data)
         <Typography variant='h6' color='primary'>  <ArrowBackIcon/> Volver</Typography>
       </Link>
      </Box>
-    <Body/>
+    <Body />
     </>}
 
    </Box>
