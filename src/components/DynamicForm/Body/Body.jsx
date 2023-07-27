@@ -4,11 +4,14 @@ import Card from './Card/Card.jsx';
 import Form from './Form/Form.jsx';
 import { useState } from 'react';
 import styles from './Body.module.css';
-export default function Body({ model, data,user }) {
+import { useSelector } from 'react-redux';
+import { useParams } from 'react-router-dom';
+export default function Body() {
+
   const [open,setOpen] = useState(false)
   return (
     <Box className={styles.container}>
-     <Card form={data} handleOpen={setOpen} />
+     <Card  handleOpen={setOpen} />
      <Form isOpen={open} handleClose={setOpen}/>
     </Box>
   );

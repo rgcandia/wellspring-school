@@ -1,9 +1,17 @@
 import { Typography, Box , Button } from '@mui/material'
 import styles from './Card.module.css'
-import { useState } from 'react'
-export default function Card ({form, handleOpen}){
-    const [data , setData] =  useState(form);
-    const {id,email,pending,formattedCreatedAt,formattedUpdatedAt} =  data;
+import { useEffect, useState } from 'react'
+import { useParams } from 'react-router-dom';
+import { useSelector } from 'react-redux';
+export default function Card ({handleOpen}){
+
+  const { id } = useParams();
+const {forms} = useSelector(state=>state.data)
+const selectedForm = forms?.find(e=>e.id==id)
+
+    const [data , setData] =  useState(selectedForm);
+    const {email,pending,formattedCreatedAt,formattedUpdatedAt} =  data;
+
     function compareStrings(string1, string2) {
       return string1 !== string2;
     }
@@ -11,6 +19,9 @@ export default function Card ({form, handleOpen}){
     const handleClickOpen = ()=>{
       handleOpen(true);
     }
+    useEffect(()=>{
+      console.log(pending)
+    },[forms])
     return (
         <Box className={styles.container}>
       <Box>

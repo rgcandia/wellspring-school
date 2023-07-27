@@ -4,10 +4,13 @@ import {updateForm} from '../../../../../socket.js'
 import styles from './RenderForm.module.css'; // Importar los estilos
 import { useSelector } from 'react-redux';
 import {alertSendFormOk} from '../../../../../services.js'
-import { useNavigate } from 'react-router-dom';
+import { useNavigate,useParams } from 'react-router-dom';
+
 export default function RenderForm({handleClose}) {
+  const { id } = useParams();
   const navigate = useNavigate()
-  const {user,selectedForm} = useSelector(state=>state.data)
+  const {user,forms} = useSelector(state=>state.data)
+  const selectedForm = forms?.find(e=>e.id==id)
   const [formData, setFormData] = useState({
     nombre: '',
     correo: '',
@@ -115,7 +118,7 @@ export default function RenderForm({handleClose}) {
 ]
 
 //envio la data
-updateForm({id:selectedForm.id,form,user});
+updateForm({id:selectedForm?.id,form,user});
 handleClose();
 alertSendFormOk();
 
