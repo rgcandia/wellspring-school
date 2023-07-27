@@ -5,6 +5,7 @@ import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import Body from "./Body/Body";
 import styles from "./DynamicForm.module.css";
 import { uploadSelectedForm } from "../../redux/slice";
+import { useEffect } from "react";
 
 export default function DynamicForm() {
   const dispatch = useDispatch()
@@ -17,6 +18,9 @@ const model =  modelForm?.data;
 const handleClick = (data)=>{
   dispatch(uploadSelectedForm(data))
  }
+ useEffect(()=>{
+  dispatch(uploadSelectedForm(data))
+ },[data])
 
   return (
    <Box className={styles.containerForm}>

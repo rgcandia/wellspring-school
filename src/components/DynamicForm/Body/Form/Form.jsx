@@ -6,7 +6,7 @@ import styles from './Form.module.css'
 const Transition = React.forwardRef(function Transition(props, ref) {
     return <Slide direction="up" ref={ref} {...props} />;
   });
-export default function Form({isOpen,handleClose,user,model}){
+export default function Form({isOpen,handleClose}){
    
     const [form,setForm] = useState(null)
    
@@ -32,8 +32,7 @@ TransitionComponent={Transition}
         </IconButton>
     </Toolbar>
 </AppBar>
-<h1>Estamos trabajando</h1>
-<RenderForm model={model}/>
+<RenderForm />
 </Dialog> 
     )
 }

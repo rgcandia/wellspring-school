@@ -1,0 +1,46 @@
+.containerForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    margin: 0 auto;
+    padding: 16px;
+    width: 100%;
+  }
+  .section2{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 70%;
+  }
+  .section1 {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 70%;
+  }
+  
+  .checkboxGroup {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  
+  .checkboxItem {
+    display: flex;
+    align-items: center;
+  }
+  
+  .button {
+    margin-top: 16px;
+  }
+  
+  @media(max-width:700px){
+    .section1{
+        width: 100%;
+    }
+    .section2{
+      width: 100%;
+    }
+  }

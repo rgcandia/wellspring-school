@@ -9,7 +9,7 @@ export default function Body({ model, data,user }) {
   return (
     <Box className={styles.container}>
      <Card form={data} handleOpen={setOpen} />
-     <Form isOpen={open} handleClose={setOpen} model={model} user={user}/>
+     <Form isOpen={open} handleClose={setOpen}/>
     </Box>
   );
 }
