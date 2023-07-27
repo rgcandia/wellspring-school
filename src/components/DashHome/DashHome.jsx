@@ -10,18 +10,18 @@ import styles from './DashHome.module.css'
 
 export default function DashHome() {
   const dispatch = useDispatch()
-  const { values ,user} = useSelector(state => state.value);
+  const { forms ,user} = useSelector(state => state.data);
   const admin = "admin@wellspring.edu.ar"
   useEffect(()=>{
     getForms(dispatch,uploadValues,uploadModels)
-  },[values])
+  },[forms])
                                              
   return (
     <div className={styles.dashhome}>
       
-    {user===admin && values?<SendForm/>:null}
-    {values&&<TableForms forms={values}/>}
-     {(!values&&user)&&<LoaderDash/>} 
+    {user===admin && forms?<SendForm/>:null}
+    {forms&&<TableForms forms={forms}/>}
+     {(!forms&&user)&&<LoaderDash/>} 
     </div>
   );
 }

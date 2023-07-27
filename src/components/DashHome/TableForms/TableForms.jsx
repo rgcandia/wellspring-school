@@ -1,14 +1,18 @@
 // TableForms.js
 import { Box, Typography } from "@mui/material";
 import React, { useEffect } from "react";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import ListIcon from '@mui/icons-material/List';
+import {uploadSelectedForm}from '../../../redux/slice.js'
 import styles from "./TableForms.module.css";
 
 export function TableForms({ forms }) {
- const {models} = useSelector(state=>state.value)
- 
+ const {models} = useSelector(state=>state.data)
+ const dispatch = useDispatch()
+ const handleClick = (data)=>{
+  dispatch(uploadSelectedForm(data))
+ }
   useEffect(() => {
     
     
@@ -45,6 +49,7 @@ export function TableForms({ forms }) {
                   <Link
                     to={`formulario/${form.id}`}
                     className={styles.link}
+                    onClick={()=>{handleClick(form)}}
                     >
                     {form.id}
                   </Link>

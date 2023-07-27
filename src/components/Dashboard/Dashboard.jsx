@@ -6,12 +6,11 @@ import Login from "./Login/Login";
 import { useSelector,useDispatch } from "react-redux";
 import { initListener } from "../../services";
 import Unlog from "./Unlog/Unlog";
-import DashHome from '../DashHome/DashHome.jsx';
 import {Outlet} from 'react-router-dom'
 import styles from './Dashboard.module.css';
 export default function Dashboard (){
     const dispatch =useDispatch();
-    const {user,values} = useSelector(state=>state.value)
+    const {user,forms} = useSelector(state=>state.data)
     useEffect(()=>{
         initListener(dispatch)
         getForms(dispatch,uploadValues,uploadModels)
@@ -19,7 +18,7 @@ export default function Dashboard (){
         },[user]);
      useEffect(()=>{
         window.scrollTo(0, 0);
-     },[values])   
+     },[forms])   
 return(<Box className={styles.dashboard}>
        
        {!user&&<Login/>}

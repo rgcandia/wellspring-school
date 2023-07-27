@@ -1,7 +1,7 @@
 import { configureStore } from '@reduxjs/toolkit'
-import  value  from './slice'
+import  data  from './slice'
 export const store = configureStore({
   reducer: {
-    value 
+    data 
   },
 })

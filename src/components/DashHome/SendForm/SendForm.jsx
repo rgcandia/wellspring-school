@@ -16,7 +16,7 @@ export default function Formulario() {
   const [email, setEmail] = useState("");
   const [selectedModel, setSelectedModel] = useState(""); // Nuevo estado local para el selector
 
-  const { models } = useSelector((state) => state.value); // Obtén el array de modelos desde el estado global
+  const { models } = useSelector((state) => state.data); // Obtén el array de modelos desde el estado global
 
   const handleSubmit = (event) => {
     event.preventDefault();
