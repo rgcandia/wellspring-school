@@ -21,8 +21,10 @@ export default function Formulario() {
   const handleSubmit = (event) => {
     event.preventDefault();
     // Aquí puedes realizar la acción que desees con el email y el modelo ingresado
-    setForm(email, selectedModel);
-    console.log(selectedModel)
+    const modelId = models.find(e=>e.name===selectedModel).id
+  
+    setForm(email, modelId);
+    
     // Limpia los campos después de enviar el formulario
     setEmail("");
     setSelectedModel("");

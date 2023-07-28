@@ -18,12 +18,12 @@ export default function Dashboard (){
         },[user]);
      useEffect(()=>{
         window.scrollTo(0, 0);
-     },[forms])   
+     },[forms])
 return(<Box className={styles.dashboard}>
-       
+
        {!user&&<Login/>}
-       {user&&<Unlog/>} 
-     
-       <Outlet/> 
+       {user&&<Unlog/>}
+         
+       <Outlet/>
     </Box>)
 }
