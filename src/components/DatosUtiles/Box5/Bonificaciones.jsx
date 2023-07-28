@@ -3,7 +3,7 @@ import LooksOneIcon from '@mui/icons-material/LooksOne';
 import LooksTwoIcon from '@mui/icons-material/LooksTwo';
 import Looks3Icon from '@mui/icons-material/Looks3';
 export  default function Modificaciones(){
-    return (<Box  sx={{marginTop:'50px'}}>
+    return (<Box  sx={{marginTop:'50px'} }>
                 <Typography>
                     En la búsqueda de una mejora continua y trabajando para brindarles mayores beneficios a quienes integran
                     la Comunidad Wellspring, nos es muy grato presentarles el plan de promociones para el Cliclo Lectivo 2019.

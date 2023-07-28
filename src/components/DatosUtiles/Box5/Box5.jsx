@@ -9,7 +9,7 @@ export default function Box5(){
         setValue(newValue);
       };
 
-    return(<Box sx={{paddingRight:'10%',paddingLeft:'10%'}}>
+    return(<Box sx={{paddingRight:'10%',paddingLeft:'10%',backgroundColor:'secondary.main'}}>
        <Box>
        <Tabs centered={true} value={value} onChange={handleChange}>
         <Tab label='CONDICIONES' value='1'/>
