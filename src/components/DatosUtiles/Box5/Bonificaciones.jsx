@@ -10,7 +10,7 @@ export  default function Modificaciones(){
                     Para hacer efectivas estas Bonificaciones, deberán acercarse a la Administración y completar el formulario correspondiente.
                 </Typography>
                <Box sx={{marginTop:'20px'}}>
-               <Box sx={{display:'flex',flexDirection:'row'}}>
+               <Box sx={{display:'flex',flexDirection:'row', marginBottom:'20px'}}>
                 <LooksOneIcon/>
                     <Typography>
                             BONIFICACION EN K1, K2, K3 Y K4:
@@ -23,19 +23,39 @@ export  default function Modificaciones(){
                 </Typography>
                </Box>
                 <Box >
-                <Box sx={{display:'flex',flexDirection:'row',marginTop:'20px'}}><LooksTwoIcon/>
+                <Box sx={{display:'flex',flexDirection:'row',marginTop:'20px',marginBottom:'20px'}}><LooksTwoIcon/>
                     <Typography>
                         PRESENTACION DE FAMILIAS:
-                    </Typography></Box>
+                    </Typography>
+                    </Box>
+                    <Box sx={{marginBottom:'20px'}}>
                     <Typography>
                         <strong>La familia que presenta debe completar y firmar el formulario en la administración, sin excepción, antes de que la familia presentada visite por primera vez el colegio.</strong>
                     </Typography>
+                    </Box>
+                    <Box>
+                        <Typography>
+                           <strong> a) </strong>Bonificación del 25% del valor de la cuota de escolaridad neta por el total de un ciclo lectivo en wellspring School, para el menor de los hijosde aquella familia que presente una nueva 
+                            familia que inscriba al menos un hijo en nuestra escuela desde K5 hasta 6to Año de la Escuela Secundaria.
+                        </Typography>
+                        <Typography>
+                            <strong>b)</strong> Bonificación del 25% sobre el valor resultante en el punto a) en caso de presentar una segunda familia y así sucesivamente. 
+                        </Typography>
+                    </Box>
                 </Box>
                 <Box sx={{display:'flex',flexDirection:'row',marginTop:'20px'}}>
                 <Looks3Icon/>
+                    
+                    <Box sx={{marginBottom:'20px'}}>
                     <Typography>
                         BONIFICACION PARA HIJOS DE EGRESADOS WELLSPRING:
                     </Typography>
+                    </Box>
+                    
                 </Box>
+                <Typography>
+                        Bonificación del 25% sobre la cuota de escolaridad neta para el menor de los hijos de ex alumnos que hayan cursado al menos toda la 
+                        Secundaria en Wellspring School
+                    </Typography>
     </Box>)
 }
