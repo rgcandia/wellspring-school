@@ -27,7 +27,7 @@ export default function Login() {
 
   return (
     <Box className={styles.login}>
-       <Typography variant='h2' color='primary' sx={{textAlign:'center'}}>
+       <Typography variant='h4' color='primary' sx={{textAlign:'center'}}>
             Login
         </Typography>
       <TextField

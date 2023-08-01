@@ -36,7 +36,9 @@ export default function RenderForm({handleClose}) {
   const [section1Enabled, setSection1Enabled] = useState(true);
   const [checkedOptions, setCheckedOptions] = useState({});
   const [isTeatroChecked, setIsTeatroChecked] = useState(false);
+  const [isTingladoChecked,setIsTingladoChecked] = useState(false);
   const [isSection2Enabled, setIsSection2Enabled] = useState(false);
+  const [isCampoDeporteChecked,setisCampoDeporteChecked] = useState(false);
   const [checkedOptionsSelect1, setCheckedOptionsSelect1] = useState({});
   const [checkedOptionsSelect2, setCheckedOptionsSelect2] = useState({});
   const [checkedOptionsSelect3, setCheckedOptionsSelect3] = useState({});
@@ -84,9 +86,21 @@ export default function RenderForm({handleClose}) {
       ...prevCheckedOptions,
       [name]: checked
     }));
-    if (name === 'Teatro') {
-      setIsTeatroChecked(checked);
+    switch(name){
+      case 'Teatro':
+        setIsTeatroChecked(checked);
+        break;
+      case 'Tinglado':
+        setIsTingladoChecked(checked);
+        break;
+      case 'Campo de deporte':
+        setisCampoDeporteChecked(checked);
+        break;
+      default:
+
+        
     }
+
   };
 
   const handleNextButtonClick = () => {
@@ -350,17 +364,30 @@ alertSendFormOk();
   </Box>
 )}
 
-      <Box sx={{ display: 'flex', justifyContent: 'center', gap: '20px' }}>
-        {section1Enabled && (
+
+      <Box sx={{display:'flex',flexDirection:'column'}}>
+      {!isSection2Enabled && isTeatroChecked && (
+          <Button onClick={handleNextButtonClick}>Teatro</Button>
+        )}
+        {
+          isTingladoChecked&&(
+            <Button > Tinglado</Button>
+          )
+        }
+        {
+          isCampoDeporteChecked &&(
+            <Button>Campo de deporte</Button>
+          )
+        }
+        {!section1Enabled && (
+          <Button onClick={handleBackButtonClick}>Volver</Button>
+        )}
+      </Box>
+      <Box >
+              {section1Enabled && (
           <Button type='submit' variant='contained' color='primary' className={styles.button}>
             Enviar
           </Button>
-        )}
-        {!isSection2Enabled && isTeatroChecked && (
-          <Button onClick={handleNextButtonClick}>Sección Teatro</Button>
-        )}
-        {isSection2Enabled && (
-          <Button onClick={handleBackButtonClick}>Volver</Button>
         )}
       </Box>
     </Box>

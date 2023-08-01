@@ -28,10 +28,10 @@ export const getForms = (dispatch,action,action2)=>{
 
 }
 
-export const setForm = (email)=>{
+export const setForm = (email,idModel)=>{
 
   if(!socket) return null;
-  socket.emit("setForm",email);
+  socket.emit("setForm",{email,idModel});
   
 }
 
