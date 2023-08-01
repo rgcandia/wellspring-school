@@ -38,6 +38,8 @@ export default function RenderForm({handleClose}) {
   const [isTeatroChecked, setIsTeatroChecked] = useState(false);
   const [isTingladoChecked,setIsTingladoChecked] = useState(false);
   const [isSection2Enabled, setIsSection2Enabled] = useState(false);
+  const [isSection3Enabled, setIsSection3Enabled] = useState(false);
+  const [isSection4Enabled,setIsSection4Enabled] = useState(false);
   const [isCampoDeporteChecked,setisCampoDeporteChecked] = useState(false);
   const [checkedOptionsSelect1, setCheckedOptionsSelect1] = useState({});
   const [checkedOptionsSelect2, setCheckedOptionsSelect2] = useState({});
@@ -137,7 +139,19 @@ handleClose();
 alertSendFormOk();
 
   };
+const handleTinglado = (event)=>{
+ if(isTingladoChecked){
+  setIsSection3Enabled(true);
+  setSection1Enabled(false);
+ }
 
+}
+const handleCampoDeporte = (event)=>{
+  if(isCampoDeporteChecked){
+    setIsSection4Enabled(true);
+    setSection1Enabled(false);
+  }
+}
   const options = ['Teatro', 'Tinglado', 'Campo de deporte', 'Otro'];
   
   return (
@@ -366,17 +380,17 @@ alertSendFormOk();
 
 
       <Box sx={{display:'flex',flexDirection:'column'}}>
-      {!isSection2Enabled && isTeatroChecked && (
+      { section1Enabled && isTeatroChecked && (
           <Button onClick={handleNextButtonClick}>Teatro</Button>
         )}
         {
-          isTingladoChecked&&(
-            <Button > Tinglado</Button>
+          section1Enabled&&isTingladoChecked&&(
+            <Button onClick={handleTinglado}> Tinglado</Button>
           )
         }
         {
-          isCampoDeporteChecked &&(
-            <Button>Campo de deporte</Button>
+         section1Enabled && isCampoDeporteChecked &&(
+            <Button onClick={handleCampoDeporte}>Campo de deporte</Button>
           )
         }
         {!section1Enabled && (
