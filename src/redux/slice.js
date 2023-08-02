@@ -4,7 +4,7 @@ const initialState = {
   user: null,
   forms:null,
   models:null,
-  selectedForm:null,
+  form:null,
 }
 
 export const stateSlice = createSlice({
@@ -21,12 +21,12 @@ export const stateSlice = createSlice({
     uploadModels:(state,action)=>{
       state.models=action.payload
     },
-    uploadSelectedForm:(state,action)=>{
+    updateForm:(state,action)=>{
     state.selectedForm = action.payload
     }
   },
 })
 
 // Action creators are generated for each case reducer function
-export const { uploadUser,uploadValues,uploadModels,uploadSelectedForm } = stateSlice.actions
+export const { uploadUser,uploadValues,uploadModels,updateForm } = stateSlice.actions
 export default stateSlice.reducer

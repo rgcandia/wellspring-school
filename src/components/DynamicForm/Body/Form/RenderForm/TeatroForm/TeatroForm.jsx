@@ -1,6 +1,6 @@
 import { Box } from "@mui/material"
-export default function TingladoForm(){
+export default function TeatroForm(){
   return (<Box>
-    <h1>Tinglado</h1>
+  <h1>Teatro</h1>
   </Box>)
 }
