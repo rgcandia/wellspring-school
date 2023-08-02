@@ -27,10 +27,17 @@ export default function RenderForm() {
         {currentSection === "Home" && <HomeForm />}
         {currentSection === "Teatro" && <TeatroForm />}
         {currentSection === "Tinglado" && <TingladoForm />}
-  
+        {currentSection === "Campo de Deporte" && <CampoDeporteForm/>}
+
+     
+      {currentSection === "Home" &&
+       <Box sx={{ display: 'flex', justifyContent: 'center' ,margin:'20px'}}>
+       <Button type='submit' variant='contained'>Enviar</Button>
+     </Box> }
+     {currentSection !== "Home" && 
       <Box sx={{ display: 'flex', justifyContent: 'center' ,margin:'20px'}}>
-        <Button type='submit' variant='contained'>Enviar</Button>
-      </Box>
+      <Button variant='outlined'>Volver</Button>
+    </Box>}
     </Box>
   );
 }
