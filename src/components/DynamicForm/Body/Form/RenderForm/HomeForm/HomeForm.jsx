@@ -16,8 +16,6 @@ export default function HomeForm() {
   }
   const handleCheckChange = (event) => {
     const { name, checked } = event.target;
-    console.log("aca llegó")
-    console.log(event.target.checked)
     dispatch(updateForm({ ...formData, home: { ...formData.home, lugar:{...formData.home?.lugar,[name]: checked} } }));
   };
 
@@ -25,7 +23,7 @@ export default function HomeForm() {
     { name: "Teatro", label: "Teatro" },
     { name: "Tinglado", label: "Tinglado" },
     { name: "CampoDeporte", label: "Campo de Deporte" },
-    { name: "Otra", label: "Otra" },
+    { name: "Otro", label: "Otro" },
   ];
   return (
     <Box className={styles.home}>

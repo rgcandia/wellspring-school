@@ -5,7 +5,12 @@ const initialState = {
   forms:null,
   models:null,
   form:{
-    home:null,
+    home:{lugar:{
+      Teatro:false,
+      Tinglado:false,
+      CampoDeporte:false,
+      Otro:false,
+    }},
     teatro:null,
     tinglado:null,
     campoDeporte:null,

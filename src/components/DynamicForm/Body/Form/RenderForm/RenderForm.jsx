@@ -5,10 +5,11 @@ import TeatroForm from './TeatroForm/TeatroForm.jsx';
 import HomeForm from './HomeForm/HomeForm.jsx';
 import styles from './RenderForm.module.css';
 import { useState } from "react";
+import { useSelector } from "react-redux";
 
 
 export default function RenderForm() {
-
+ const {Teatro,Tinglado,Otro,CampoDeporte} = useSelector(state=>state.data.form.home.lugar);
   const [currentSection, setCurrentSection] = useState("Home"); // Valor inicial es "Home"
 
   // Función para cambiar la sección actual
@@ -32,6 +33,23 @@ export default function RenderForm() {
         {currentSection === "Campo de Deporte" && <CampoDeporteForm/>}
 
      
+
+
+     
+
+      {Teatro&&
+        <Button onClick={()=>{handleChangeSection("Teatro")}}>Teatro</Button>
+        }
+         {Tinglado&&
+        <Button>Tinglado</Button>
+        }
+         {CampoDeporte&&
+        <Button>Campo de Deporte</Button>
+        }
+         {Otro&&
+        <Button>Otro</Button>
+        }
+        
       {currentSection === "Home" &&
        <Box sx={{ display: 'flex', justifyContent: 'center' ,margin:'20px'}}>
        <Button type='submit' variant='contained'>Enviar</Button>

@@ -15,7 +15,14 @@ export default function Form({isOpen,handleClose}){
     
     const handlerExit = ()=>{
        handleClose(false)
-       dispatch(updateForm({home:null,teatro:null,tinglado:null,campoDeporte:null}))
+       dispatch(updateForm({home:{
+        lugar:{
+            Teatro:false,
+            Tinglado:false,
+            CampoDeporte:false,
+            Otro:false,
+          }
+       },teatro:null,tinglado:null,campoDeporte:null}))
     }
     return (
         <Dialog
