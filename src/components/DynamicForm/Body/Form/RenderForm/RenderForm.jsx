@@ -6,7 +6,9 @@ import HomeForm from './HomeForm/HomeForm.jsx';
 import styles from './RenderForm.module.css';
 import { useState } from "react";
 
+
 export default function RenderForm() {
+
   const [currentSection, setCurrentSection] = useState("Home"); // Valor inicial es "Home"
 
   // Función para cambiar la sección actual

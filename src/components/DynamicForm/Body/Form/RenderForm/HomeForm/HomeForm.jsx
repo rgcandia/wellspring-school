@@ -18,12 +18,14 @@ export default function HomeForm() {
       type='email'
       label='Correo Electrónico'
       onChange={handleChange}
+      fullWidth
      />
      <TextField
      id='nombreCompleto'
      type='text'
      label='Nombre y Apellido'
      onChange={handleChange}
+     fullWidth
      />
 
     </Box>
