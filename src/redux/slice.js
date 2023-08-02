@@ -4,7 +4,13 @@ const initialState = {
   user: null,
   forms:null,
   models:null,
-  form:null,
+  form:{
+    home:null,
+    teatro:null,
+    tinglado:null,
+    campoDeporte:null,
+    otro:null,
+  },
 }
 
 export const stateSlice = createSlice({
@@ -22,7 +28,7 @@ export const stateSlice = createSlice({
       state.models=action.payload
     },
     updateForm:(state,action)=>{
-    state.selectedForm = action.payload
+    state.form = action.payload
     }
   },
 })

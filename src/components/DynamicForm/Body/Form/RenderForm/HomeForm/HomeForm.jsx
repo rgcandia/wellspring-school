@@ -1,13 +1,31 @@
-import { Box ,TextField  } from "@mui/material"
-import {updateForm} from '../../../../../../redux/slice.js'
+import { Box, TextField} from "@mui/material";
 import { useDispatch, useSelector } from "react-redux";
-const formData = useSelector((state) => state.data.form);
-export default function HomeForm(){
+import { updateForm } from "../../../../../../redux/slice.js";
+import styles from './HomeForm.module.css'
+export default function HomeForm() {
   const dispatch = useDispatch();
-  return (<Box>
-    
-    <h1>Home Form</h1>
-   
-    
-  </Box>)
+  const formData = useSelector((state) => state.data.form);
+
+  const handleChange = (e) => {
+    const { value, id } = e.target;
+    dispatch(updateForm({ ...formData, home: {...formData.home,[id]: value } }));
+  };
+  
+  return (
+    <Box className={styles.home}>
+     <TextField
+      id='email'
+      type='email'
+      label='Correo Electrónico'
+      onChange={handleChange}
+     />
+     <TextField
+     id='nombreCompleto'
+     type='text'
+     label='Nombre y Apellido'
+     onChange={handleChange}
+     />
+
+    </Box>
+  );
 }
