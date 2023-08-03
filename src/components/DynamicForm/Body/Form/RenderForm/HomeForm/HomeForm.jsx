@@ -43,6 +43,15 @@ export default function HomeForm() {
      fullWidth
      required
      />
+     
+<TextField
+id='nombreEvento'
+type='text'
+onChange={handleChange}
+fullWidth
+required
+label='Nombre del Evento'
+/>
         <TextField
         select
         name="sector"
@@ -83,14 +92,6 @@ export default function HomeForm() {
     />
     </Box>
 
-<TextField
-id='nombreEvento'
-type='text'
-onChange={handleChange}
-fullWidth
-required
-label='Nombre del Evento'
-/>
 
 <Box>
         <Typography><strong>Lugar</strong></Typography>
@@ -106,7 +107,7 @@ label='Nombre del Evento'
                 />
               }
               label={lugar.label}
-            />
+            />  
           ))}
         </FormGroup>
       </Box>
