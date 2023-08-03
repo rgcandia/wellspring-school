@@ -16,7 +16,12 @@ const initialState = {
       alumnos:false,
       sobreEscenario:false,
       bajoEscenario:false,
-      dataSobreEscenario:null,
+      dataSobreEscenario:{
+        pieMicrofono:false,
+        proyector:false,
+        puntero:false,
+      pantalla:false,
+    computadora:false,      },
       dataBajoEscenario:null,
     },
     tinglado:null,

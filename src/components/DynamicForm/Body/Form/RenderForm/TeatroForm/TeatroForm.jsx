@@ -23,15 +23,22 @@ export default function TeatroForm(){
   }            
   
   const handleChangeSelecFondo = (e)=>{
+    
 const {value,name} = e.target;
+console.log(value)
 dispatch(updateForm({...formData,teatro:{...formData.teatro,dataSobreEscenario:{...formData.teatro.dataSobreEscenario,[name]:value}}}))
               
   } 
     
   const handleChangeSobreEscenario =(e)=>{
     const {value,id} = e.target;
-    dispatch(updateForm({...formData,dataSobreEscenario:{...formData.dataSobreEscenario,[id]:value}}))
+    dispatch(updateForm({...formData,teatro:{...formData.teatro,dataSobreEscenario:{...formData.teatro.dataSobreEscenario,[id]:value}}}))
   }
+
+  const handleCheckChangeBajoEscenario = (e)=>{
+    const {name, checked} = e.target;
+    dispatch(updateForm({...formData,teatro:{...formData.teatro,dataSobreEscenario:{...formData.teatro.dataSobreEscenario,[name]:checked}}}))
+  }  
   return (<Box>
   <Box >
          <Typography><strong>Sección Teatro</strong></Typography>
@@ -127,6 +134,68 @@ dispatch(updateForm({...formData,teatro:{...formData.teatro,dataSobreEscenario:{
           <MenuItem value='Blanco'>Blanco</MenuItem>
           <MenuItem value='Ninguno'>Ninguno</MenuItem>
          </TextField>
+         <TextField
+         id='sillas'
+         type='number'
+         label='Sillas'
+         fullWidth
+         onChange={handleChangeSobreEscenario}
+         />
+         <TextField
+         id='gradas'
+         type='number'
+         label='Gradas'
+         fullWidth
+         onChange={handleChangeSobreEscenario}
+         />
+         <TextField
+         id='micrófonoInalambrico'
+         type='number'
+         label='Micrófono inalámbrico (cantidad)'
+         fullWidth
+         onChange={handleChangeSobreEscenario}
+         />
+          <TextField
+         id='lucesYPulsadores'
+         type='number'
+         label='Luces y pulsadores'
+         fullWidth
+         onChange={handleChangeSobreEscenario}
+         />
+          <FormControlLabel
+      label='Pie de micrófono'
+      control={<Checkbox
+      checked={formData?.teatro.dataSobreEscenario.pieMicrofono || false}
+      name='pieMicrofono'
+      onChange={handleCheckChangeBajoEscenario}
+      />}
+    />
+          <FormControlLabel
+      label='Proyector sobre escenario'
+      control={<Checkbox
+      checked={formData?.teatro.dataSobreEscenario.proyector || false}
+      name='proyector'
+      onChange={handleCheckChangeBajoEscenario}
+      />}
+    />
+        <FormControlLabel
+      label='Puntero'
+      control={<Checkbox
+      checked={formData?.teatro.dataSobreEscenario.puntero || false}
+      name='puntero'
+      onChange={handleCheckChangeBajoEscenario}
+      />}
+    />
+ 
+ <FormControlLabel
+      label='Pantalla'
+      control={<Checkbox
+      checked={formData?.teatro.dataSobreEscenario.pantalla || false}
+      name='pantalla'
+      onChange={handleCheckChangeBajoEscenario}
+      />}
+    />
+    
       </Box>
     }
     </Box>
