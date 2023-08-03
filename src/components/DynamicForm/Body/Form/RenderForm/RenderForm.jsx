@@ -37,17 +37,17 @@ export default function RenderForm() {
 
      
 
-      {Teatro&&
+      {Teatro&& currentSection === "Home"&&
         <Button onClick={()=>{handleChangeSection("Teatro")}}>Teatro</Button>
         }
-         {Tinglado&&
-        <Button>Tinglado</Button>
+         {Tinglado && currentSection === "Home"&&
+        <Button  onClick={()=>{handleChangeSection("Tinglado")}}>Tinglado</Button>
         }
-         {CampoDeporte&&
-        <Button>Campo de Deporte</Button>
+         {CampoDeporte&& currentSection === "Home"&&
+        <Button  onClick={()=>{handleChangeSection("CampoDeporte")}}>Campo de Deporte</Button>
         }
-         {Otro&&
-        <Button>Otro</Button>
+         {Otro&& currentSection === "Home"&&
+        <Button  onClick={()=>{handleChangeSection("Otro")}}>Otro</Button>
         }
         
       {currentSection === "Home" &&
@@ -56,7 +56,7 @@ export default function RenderForm() {
      </Box> }
      {currentSection !== "Home" && 
       <Box sx={{ display: 'flex', justifyContent: 'center' ,margin:'20px'}}>
-      <Button variant='outlined'>Volver</Button>
+      <Button variant='outlined' onClick={()=>{handleChangeSection("Home")}}>Volver</Button>
     </Box>}
     </Box>
   );

@@ -106,7 +106,7 @@ label='Nombre del Evento'
                 />
               }
               label={lugar.label}
-            />
+            />  
           ))}
         </FormGroup>
       </Box>
