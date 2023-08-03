@@ -162,6 +162,13 @@ dispatch(updateForm({...formData,teatro:{...formData.teatro,dataSobreEscenario:{
          fullWidth
          onChange={handleChangeSobreEscenario}
          />
+           <TextField
+         id='alargues'
+         type='number'
+         label='Alargues(cantidad)'
+         fullWidth
+         onChange={handleChangeSobreEscenario}
+         />
           <FormControlLabel
       label='Pie de micrófono'
       control={<Checkbox
@@ -192,6 +199,14 @@ dispatch(updateForm({...formData,teatro:{...formData.teatro,dataSobreEscenario:{
       control={<Checkbox
       checked={formData?.teatro.dataSobreEscenario.pantalla || false}
       name='pantalla'
+      onChange={handleCheckChangeBajoEscenario}
+      />}
+    />
+     <FormControlLabel
+      label='Computadora'
+      control={<Checkbox
+      checked={formData?.teatro.dataSobreEscenario.computadora || false}
+      name='computadora'
       onChange={handleCheckChangeBajoEscenario}
       />}
     />
