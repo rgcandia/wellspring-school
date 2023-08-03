@@ -335,6 +335,27 @@ dispatch(updateForm({...formData,teatro:{...formData.teatro,dataSobreEscenario:{
       onChange={handleCheckChangeBajoEscenario}
       />}
     />
+          <TextField
+         id='observacionesCocina'
+         label='Observaciones Cocina'
+         multiline
+         rows={5}
+         onChange={handleChangeBajoEscenario}
+         />
+             <TextField
+         id='observacionesCompras'
+         label='Observaciones Compras'
+         multiline
+         rows={5}
+         onChange={handleChangeBajoEscenario}
+         />
+             <TextField
+         id='observacionesMantenimiento'
+         label='Observaciones Mantenimiento'
+         multiline
+         rows={5}
+         onChange={handleChangeBajoEscenario}
+         />
     </Box>
     }
     

@@ -56,7 +56,7 @@ const selectedForm = forms?.find(e=>e.id==id)
 <Typography variant="body1" className={styles.field}>
   <strong>Estado:</strong> 
 </Typography>
-{pending ? <Typography sx={{color:'red'}}>pendiente</Typography> : <Typography sx={{color:'green'}}>completado</Typography>}
+{pending ? <Typography sx={{color:'red'}}>pendiente</Typography> : <Typography sx={{color:'green'}}>completo</Typography>}
 </Box>
 
 <Typography variant="body1" className={styles.field}>
