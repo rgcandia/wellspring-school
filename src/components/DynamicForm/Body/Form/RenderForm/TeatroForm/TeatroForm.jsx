@@ -1,6 +1,7 @@
 import { Box , Typography, FormControlLabel,Checkbox, TextField, FormGroup, MenuItem} from "@mui/material"
 import { useDispatch, useSelector } from "react-redux";
 import { updateForm } from "../../../../../../redux/slice.js";
+import styles from './TeatroForm.module.css'
 export default function TeatroForm(){
   //instancias
   const dispatch = useDispatch();
@@ -235,7 +236,7 @@ dispatch(updateForm({...formData,teatro:{...formData.teatro,dataSobreEscenario:{
       />}
     />
     {formData.teatro.bajoEscenario &&
-    <Box sx={{display:'flex',flexDirection:'column',gap:'10px'}}>
+    <Box sx={{display:'flex',flexDirection:'column',gap:'10px'}} className={styles.bajoEscenario}>
        <TextField
          id='pupitres'
          type='number'
