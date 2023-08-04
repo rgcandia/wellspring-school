@@ -1,49 +1,10 @@
 import { createSlice } from '@reduxjs/toolkit'
-
+import { estructuraFormulario } from './service.js'
 const initialState = {
   user: null,
   forms:null,
   models:null,
-  form:{
-    home:{lugar:{
-      Teatro:false,
-      Tinglado:false,
-      CampoDeporte:false,
-      Otro:false,
-    }},
-    teatro:{
-      padres:false,
-      alumnos:false,
-      sobreEscenario:false,
-      bajoEscenario:false,
-
-      dataSobreEscenario:{
-        pieMicrofono:false,
-        proyector:false,
-        puntero:false,
-      pantalla:false,
-    computadora:false,  
-      },
-      dataBajoEscenario:{
-        proyector:false,
-        fondoPrensa:false,
-        computadora:false,
-        alargue:false,
-        aireAcondicionado:false,
-        cafe:false,
-        aguaCaliente:false,
-      },
-    },
-    tinglado:null,
-    campoDeporte:{
-      parlantes:false,
-      computadora:false,
-      consola:false,
-      fondoPrensa:false,
-      podio:false,
-    },
-    otro:null,
-  },
+  form: estructuraFormulario,
 }
 
 export const stateSlice = createSlice({

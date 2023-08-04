@@ -336,6 +336,123 @@ dispatch(updateForm({...formData,teatro:{...formData.teatro,dataSobreEscenario:{
       onChange={handleCheckChangeBajoEscenario}
       />}
     />
+     <FormControlLabel
+      label='Té'
+      control={<Checkbox
+      checked={formData?.teatro.dataBajoEscenario.te || false}
+      name='te'
+      onChange={handleCheckChangeBajoEscenario}
+      />}
+    />
+     <FormControlLabel
+      label='Jarra con agua y hielo'
+      control={<Checkbox
+      checked={formData?.teatro.dataBajoEscenario.jarraAguaHielo || false}
+      name='jarraAguaHielo'
+      onChange={handleCheckChangeBajoEscenario}
+      />}
+    />
+    <FormControlLabel
+      label='Azúcar'
+      control={<Checkbox
+      checked={formData?.teatro.dataBajoEscenario.azucar || false}
+      name='azucar'
+      onChange={handleCheckChangeBajoEscenario}
+      />}
+    />
+    <FormControlLabel
+      label='Edulcorante'
+      control={<Checkbox
+      checked={formData?.teatro.dataBajoEscenario.edulcorante || false}
+      name='edulcorante'
+      onChange={handleCheckChangeBajoEscenario}
+      />}
+    />
+    <FormControlLabel
+      label='Vasos plásticos (frio)'
+      control={<Checkbox
+      checked={formData?.teatro.dataBajoEscenario.vasosPlasticos || false}
+      name='vasosPlasticos'
+      onChange={handleCheckChangeBajoEscenario}
+      />}
+    />
+    
+    <FormControlLabel
+      label='Vasos telgopor (calor)'
+      control={<Checkbox
+      checked={formData?.teatro.dataBajoEscenario.vasosTelgopor || false}
+      name='vasosTelgopor'
+      onChange={handleCheckChangeBajoEscenario}
+      />}
+    />
+  <FormControlLabel
+      label='Vasos vidrio'
+      control={<Checkbox
+      checked={formData?.teatro.dataBajoEscenario.vasoVidrio || false}
+      name='vasoVidrio'
+      onChange={handleCheckChangeBajoEscenario}
+      />}
+    />
+      <FormControlLabel
+      label='Batidores'
+      control={<Checkbox
+      checked={formData?.teatro.dataBajoEscenario.batidores || false}
+      name='batidores'
+      onChange={handleCheckChangeBajoEscenario}
+      />}
+    />
+     <FormControlLabel
+      label='Servilleta'
+      control={<Checkbox
+      checked={formData?.teatro.dataBajoEscenario.servilleta || false}
+      name='servilleta'
+      onChange={handleCheckChangeBajoEscenario}
+      />}
+    />
+    
+    <TextField
+         id='sandwichesMiga'
+         type='number'
+         label='Sandwiches de miga (cantidad)'
+         fullWidth
+         onChange={handleChangeBajoEscenario}
+         />
+    <TextField
+         id='medialunas'
+         type='number'
+         label='Medialunas (cantidad)'
+         fullWidth
+         onChange={handleChangeBajoEscenario}
+         />
+
+        <TextField
+         id='musica'
+         label='Música'
+         multiline
+         rows={5}
+         onChange={handleChangeBajoEscenario}
+         helperText="En el caso de canciones patrias, aclarar cuáles son y el orden.
+         Resto de la música entregar en pendrive en formato mp3, enumeradas conforme al orden en que serán 
+         reproducidas en el acto"
+         />
+      <TextField
+         id='video'
+         label='Video o presentación'
+         multiline
+         rows={5}
+         onChange={handleChangeBajoEscenario}
+         helperText="En el caso de utilizar proyector, entregar los archivos en pendrive en formato mp4(video)
+          o pdf (presentacion power point). Si se llegara a usar más de un video, enumerarlos conforme
+          al orden en que serán reproducidos en el acto"
+         />
+    <TextField
+         id='observacionesComunicaciones'
+         label='Observaciones Comunicaciones'
+         multiline
+         rows={5}
+         onChange={handleChangeBajoEscenario}
+         />
+
           <TextField
          id='observacionesCocina'
          label='Observaciones Cocina'
