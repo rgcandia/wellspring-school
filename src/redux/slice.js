@@ -35,7 +35,13 @@ const initialState = {
       },
     },
     tinglado:null,
-    campoDeporte:null,
+    campoDeporte:{
+      parlantes:false,
+      computadora:false,
+      consola:false,
+      fondoPrensa:false,
+      podio:false,
+    },
     otro:null,
   },
 }

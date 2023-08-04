@@ -30,14 +30,14 @@ export default function RenderForm() {
         {currentSection === "Home" && <HomeForm />}
         {currentSection === "Teatro" && <TeatroForm />}
         {currentSection === "Tinglado" && <TingladoForm />}
-        {currentSection === "Campo de Deporte" && <CampoDeporteForm/>}
+        {currentSection === "CampoDeporte" && <CampoDeporteForm/>}
 
      
 
 
      
 
-      {Teatro&& currentSection === "Home"&&
+        {Teatro&& currentSection === "Home"&&
         <Button onClick={()=>{handleChangeSection("Teatro")}}>Teatro</Button>
         }
          {Tinglado && currentSection === "Home"&&
