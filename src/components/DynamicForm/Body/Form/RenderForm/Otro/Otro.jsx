@@ -1,65 +1,69 @@
-import { Box , Typography, FormControlLabel,Checkbox, TextField, MenuItem} from "@mui/material"
+import { Box , Typography, FormControlLabel,Checkbox, TextField, FormGroup, MenuItem} from "@mui/material"
 import { useDispatch, useSelector } from "react-redux";
 import { updateForm } from "../../../../../../redux/slice.js";
-import styles from './TingladoForm.module.css'
-export default function TingladoForm(){
+import styles from './Otro.module.css'
+export default function Otro(){
   //instanciase
   const dispatch = useDispatch();
   const formData = useSelector((state) => state.data.form);
-
+  const itemsFondoEscenario = [
+    {name:'5 paneles',label:'5 paneles'},
+    {name:'7 paneles',label:'7 paneles'},
+    {name:'s/fondo',label:'sin fondo'}
+  ]
   //funciones
               //funcion manejadora del dispatch 
   const handleChange = (e) => {
     const { value, id } = e.target;
-    dispatch(updateForm({ ...formData, tinglado: {...formData.tinglado,[id]: value } }));
+    dispatch(updateForm({ ...formData, otro: {...formData.otro,[id]: value } }));
   };
               //manejador de los check
   const handleCheckChange = (e)=>{
     const {name, checked} = e.target;
-    console.log('llega')
-    dispatch(updateForm({...formData,tinglado:{...formData.tinglado,[name]:checked}}))
+    dispatch(updateForm({...formData,otro:{...formData.otro,[name]:checked}}))
   }            
   
   const handleChangeSelecFondo = (e)=>{
     
 const {value,name} = e.target;
-dispatch(updateForm({...formData,tinglado:{...formData.tinglado,dataSobreEscenario:{...formData.tinglado.dataSobreEscenario,[name]:value}}}))
+console.log(value)
+dispatch(updateForm({...formData,otro:{...formData.otro,dataSobreEscenario:{...formData.otro.dataSobreEscenario,[name]:value}}}))
               
   } 
     
   const handleChangeSobreEscenario =(e)=>{
     const {value,id} = e.target;
-    dispatch(updateForm({...formData,tinglado:{...formData.tinglado,dataSobreEscenario:{...formData.tinglado.dataSobreEscenario,[id]:value}}}))
+    dispatch(updateForm({...formData,otro:{...formData.otro,dataSobreEscenario:{...formData.otro.dataSobreEscenario,[id]:value}}}))
   }
 
   const handleCheckChangeSobreEscenario = (e)=>{
     const {name, checked} = e.target;
-    dispatch(updateForm({...formData,tinglado:{...formData.tinglado,dataSobreEscenario:{...formData.tinglado.dataSobreEscenario,[name]:checked}}}))
+    dispatch(updateForm({...formData,otro:{...formData.otro,dataSobreEscenario:{...formData.otro.dataSobreEscenario,[name]:checked}}}))
   }  
   const handleChangeBajoEscenario =(e)=>{
     const {value,id} = e.target;
-    dispatch(updateForm({...formData,tinglado:{...formData.tinglado,dataBajoEscenario:{...formData.ttingladodataBajoEscenario,[id]:value}}}))
+    dispatch(updateForm({...formData,otro:{...formData.otro,dataBajoEscenario:{...formData.otro.dataBajoEscenario,[id]:value}}}))
   }
   const handleCheckChangeBajoEscenario = (e)=>{
     const {name, checked} = e.target;
-    dispatch(updateForm({...formData,tinglado:{...formData.teatro,dataBajoEscenario:{...formData.tinglado.dataBajoEscenario,[name]:checked}}}))
+    dispatch(updateForm({...formData,otro:{...formData.otro,dataBajoEscenario:{...formData.otro.dataBajoEscenario,[name]:checked}}}))
   }  
 
   return (<Box>
   <Box >
-         <Typography><strong>Sección Tinglado</strong></Typography>
+         <Typography><strong>Sección Teatro</strong></Typography>
  </Box>
     <Box>
     <FormControlLabel
       label='Padres'
       control={<Checkbox
-        checked={formData?.tinglado.padres || false}
+        checked={formData?.otro.padres || false}
         name='padres'
         onChange={handleCheckChange}
       />}
     />
-     {
-      formData.tinglado.padres &&
+    {
+      formData.otro.padres &&
       <TextField
       id='cantidadPadres'
       type='number'
@@ -73,13 +77,13 @@ dispatch(updateForm({...formData,tinglado:{...formData.tinglado,dataSobreEscenar
     <FormControlLabel
       label='Alumnos'
       control={<Checkbox
-      checked={formData?.tinglado.alumnos || false}
+      checked={formData?.otro.alumnos || false}
       name='alumnos'
       onChange={handleCheckChange}
       />}
     />
     {
-      formData.tinglado.alumnos&&
+      formData.otro.alumnos&&
       <TextField
       id='cantidadAlumnos'
       type='number'
@@ -93,13 +97,13 @@ dispatch(updateForm({...formData,tinglado:{...formData.tinglado,dataSobreEscenar
     <FormControlLabel
       label='Sobre el Escenario'
       control={<Checkbox
-      checked={formData?.tinglado.sobreEscenario || false}
+      checked={formData?.otro.sobreEscenario || false}
       name='sobreEscenario'
       onChange={handleCheckChange}
       />}
     />
     {
-      formData.tinglado.sobreEscenario &&
+      formData.otro.sobreEscenario &&
       <Box sx={{display:'flex',flexDirection:'column',gap:'10px'}}>
          <TextField
          select
@@ -164,7 +168,7 @@ dispatch(updateForm({...formData,tinglado:{...formData.tinglado,dataSobreEscenar
              <FormControlLabel
       label='Pie de micrófono'
       control={<Checkbox
-      checked={formData?.tinglado.dataSobreEscenario.pieMicrofono || false}
+      checked={formData?.otro.dataSobreEscenario.pieMicrofono || false}
       name='pieMicrofono'
       onChange={handleCheckChangeSobreEscenario}
       />}
@@ -187,7 +191,7 @@ dispatch(updateForm({...formData,tinglado:{...formData.tinglado,dataSobreEscenar
           <FormControlLabel
       label='Proyector sobre escenario'
       control={<Checkbox
-      checked={formData?.tinglado.dataSobreEscenario.proyector || false}
+      checked={formData?.otro.dataSobreEscenario.proyector || false}
       name='proyector'
       onChange={handleCheckChangeSobreEscenario}
       />}
@@ -195,7 +199,7 @@ dispatch(updateForm({...formData,tinglado:{...formData.tinglado,dataSobreEscenar
         <FormControlLabel
       label='Puntero'
       control={<Checkbox
-      checked={formData?.tinglado.dataSobreEscenario.puntero || false}
+      checked={formData?.otro.dataSobreEscenario.puntero || false}
       name='puntero'
       onChange={handleCheckChangeSobreEscenario}
       />}
@@ -204,7 +208,7 @@ dispatch(updateForm({...formData,tinglado:{...formData.tinglado,dataSobreEscenar
  <FormControlLabel
       label='Pantalla'
       control={<Checkbox
-      checked={formData?.tinglado.dataSobreEscenario.pantalla || false}
+      checked={formData?.otro.dataSobreEscenario.pantalla || false}
       name='pantalla'
       onChange={handleCheckChangeSobreEscenario}
       />}
@@ -212,7 +216,7 @@ dispatch(updateForm({...formData,tinglado:{...formData.tinglado,dataSobreEscenar
      <FormControlLabel
       label='Computadora'
       control={<Checkbox
-      checked={formData?.tinglado.dataSobreEscenario.computadora || false}
+      checked={formData?.otro.dataSobreEscenario.computadora || false}
       name='computadora'
       onChange={handleCheckChangeSobreEscenario}
       />}
@@ -226,12 +230,12 @@ dispatch(updateForm({...formData,tinglado:{...formData.tinglado,dataSobreEscenar
     <FormControlLabel
       label='Bajo el Escenario'
       control={<Checkbox
-      checked={formData?.tinglado.bajoEscenario || false}
+      checked={formData?.otro.bajoEscenario || false}
       name='bajoEscenario'
       onChange={handleCheckChange}
       />}
     />
-    {formData.tinglado.bajoEscenario &&
+    {formData.otro.bajoEscenario &&
     <Box sx={{display:'flex',flexDirection:'column',gap:'10px'}} className={styles.bajoEscenario}>
        <TextField
          id='pupitres'
@@ -278,7 +282,7 @@ dispatch(updateForm({...formData,tinglado:{...formData.tinglado,dataSobreEscenar
           <FormControlLabel
       label='Proyector Arriba'
       control={<Checkbox
-      checked={formData?.tinglado.dataBajoEscenario.proyector || false}
+      checked={formData?.otro.dataBajoEscenario.proyector || false}
       name='proyector'
       onChange={handleCheckChangeBajoEscenario}
       />}
@@ -287,7 +291,7 @@ dispatch(updateForm({...formData,tinglado:{...formData.tinglado,dataSobreEscenar
 <FormControlLabel
       label='Fondo de prensa'
       control={<Checkbox
-      checked={formData?.tinglado.dataBajoEscenario.fondoPrensa || false}
+      checked={formData?.otro.dataBajoEscenario.fondoPrensa || false}
       name='fondoPrensa'
       onChange={handleCheckChangeBajoEscenario}
       />}
@@ -295,7 +299,7 @@ dispatch(updateForm({...formData,tinglado:{...formData.tinglado,dataSobreEscenar
     <FormControlLabel
       label='Computadora'
       control={<Checkbox
-      checked={formData?.tinglado.dataBajoEscenario.computadora || false}
+      checked={formData?.otro.dataBajoEscenario.computadora || false}
       name='computadora'
       onChange={handleCheckChangeBajoEscenario}
       />}
@@ -303,7 +307,7 @@ dispatch(updateForm({...formData,tinglado:{...formData.tinglado,dataSobreEscenar
     <FormControlLabel
       label='Alargue'
       control={<Checkbox
-      checked={formData?.tinglado.dataBajoEscenario.alargue || false}
+      checked={formData?.otro.dataBajoEscenario.alargue || false}
       name='alargue'
       onChange={handleCheckChangeBajoEscenario}
       />}
@@ -311,7 +315,7 @@ dispatch(updateForm({...formData,tinglado:{...formData.tinglado,dataSobreEscenar
     <FormControlLabel
       label='Aire Acondicionado'
       control={<Checkbox
-      checked={formData?.tinglado.dataBajoEscenario.aireAcondicionado || false}
+      checked={formData?.otro.dataBajoEscenario.aireAcondicionado || false}
       name='aireAcondicionado'
       onChange={handleCheckChangeBajoEscenario}
       />}
@@ -319,7 +323,7 @@ dispatch(updateForm({...formData,tinglado:{...formData.tinglado,dataSobreEscenar
     <FormControlLabel
       label='Café'
       control={<Checkbox
-      checked={formData?.tinglado.dataBajoEscenario.cafe || false}
+      checked={formData?.otro.dataBajoEscenario.cafe || false}
       name='cafe'
       onChange={handleCheckChangeBajoEscenario}
       />}
@@ -327,7 +331,7 @@ dispatch(updateForm({...formData,tinglado:{...formData.tinglado,dataSobreEscenar
     <FormControlLabel
       label='Agua caliente'
       control={<Checkbox
-      checked={formData?.tinglado.dataBajoEscenario.aguaCaliente || false}
+      checked={formData?.otro.dataBajoEscenario.aguaCaliente || false}
       name='aguaCaliente'
       onChange={handleCheckChangeBajoEscenario}
       />}
@@ -335,7 +339,7 @@ dispatch(updateForm({...formData,tinglado:{...formData.tinglado,dataSobreEscenar
      <FormControlLabel
       label='Té'
       control={<Checkbox
-      checked={formData?.tinglado.dataBajoEscenario.te || false}
+      checked={formData?.otro.dataBajoEscenario.te || false}
       name='te'
       onChange={handleCheckChangeBajoEscenario}
       />}
@@ -343,7 +347,7 @@ dispatch(updateForm({...formData,tinglado:{...formData.tinglado,dataSobreEscenar
      <FormControlLabel
       label='Jarra con agua y hielo'
       control={<Checkbox
-      checked={formData?.tinglado.dataBajoEscenario.jarraAguaHielo || false}
+      checked={formData?.otro.dataBajoEscenario.jarraAguaHielo || false}
       name='jarraAguaHielo'
       onChange={handleCheckChangeBajoEscenario}
       />}
@@ -351,7 +355,7 @@ dispatch(updateForm({...formData,tinglado:{...formData.tinglado,dataSobreEscenar
     <FormControlLabel
       label='Azúcar'
       control={<Checkbox
-      checked={formData?.tinglado.dataBajoEscenario.azucar || false}
+      checked={formData?.otro.dataBajoEscenario.azucar || false}
       name='azucar'
       onChange={handleCheckChangeBajoEscenario}
       />}
@@ -359,7 +363,7 @@ dispatch(updateForm({...formData,tinglado:{...formData.tinglado,dataSobreEscenar
     <FormControlLabel
       label='Edulcorante'
       control={<Checkbox
-      checked={formData?.tinglado.dataBajoEscenario.edulcorante || false}
+      checked={formData?.otro.dataBajoEscenario.edulcorante || false}
       name='edulcorante'
       onChange={handleCheckChangeBajoEscenario}
       />}
@@ -367,7 +371,7 @@ dispatch(updateForm({...formData,tinglado:{...formData.tinglado,dataSobreEscenar
     <FormControlLabel
       label='Vasos plásticos (frio)'
       control={<Checkbox
-      checked={formData?.tinglado.dataBajoEscenario.vasosPlasticos || false}
+      checked={formData?.otro.dataBajoEscenario.vasosPlasticos || false}
       name='vasosPlasticos'
       onChange={handleCheckChangeBajoEscenario}
       />}
@@ -376,7 +380,7 @@ dispatch(updateForm({...formData,tinglado:{...formData.tinglado,dataSobreEscenar
     <FormControlLabel
       label='Vasos telgopor (calor)'
       control={<Checkbox
-      checked={formData?.tinglado.dataBajoEscenario.vasosTelgopor || false}
+      checked={formData?.otro.dataBajoEscenario.vasosTelgopor || false}
       name='vasosTelgopor'
       onChange={handleCheckChangeBajoEscenario}
       />}
@@ -384,7 +388,7 @@ dispatch(updateForm({...formData,tinglado:{...formData.tinglado,dataSobreEscenar
   <FormControlLabel
       label='Vasos vidrio'
       control={<Checkbox
-      checked={formData?.tinglado.dataBajoEscenario.vasoVidrio || false}
+      checked={formData?.otro.dataBajoEscenario.vasoVidrio || false}
       name='vasoVidrio'
       onChange={handleCheckChangeBajoEscenario}
       />}
@@ -392,7 +396,7 @@ dispatch(updateForm({...formData,tinglado:{...formData.tinglado,dataSobreEscenar
       <FormControlLabel
       label='Batidores'
       control={<Checkbox
-      checked={formData?.tinglado.dataBajoEscenario.batidores || false}
+      checked={formData?.otro.dataBajoEscenario.batidores || false}
       name='batidores'
       onChange={handleCheckChangeBajoEscenario}
       />}
@@ -400,7 +404,7 @@ dispatch(updateForm({...formData,tinglado:{...formData.tinglado,dataSobreEscenar
      <FormControlLabel
       label='Servilleta'
       control={<Checkbox
-      checked={formData?.tinglado.dataBajoEscenario.servilleta || false}
+      checked={formData?.otro.dataBajoEscenario.servilleta || false}
       name='servilleta'
       onChange={handleCheckChangeBajoEscenario}
       />}
@@ -474,7 +478,6 @@ dispatch(updateForm({...formData,tinglado:{...formData.tinglado,dataSobreEscenar
     }
     
     </Box>
-
     </Box>
     
     

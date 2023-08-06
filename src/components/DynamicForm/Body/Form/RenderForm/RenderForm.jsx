@@ -3,6 +3,7 @@ import CampoDeporteForm from './CampoDeporteForm/CampoDeporteForm.jsx';
 import TingladoForm from './TingladoForm/TingladoForm.jsx';
 import TeatroForm from './TeatroForm/TeatroForm.jsx';
 import HomeForm from './HomeForm/HomeForm.jsx';
+import Otros from './Otro/Otro.jsx'
 import styles from './RenderForm.module.css';
 import { useState } from "react";
 import { useSelector } from "react-redux";
@@ -31,7 +32,7 @@ export default function RenderForm() {
         {currentSection === "Teatro" && <TeatroForm />}
         {currentSection === "Tinglado" && <TingladoForm />}
         {currentSection === "CampoDeporte" && <CampoDeporteForm/>}
-
+        {currentSection === "Otro" && <Otros/>}
      
 
 

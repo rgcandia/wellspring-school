@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { updateForm } from "../../../../../../redux/slice.js";
 import styles from './TeatroForm.module.css'
 export default function TeatroForm(){
-  //instancias
+  //instanciase
   const dispatch = useDispatch();
   const formData = useSelector((state) => state.data.form);
   const itemsFondoEscenario = [

@@ -38,7 +38,39 @@ export const  estructuraFormulario = {
       
       },
     },
-    tinglado:null,
+    tinglado:{
+      padres:false,
+      alumnos:false,
+      sobreEscenario:false,
+      bajoEscenario:false,
+
+      dataSobreEscenario:{
+        pieMicrofono:false,
+        proyector:false,
+        puntero:false,
+      pantalla:false,
+    computadora:false,  
+      },
+      dataBajoEscenario:{
+        proyector:false,
+        fondoPrensa:false,
+        computadora:false,
+        alargue:false,
+        aireAcondicionado:false,
+        cafe:false,
+        aguaCaliente:false,
+        te:false,
+        jarraAguaHielo:false,
+        azucar:false,
+        edulcorante:false,
+        vasosPlasticos:false,
+        vasosTelgopor:false,
+        vasoVidrio:false,
+        batidores:false,
+        servilleta:false,
+      
+      },
+    },
     campoDeporte:{
       parlantes:false,
       computadora:false,
@@ -46,7 +78,39 @@ export const  estructuraFormulario = {
       fondoPrensa:false,
       podio:false,
     },
-    otro:null,
+    otro:{
+      padres:false,
+      alumnos:false,
+      sobreEscenario:false,
+      bajoEscenario:false,
+
+      dataSobreEscenario:{
+        pieMicrofono:false,
+        proyector:false,
+        puntero:false,
+      pantalla:false,
+    computadora:false,  
+      },
+      dataBajoEscenario:{
+        proyector:false,
+        fondoPrensa:false,
+        computadora:false,
+        alargue:false,
+        aireAcondicionado:false,
+        cafe:false,
+        aguaCaliente:false,
+        te:false,
+        jarraAguaHielo:false,
+        azucar:false,
+        edulcorante:false,
+        vasosPlasticos:false,
+        vasosTelgopor:false,
+        vasoVidrio:false,
+        batidores:false,
+        servilleta:false,
+      
+      },
+    },
   }
 
  
