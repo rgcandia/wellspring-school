@@ -31,7 +31,7 @@ export default function HomeForm() {
       id='email'
       type='email'
       label='Correo Electrónico'
-      value={formData.home.email || null}
+      value={formData.home.email || ""}
       onChange={handleChange}
       fullWidth
       required
@@ -40,7 +40,7 @@ export default function HomeForm() {
      id='nombreCompleto'
      type='text'
      label='Nombre y Apellido'
-     value={formData.home.nombreCompleto || null}
+     value={formData.home.nombreCompleto || ""}
      onChange={handleChange}
      fullWidth
      required
@@ -50,7 +50,7 @@ export default function HomeForm() {
 id='nombreEvento'
 type='text'
 onChange={handleChange}
-value={formData.home.nombreEvento || null}
+value={formData.home.nombreEvento || ""}
 fullWidth
 required
 label='Nombre del Evento'
@@ -78,7 +78,7 @@ label='Nombre del Evento'
     <TextField
      id='fecha'
      type='date'
-     value={formData.home.fecha || null}
+     value={formData.home.fecha || ""}
      onChange={handleChange}
      fullWidth
      required
@@ -91,7 +91,7 @@ label='Nombre del Evento'
     <TextField
     id="hora"
     type='time'nombreEvento
-    value={formData.home.hora || null}
+    value={formData.home.hora || ""}
     onChange={handleChange}
     fullWidth
     required
