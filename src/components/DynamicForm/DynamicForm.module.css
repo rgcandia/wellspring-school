@@ -1,12 +1,11 @@
 
   .containerForm{
-    margin: 20px;
+   
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     width: 100%;
-    padding-right: 10%;
-    padding-left: 10%;
     max-width: 1000px;
+  
   }
