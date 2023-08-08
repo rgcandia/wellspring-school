@@ -7,19 +7,28 @@ import Otros from './Otro/Otro.jsx'
 import styles from './RenderForm.module.css';
 import { useState } from "react";
 import { useSelector } from "react-redux";
+import { useParams } from 'react-router-dom';
+import { updateForm } from "../../../../../socket.js";
 
 
 export default function RenderForm() {
  const {Teatro,Tinglado,Otro,CampoDeporte} = useSelector(state=>state.data.form.home.lugar);
+ const {form,user} = useSelector(state=>state.data)
+ const { id } = useParams();
   const [currentSection, setCurrentSection] = useState("Home"); // Valor inicial es "Home"
 
   // Función para cambiar la sección actual
   const handleChangeSection = (sectionName) => {
     setCurrentSection(sectionName);
   };
-
+  // Funcion para enviar el formulario
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    updateForm({id,form,user})
+  }
+  
   return (
-    <Box component='form' className={styles.containerForm}>
+    <Box component='form' className={styles.containerForm} onSubmit={handleSubmit}>
       <Box sx={{ display: 'flex', justifyContent: 'center' }}>
         <Typography variant='h4'>Solicitud de Evento</Typography>
 
