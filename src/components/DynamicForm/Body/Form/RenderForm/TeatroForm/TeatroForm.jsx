@@ -253,6 +253,7 @@ dispatch(updateForm({...formData,teatro:{...formData.teatro,dataSobreEscenario:{
          type='number'
          label='Pupitres (cantidad)'
          fullWidth
+         value={formData?.teatro.dataBajoEscenario.pupitres || null}
          onChange={handleChangeBajoEscenario}
          />
             <TextField
@@ -260,6 +261,7 @@ dispatch(updateForm({...formData,teatro:{...formData.teatro,dataSobreEscenario:{
          type='number'
          label='Manteles (cantidad)'
          fullWidth
+         value={formData?.teatro.dataBajoEscenario.manteles || null}
          onChange={handleChangeBajoEscenario}
          />
            <TextField
@@ -267,6 +269,7 @@ dispatch(updateForm({...formData,teatro:{...formData.teatro,dataSobreEscenario:{
          type='number'
          label='Sillas (cantidad)'
          fullWidth
+         value={formData?.teatro.dataBajoEscenario.sillas || null}
          onChange={handleChangeBajoEscenario}
          />
             <TextField
@@ -274,6 +277,7 @@ dispatch(updateForm({...formData,teatro:{...formData.teatro,dataSobreEscenario:{
          type='number'
          label='Gradas (cantidad)'
          fullWidth
+         value={formData?.teatro.dataBajoEscenario.gradas || null}
          onChange={handleChangeBajoEscenario}
          />
             <TextField
@@ -281,6 +285,7 @@ dispatch(updateForm({...formData,teatro:{...formData.teatro,dataSobreEscenario:{
          type='number'
          label='Tarimas (cantidad)'
          fullWidth
+         value={formData?.teatro.dataBajoEscenario.tarimas || null}
          onChange={handleChangeBajoEscenario}
          />
             <TextField
@@ -288,6 +293,7 @@ dispatch(updateForm({...formData,teatro:{...formData.teatro,dataSobreEscenario:{
          type='number'
          label='Micrófono Inalambrico (cantidad)'
          fullWidth
+         value={formData?.teatro.dataBajoEscenario.microfonoInalambrico || null}
          onChange={handleChangeBajoEscenario}
          />
           <FormControlLabel
@@ -426,6 +432,7 @@ dispatch(updateForm({...formData,teatro:{...formData.teatro,dataSobreEscenario:{
          type='number'
          label='Sandwiches de miga (cantidad)'
          fullWidth
+         value={formData?.teatro.dataBajoEscenario.sandwichesMiga || null}
          onChange={handleChangeBajoEscenario}
          />
     <TextField
@@ -433,6 +440,7 @@ dispatch(updateForm({...formData,teatro:{...formData.teatro,dataSobreEscenario:{
          type='number'
          label='Medialunas (cantidad)'
          fullWidth
+         value={formData?.teatro.dataBajoEscenario.medialunas || null}
          onChange={handleChangeBajoEscenario}
          />
 
@@ -442,6 +450,7 @@ dispatch(updateForm({...formData,teatro:{...formData.teatro,dataSobreEscenario:{
          multiline
          rows={5}
          onChange={handleChangeBajoEscenario}
+         value={formData?.teatro.dataBajoEscenario.musica || null}
          helperText="En el caso de canciones patrias, aclarar cuáles son y el orden.
          Resto de la música entregar en pendrive en formato mp3, enumeradas conforme al orden en que serán 
          reproducidas en el acto"
@@ -452,6 +461,7 @@ dispatch(updateForm({...formData,teatro:{...formData.teatro,dataSobreEscenario:{
          multiline
          rows={5}
          onChange={handleChangeBajoEscenario}
+         value={formData?.teatro.dataBajoEscenario.video || null}
          helperText="En el caso de utilizar proyector, entregar los archivos en pendrive en formato mp4(video)
           o pdf (presentacion power point). Si se llegara a usar más de un video, enumerarlos conforme
           al orden en que serán reproducidos en el acto"
@@ -461,6 +471,7 @@ dispatch(updateForm({...formData,teatro:{...formData.teatro,dataSobreEscenario:{
          label='Observaciones Comunicaciones'
          multiline
          rows={5}
+         value={formData?.teatro.dataBajoEscenario.observacionesComunicaciones || null}
          onChange={handleChangeBajoEscenario}
          />
 
@@ -469,6 +480,7 @@ dispatch(updateForm({...formData,teatro:{...formData.teatro,dataSobreEscenario:{
          label='Observaciones Cocina'
          multiline
          rows={5}
+         value={formData?.teatro.dataBajoEscenario.observacionesCocina || null}
          onChange={handleChangeBajoEscenario}
          />
              <TextField
@@ -476,6 +488,7 @@ dispatch(updateForm({...formData,teatro:{...formData.teatro,dataSobreEscenario:{
          label='Observaciones Compras'
          multiline
          rows={5}
+         value={formData?.teatro.dataBajoEscenario.observacionesCompras || null}
          onChange={handleChangeBajoEscenario}
          />
              <TextField
@@ -483,6 +496,7 @@ dispatch(updateForm({...formData,teatro:{...formData.teatro,dataSobreEscenario:{
          label='Observaciones Mantenimiento'
          multiline
          rows={5}
+         value={formData?.teatro.dataBajoEscenario.observacionesMantenimiento || null}
          onChange={handleChangeBajoEscenario}
          />
     </Box>

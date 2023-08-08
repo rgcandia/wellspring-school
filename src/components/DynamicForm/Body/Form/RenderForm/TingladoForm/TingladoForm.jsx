@@ -38,11 +38,11 @@ dispatch(updateForm({...formData,tinglado:{...formData.tinglado,dataSobreEscenar
   }  
   const handleChangeBajoEscenario =(e)=>{
     const {value,id} = e.target;
-    dispatch(updateForm({...formData,tinglado:{...formData.tinglado,dataBajoEscenario:{...formData.ttingladodataBajoEscenario,[id]:value}}}))
+    dispatch(updateForm({...formData,tinglado:{...formData.tinglado,dataBajoEscenario:{...formData.tinglado.dataBajoEscenario,[id]:value}}}))
   }
   const handleCheckChangeBajoEscenario = (e)=>{
     const {name, checked} = e.target;
-    dispatch(updateForm({...formData,tinglado:{...formData.teatro,dataBajoEscenario:{...formData.tinglado.dataBajoEscenario,[name]:checked}}}))
+    dispatch(updateForm({...formData,tinglado:{...formData.tinglado,dataBajoEscenario:{...formData.tinglado.dataBajoEscenario,[name]:checked}}}))
   }  
 
   return (<Box>
@@ -64,6 +64,7 @@ dispatch(updateForm({...formData,tinglado:{...formData.tinglado,dataSobreEscenar
       id='cantidadPadres'
       type='number'
       label='Cantidad Padres'
+      value={formData.tinglado.cantidadPadres || null}
       onChange={handleChange}
       fullWidth
       />
@@ -84,6 +85,7 @@ dispatch(updateForm({...formData,tinglado:{...formData.tinglado,dataSobreEscenar
       id='cantidadAlumnos'
       type='number'
       label='Cantidad Alumnos'
+      value={formData.tinglado.cantidadAlumnos || null}
       onChange={handleChange}
       fullWidth
       />
@@ -106,6 +108,7 @@ dispatch(updateForm({...formData,tinglado:{...formData.tinglado,dataSobreEscenar
          name='fondoEscenario'
          label='Fondo de escenario blanco'
          onChange={handleChangeSelecFondo}
+         value={formData?.tinglado.dataSobreEscenario.fondoEscenario}
          fullWidth
          defaultValue='sin fondo'
          >
@@ -119,6 +122,7 @@ dispatch(updateForm({...formData,tinglado:{...formData.tinglado,dataSobreEscenar
          type='number'
          label='Sillas(cantidad)'
          fullWidth
+         value={formData?.tinglado.dataSobreEscenario.mesas || null}
          onChange={handleChangeSobreEscenario}
          />
          <TextField
@@ -126,6 +130,7 @@ dispatch(updateForm({...formData,tinglado:{...formData.tinglado,dataSobreEscenar
          type="number"
          label='Pupitres(cantidad)'
          fullWidth
+         value={formData?.tinglado.dataSobreEscenario.Pupitres || null}
          onChange={handleChangeSobreEscenario}
          />
          <TextField
@@ -134,6 +139,7 @@ dispatch(updateForm({...formData,tinglado:{...formData.tinglado,dataSobreEscenar
          label='Manteles'
          fullWidth
          defaultValue='Ninguno'
+         value={formData?.tinglado.dataSobreEscenario.manteles}
          onChange={handleChangeSelecFondo}
          >
           <MenuItem value='Azul'>Azul</MenuItem>
@@ -145,6 +151,7 @@ dispatch(updateForm({...formData,tinglado:{...formData.tinglado,dataSobreEscenar
          type='number'
          label='Sillas'
          fullWidth
+         value={formData?.tinglado.dataSobreEscenario.sillas || null}
          onChange={handleChangeSobreEscenario}
          />
          <TextField
@@ -152,6 +159,7 @@ dispatch(updateForm({...formData,tinglado:{...formData.tinglado,dataSobreEscenar
          type='number'
          label='Gradas'
          fullWidth
+         value={formData?.tinglado.dataSobreEscenario.gradas || null}
          onChange={handleChangeSobreEscenario}
          />
          <TextField
@@ -174,6 +182,7 @@ dispatch(updateForm({...formData,tinglado:{...formData.tinglado,dataSobreEscenar
          type='number'
          label='Luces y pulsadores'
          fullWidth
+         value={formData?.tinglado.dataSobreEscenario.lucesYPulsadores || null}
          onChange={handleChangeSobreEscenario}
          />
            <TextField
@@ -181,6 +190,7 @@ dispatch(updateForm({...formData,tinglado:{...formData.tinglado,dataSobreEscenar
          type='number'
          label='Alargues(cantidad)'
          fullWidth
+         value={formData?.tinglado.dataSobreEscenario.alargues || null}
          onChange={handleChangeSobreEscenario}
          />
       
@@ -238,6 +248,7 @@ dispatch(updateForm({...formData,tinglado:{...formData.tinglado,dataSobreEscenar
          type='number'
          label='Pupitres (cantidad)'
          fullWidth
+         value={formData?.tinglado.dataBajoEscenario.pupitres || null}
          onChange={handleChangeBajoEscenario}
          />
             <TextField
@@ -245,6 +256,7 @@ dispatch(updateForm({...formData,tinglado:{...formData.tinglado,dataSobreEscenar
          type='number'
          label='Manteles (cantidad)'
          fullWidth
+         value={formData?.tinglado.dataBajoEscenario.manteles || null}
          onChange={handleChangeBajoEscenario}
          />
            <TextField
@@ -252,6 +264,7 @@ dispatch(updateForm({...formData,tinglado:{...formData.tinglado,dataSobreEscenar
          type='number'
          label='Sillas (cantidad)'
          fullWidth
+         value={formData?.tinglado.dataBajoEscenario.sillas || null}
          onChange={handleChangeBajoEscenario}
          />
             <TextField
@@ -259,6 +272,7 @@ dispatch(updateForm({...formData,tinglado:{...formData.tinglado,dataSobreEscenar
          type='number'
          label='Gradas (cantidad)'
          fullWidth
+         value={formData?.tinglado.dataBajoEscenario.gradas || null}
          onChange={handleChangeBajoEscenario}
          />
             <TextField
@@ -266,6 +280,7 @@ dispatch(updateForm({...formData,tinglado:{...formData.tinglado,dataSobreEscenar
          type='number'
          label='Tarimas (cantidad)'
          fullWidth
+         value={formData?.tinglado.dataBajoEscenario.tarimas || null}
          onChange={handleChangeBajoEscenario}
          />
             <TextField
@@ -273,6 +288,7 @@ dispatch(updateForm({...formData,tinglado:{...formData.tinglado,dataSobreEscenar
          type='number'
          label='Micrófono Inalambrico (cantidad)'
          fullWidth
+         value={formData?.tinglado.dataBajoEscenario.microfonoInalambrico || null}
          onChange={handleChangeBajoEscenario}
          />
           <FormControlLabel
@@ -411,6 +427,7 @@ dispatch(updateForm({...formData,tinglado:{...formData.tinglado,dataSobreEscenar
          type='number'
          label='Sandwiches de miga (cantidad)'
          fullWidth
+         value={formData?.tinglado.dataBajoEscenario.sandwichesMiga || null}
          onChange={handleChangeBajoEscenario}
          />
     <TextField
@@ -418,6 +435,7 @@ dispatch(updateForm({...formData,tinglado:{...formData.tinglado,dataSobreEscenar
          type='number'
          label='Medialunas (cantidad)'
          fullWidth
+         value={formData?.tinglado.dataBajoEscenario.medialunas || null}
          onChange={handleChangeBajoEscenario}
          />
 
@@ -427,6 +445,7 @@ dispatch(updateForm({...formData,tinglado:{...formData.tinglado,dataSobreEscenar
          multiline
          rows={5}
          onChange={handleChangeBajoEscenario}
+         value={formData?.tinglado.dataBajoEscenario.musica || null}
          helperText="En el caso de canciones patrias, aclarar cuáles son y el orden.
          Resto de la música entregar en pendrive en formato mp3, enumeradas conforme al orden en que serán 
          reproducidas en el acto"
@@ -437,6 +456,7 @@ dispatch(updateForm({...formData,tinglado:{...formData.tinglado,dataSobreEscenar
          multiline
          rows={5}
          onChange={handleChangeBajoEscenario}
+         value={formData?.tinglado.dataBajoEscenario.video || null}
          helperText="En el caso de utilizar proyector, entregar los archivos en pendrive en formato mp4(video)
           o pdf (presentacion power point). Si se llegara a usar más de un video, enumerarlos conforme
           al orden en que serán reproducidos en el acto"
@@ -446,6 +466,7 @@ dispatch(updateForm({...formData,tinglado:{...formData.tinglado,dataSobreEscenar
          label='Observaciones Comunicaciones'
          multiline
          rows={5}
+         value={formData?.tinglado.dataBajoEscenario.observacionesComunicaciones || null}
          onChange={handleChangeBajoEscenario}
          />
 
@@ -454,6 +475,7 @@ dispatch(updateForm({...formData,tinglado:{...formData.tinglado,dataSobreEscenar
          label='Observaciones Cocina'
          multiline
          rows={5}
+         value={formData?.tinglado.dataBajoEscenario.observacionesCocina || null}
          onChange={handleChangeBajoEscenario}
          />
              <TextField
@@ -461,6 +483,7 @@ dispatch(updateForm({...formData,tinglado:{...formData.tinglado,dataSobreEscenar
          label='Observaciones Compras'
          multiline
          rows={5}
+         value={formData?.tinglado.dataBajoEscenario.observacionesCompras || null}
          onChange={handleChangeBajoEscenario}
          />
              <TextField
@@ -468,6 +491,7 @@ dispatch(updateForm({...formData,tinglado:{...formData.tinglado,dataSobreEscenar
          label='Observaciones Mantenimiento'
          multiline
          rows={5}
+         value={formData?.tinglado.dataBajoEscenario.observacionesMantenimiento || null}
          onChange={handleChangeBajoEscenario}
          />
     </Box>
