@@ -68,6 +68,7 @@ dispatch(updateForm({...formData,teatro:{...formData.teatro,dataSobreEscenario:{
       id='cantidadPadres'
       type='number'
       label='Cantidad Padres'
+      value={formData?.teatro.cantidadPadres || false}
       onChange={handleChange}
       fullWidth
       />
@@ -88,6 +89,7 @@ dispatch(updateForm({...formData,teatro:{...formData.teatro,dataSobreEscenario:{
       id='cantidadAlumnos'
       type='number'
       label='Cantidad Alumnos'
+      value={formData?.teatro.cantidadAlumnos || false}
       onChange={handleChange}
       fullWidth
       />
@@ -110,6 +112,7 @@ dispatch(updateForm({...formData,teatro:{...formData.teatro,dataSobreEscenario:{
          name='fondoEscenario'
          label='Fondo de escenario blanco'
          onChange={handleChangeSelecFondo}
+         value={formData?.teatro.dataSobreEscenario.fondoEscenario}
          fullWidth
          defaultValue='sin fondo'
          >
@@ -121,8 +124,9 @@ dispatch(updateForm({...formData,teatro:{...formData.teatro,dataSobreEscenario:{
          <TextField
          id="mesas"
          type='number'
-         label='Sillas(cantidad)'
+         label='Mesas(cantidad)'
          fullWidth
+         value={formData?.teatro.dataSobreEscenario.mesas || null}
          onChange={handleChangeSobreEscenario}
          />
          <TextField
@@ -130,6 +134,7 @@ dispatch(updateForm({...formData,teatro:{...formData.teatro,dataSobreEscenario:{
          type="number"
          label='Pupitres(cantidad)'
          fullWidth
+         value={formData?.teatro.dataSobreEscenario.Pupitres || null}
          onChange={handleChangeSobreEscenario}
          />
          <TextField
@@ -138,6 +143,7 @@ dispatch(updateForm({...formData,teatro:{...formData.teatro,dataSobreEscenario:{
          label='Manteles'
          fullWidth
          defaultValue='Ninguno'
+         value={formData?.teatro.dataSobreEscenario.manteles }
          onChange={handleChangeSelecFondo}
          >
           <MenuItem value='Azul'>Azul</MenuItem>
@@ -149,6 +155,7 @@ dispatch(updateForm({...formData,teatro:{...formData.teatro,dataSobreEscenario:{
          type='number'
          label='Sillas'
          fullWidth
+         value={formData?.teatro.dataSobreEscenario.sillas || null}
          onChange={handleChangeSobreEscenario}
          />
          <TextField
@@ -156,13 +163,15 @@ dispatch(updateForm({...formData,teatro:{...formData.teatro,dataSobreEscenario:{
          type='number'
          label='Gradas'
          fullWidth
+         value={formData?.teatro.dataSobreEscenario.gradas || null}
          onChange={handleChangeSobreEscenario}
          />
          <TextField
-         id='micrófonoInalambrico'
+         id='microfonoInalambrico'
          type='number'
          label='Micrófono inalámbrico (cantidad)'
          fullWidth
+         value={formData?.teatro.dataSobreEscenario.microfonoInalambrico || null}
          onChange={handleChangeSobreEscenario}
          />
              <FormControlLabel
@@ -178,6 +187,7 @@ dispatch(updateForm({...formData,teatro:{...formData.teatro,dataSobreEscenario:{
          type='number'
          label='Luces y pulsadores'
          fullWidth
+         value={formData?.teatro.dataSobreEscenario.lucesYPulsadores || null}
          onChange={handleChangeSobreEscenario}
          />
            <TextField
@@ -185,6 +195,7 @@ dispatch(updateForm({...formData,teatro:{...formData.teatro,dataSobreEscenario:{
          type='number'
          label='Alargues(cantidad)'
          fullWidth
+         value={formData?.teatro.dataSobreEscenario.alargues || null}
          onChange={handleChangeSobreEscenario}
          />
       
