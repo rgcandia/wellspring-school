@@ -25,14 +25,14 @@ export default function CampoDeporteForm(){
       type='number'
       label='Mesa,sombrilla y sillas'
       onChange={handleChange}
-      value={formData.campoDeporte.mesaSombrillaSillas || null}
+      value={formData.campoDeporte.mesaSombrillaSillas || ""}
       fullWidth
       />
        <TextField
       id='mesaLarga'
       type='number'
       label='Mesa larga'
-      value={formData.campoDeporte.mesaLarga || null}
+      value={formData.campoDeporte.mesaLarga || ""}
       onChange={handleChange}
       fullWidth
       />
@@ -40,7 +40,7 @@ export default function CampoDeporteForm(){
       id='alargues'
       type='number'
       label=' Alargues'
-      value={formData.campoDeporte.alargues || null}
+      value={formData.campoDeporte.alargues || ""}
       onChange={handleChange}
       fullWidth
       />
@@ -48,7 +48,7 @@ export default function CampoDeporteForm(){
       id='zapatillas'
       type='number'
       label='Zapatillas'
-      value={formData.campoDeporte.zapatillas || null}
+      value={formData.campoDeporte.zapatillas || ""}
       onChange={handleChange}
       fullWidth
       />
@@ -98,7 +98,7 @@ export default function CampoDeporteForm(){
          multiline
          rows={5}
          onChange={handleChange}
-         value={formData.campoDeporte.musica || null}
+         value={formData.campoDeporte.musica || ""}
          helperText="Aclarar estilo del evento. En caso de necesitar algún
          tema específico entregar en pendrive en formato mp3.
          De necesitar más de un tema enumerar conforme al orden en que serán reproducidas
@@ -109,7 +109,7 @@ export default function CampoDeporteForm(){
          label='Observaciones Comunicación'
          multiline
          rows={5}
-         value={formData.campoDeporte.observacionesComunicacion || null}
+         value={formData.campoDeporte.observacionesComunicacion || ""}
          onChange={handleChange} 
          />
           <TextField
@@ -117,7 +117,7 @@ export default function CampoDeporteForm(){
          label='Observaciones Cocina'
          multiline
          rows={5}
-         value={formData.campoDeporte.observacionesCocina || null}
+         value={formData.campoDeporte.observacionesCocina || ""}
          onChange={handleChange} 
          />
             <TextField
@@ -125,7 +125,7 @@ export default function CampoDeporteForm(){
          label='Observaciones Compras'
          multiline
          rows={5}
-         value={formData.campoDeporte.observacionesCompras || null}
+         value={formData.campoDeporte.observacionesCompras || ""}
          onChange={handleChange} 
          />
             <TextField
@@ -133,7 +133,7 @@ export default function CampoDeporteForm(){
          label='Observaciones Manteniento'
          multiline
          rows={5}
-         value={formData.campoDeporte.observacionesMantenimineto || null}
+         value={formData.campoDeporte.observacionesMantenimineto || ""}
          onChange={handleChange} 
          />
   </Box>)
