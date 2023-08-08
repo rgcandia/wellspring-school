@@ -9,9 +9,10 @@ import { useState } from "react";
 import { useSelector } from "react-redux";
 import { useParams } from 'react-router-dom';
 import { updateForm } from "../../../../../socket.js";
+import { alertSendFormOk } from "../../../../../services.js";
 
 
-export default function RenderForm() {
+export default function RenderForm({handleClose}) {
  const {Teatro,Tinglado,Otro,CampoDeporte} = useSelector(state=>state.data.form.home.lugar);
  const {form,user} = useSelector(state=>state.data)
  const { id } = useParams();
@@ -24,7 +25,9 @@ export default function RenderForm() {
   // Funcion para enviar el formulario
   const handleSubmit = (e) => {
     e.preventDefault();
-    updateForm({id,form,user})
+    updateForm({id,form,user});
+    handleClose(false);
+    alertSendFormOk();
   }
   
   return (
