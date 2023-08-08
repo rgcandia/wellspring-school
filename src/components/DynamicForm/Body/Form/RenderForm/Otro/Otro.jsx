@@ -26,7 +26,6 @@ export default function Otro(){
   const handleChangeSelecFondo = (e)=>{
     
 const {value,name} = e.target;
-console.log(value)
 dispatch(updateForm({...formData,otro:{...formData.otro,dataSobreEscenario:{...formData.otro.dataSobreEscenario,[name]:value}}}))
               
   } 
@@ -68,6 +67,7 @@ dispatch(updateForm({...formData,otro:{...formData.otro,dataSobreEscenario:{...f
       id='cantidadPadres'
       type='number'
       label='Cantidad Padres'
+      value={formData.otro.cantidadPadres || ""}
       onChange={handleChange}
       fullWidth
       />
@@ -88,6 +88,7 @@ dispatch(updateForm({...formData,otro:{...formData.otro,dataSobreEscenario:{...f
       id='cantidadAlumnos'
       type='number'
       label='Cantidad Alumnos'
+      value={formData.otro.cantidadAlumnos || ""}
       onChange={handleChange}
       fullWidth
       />
@@ -110,6 +111,7 @@ dispatch(updateForm({...formData,otro:{...formData.otro,dataSobreEscenario:{...f
          name='fondoEscenario'
          label='Fondo de escenario blanco'
          onChange={handleChangeSelecFondo}
+         value={formData.otro.dataSobreEscenario.fondoEscenario || "sin fondo"}
          fullWidth
          defaultValue='sin fondo'
          >
@@ -123,6 +125,7 @@ dispatch(updateForm({...formData,otro:{...formData.otro,dataSobreEscenario:{...f
          type='number'
          label='Sillas(cantidad)'
          fullWidth
+         value={formData.otro.dataSobreEscenario.mesas || ""}
          onChange={handleChangeSobreEscenario}
          />
          <TextField
@@ -130,6 +133,7 @@ dispatch(updateForm({...formData,otro:{...formData.otro,dataSobreEscenario:{...f
          type="number"
          label='Pupitres(cantidad)'
          fullWidth
+         value={formData.otro.dataSobreEscenario.Pupitres || ""}
          onChange={handleChangeSobreEscenario}
          />
          <TextField
@@ -138,6 +142,7 @@ dispatch(updateForm({...formData,otro:{...formData.otro,dataSobreEscenario:{...f
          label='Manteles'
          fullWidth
          defaultValue='Ninguno'
+         value={formData.otro.dataSobreEscenario.manteles || "Ninguno"}
          onChange={handleChangeSelecFondo}
          >
           <MenuItem value='Azul'>Azul</MenuItem>
@@ -149,6 +154,7 @@ dispatch(updateForm({...formData,otro:{...formData.otro,dataSobreEscenario:{...f
          type='number'
          label='Sillas'
          fullWidth
+         value={formData.otro.dataSobreEscenario.sillas || ""}
          onChange={handleChangeSobreEscenario}
          />
          <TextField
@@ -156,13 +162,15 @@ dispatch(updateForm({...formData,otro:{...formData.otro,dataSobreEscenario:{...f
          type='number'
          label='Gradas'
          fullWidth
+         value={formData.otro.dataSobreEscenario.gradas || ""}
          onChange={handleChangeSobreEscenario}
          />
          <TextField
-         id='micrófonoInalambrico'
+         id='microfonoInalambrico'
          type='number'
          label='Micrófono inalámbrico (cantidad)'
          fullWidth
+         value={formData.otro.dataSobreEscenario.microfonoInalambrico || ""}
          onChange={handleChangeSobreEscenario}
          />
              <FormControlLabel
@@ -178,6 +186,7 @@ dispatch(updateForm({...formData,otro:{...formData.otro,dataSobreEscenario:{...f
          type='number'
          label='Luces y pulsadores'
          fullWidth
+         value={formData.otro.dataSobreEscenario.lucesYPulsadores || ""}
          onChange={handleChangeSobreEscenario}
          />
            <TextField
@@ -185,6 +194,7 @@ dispatch(updateForm({...formData,otro:{...formData.otro,dataSobreEscenario:{...f
          type='number'
          label='Alargues(cantidad)'
          fullWidth
+         value={formData.otro.dataSobreEscenario.alargues || ""}
          onChange={handleChangeSobreEscenario}
          />
       
@@ -242,6 +252,7 @@ dispatch(updateForm({...formData,otro:{...formData.otro,dataSobreEscenario:{...f
          type='number'
          label='Pupitres (cantidad)'
          fullWidth
+         value={formData.otro.dataBajoEscenario.pupitres || ""}
          onChange={handleChangeBajoEscenario}
          />
             <TextField
@@ -249,6 +260,7 @@ dispatch(updateForm({...formData,otro:{...formData.otro,dataSobreEscenario:{...f
          type='number'
          label='Manteles (cantidad)'
          fullWidth
+         value={formData.otro.dataBajoEscenario.manteles || ""}
          onChange={handleChangeBajoEscenario}
          />
            <TextField
@@ -256,6 +268,7 @@ dispatch(updateForm({...formData,otro:{...formData.otro,dataSobreEscenario:{...f
          type='number'
          label='Sillas (cantidad)'
          fullWidth
+         value={formData.otro.dataBajoEscenario.sillas || ""}
          onChange={handleChangeBajoEscenario}
          />
             <TextField
@@ -263,6 +276,7 @@ dispatch(updateForm({...formData,otro:{...formData.otro,dataSobreEscenario:{...f
          type='number'
          label='Gradas (cantidad)'
          fullWidth
+         value={formData.otro.dataBajoEscenario.gradas || ""}
          onChange={handleChangeBajoEscenario}
          />
             <TextField
@@ -270,6 +284,7 @@ dispatch(updateForm({...formData,otro:{...formData.otro,dataSobreEscenario:{...f
          type='number'
          label='Tarimas (cantidad)'
          fullWidth
+         value={formData.otro.dataBajoEscenario.tarimas || ""}
          onChange={handleChangeBajoEscenario}
          />
             <TextField
@@ -277,6 +292,7 @@ dispatch(updateForm({...formData,otro:{...formData.otro,dataSobreEscenario:{...f
          type='number'
          label='Micrófono Inalambrico (cantidad)'
          fullWidth
+         value={formData.otro.dataBajoEscenario.microfonoInalambrico || ""}
          onChange={handleChangeBajoEscenario}
          />
           <FormControlLabel
@@ -415,6 +431,7 @@ dispatch(updateForm({...formData,otro:{...formData.otro,dataSobreEscenario:{...f
          type='number'
          label='Sandwiches de miga (cantidad)'
          fullWidth
+         value={formData.otro.dataBajoEscenario.sandwichesMiga || ""}
          onChange={handleChangeBajoEscenario}
          />
     <TextField
@@ -422,6 +439,7 @@ dispatch(updateForm({...formData,otro:{...formData.otro,dataSobreEscenario:{...f
          type='number'
          label='Medialunas (cantidad)'
          fullWidth
+         value={formData.otro.dataBajoEscenario.medialunas || ""}
          onChange={handleChangeBajoEscenario}
          />
 
@@ -431,6 +449,7 @@ dispatch(updateForm({...formData,otro:{...formData.otro,dataSobreEscenario:{...f
          multiline
          rows={5}
          onChange={handleChangeBajoEscenario}
+         value={formData.otro.dataBajoEscenario.musica || ""}
          helperText="En el caso de canciones patrias, aclarar cuáles son y el orden.
          Resto de la música entregar en pendrive en formato mp3, enumeradas conforme al orden en que serán 
          reproducidas en el acto"
@@ -441,6 +460,7 @@ dispatch(updateForm({...formData,otro:{...formData.otro,dataSobreEscenario:{...f
          multiline
          rows={5}
          onChange={handleChangeBajoEscenario}
+         value={formData.otro.dataBajoEscenario.video || ""}
          helperText="En el caso de utilizar proyector, entregar los archivos en pendrive en formato mp4(video)
           o pdf (presentacion power point). Si se llegara a usar más de un video, enumerarlos conforme
           al orden en que serán reproducidos en el acto"
@@ -450,6 +470,7 @@ dispatch(updateForm({...formData,otro:{...formData.otro,dataSobreEscenario:{...f
          label='Observaciones Comunicaciones'
          multiline
          rows={5}
+         value={formData.otro.dataBajoEscenario.observacionesComunicaciones || ""}
          onChange={handleChangeBajoEscenario}
          />
 
@@ -458,6 +479,7 @@ dispatch(updateForm({...formData,otro:{...formData.otro,dataSobreEscenario:{...f
          label='Observaciones Cocina'
          multiline
          rows={5}
+         value={formData.otro.dataBajoEscenario.observacionesCocina || ""}
          onChange={handleChangeBajoEscenario}
          />
              <TextField
@@ -465,6 +487,7 @@ dispatch(updateForm({...formData,otro:{...formData.otro,dataSobreEscenario:{...f
          label='Observaciones Compras'
          multiline
          rows={5}
+         value={formData.otro.dataBajoEscenario.observacionesCompras || ""}
          onChange={handleChangeBajoEscenario}
          />
              <TextField
@@ -472,6 +495,7 @@ dispatch(updateForm({...formData,otro:{...formData.otro,dataSobreEscenario:{...f
          label='Observaciones Mantenimiento'
          multiline
          rows={5}
+         value={formData.otro.dataBajoEscenario.observacionesMantenimiento || ""}
          onChange={handleChangeBajoEscenario}
          />
     </Box>
