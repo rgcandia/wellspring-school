@@ -8,6 +8,7 @@ import LoaderDash from './LoaderDash/LoaderDash.jsx'
 import styles from './DashHome.module.css'
 
 
+
 export default function DashHome() {
   const dispatch = useDispatch()
   const { forms ,user} = useSelector(state => state.data);
@@ -20,6 +21,7 @@ export default function DashHome() {
     <div className={styles.dashhome}>
       
     {user===admin && forms?<SendForm/>:null}
+  
     {forms&&<TableForms forms={forms}/>}
      {(!forms&&user)&&<LoaderDash/>} 
     </div>

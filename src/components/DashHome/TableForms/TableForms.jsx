@@ -5,6 +5,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import ListIcon from '@mui/icons-material/List';
 import styles from "./TableForms.module.css";
+import CreateForm from "../CreateForm/CreateForm";
 
 export function TableForms({ forms }) {
  const {models} = useSelector(state=>state.data)
@@ -16,14 +17,16 @@ export function TableForms({ forms }) {
 
   return (
     <Box className={styles.tablecontainer}>
-      
+    
         {forms.length?<>
         <Box sx={{display:'flex'}}>
                <ListIcon/>
                <Typography variant="body1" component="p" className={styles.tabletitle}>
         Tus formularios</Typography>
         </Box>
-      
+        <Box sx={{width:'100%'}}>
+        <CreateForm/>
+      </Box>
       <table className={styles.table}>
         <thead>
           <tr>
