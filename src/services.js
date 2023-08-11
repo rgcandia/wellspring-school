@@ -23,3 +23,14 @@ export function alertSendFormOk(){
     
   )
 }
+
+export function alertSetFormOk(){
+  return Swal.fire({
+    position: 'top-end',
+    icon: 'success',
+    title: 'Formulario creado correctamente.',
+    showConfirmButton: false,
+    timer: 2000
+  })
+  
+}
