@@ -20,7 +20,7 @@ export default function DashHome() {
   return (
     <div className={styles.dashhome}>
       
-    {user===admin && forms?<SendForm/>:null}
+    {/* {user===admin && forms?<SendForm/>:null} */}
   
     {forms&&<TableForms forms={forms}/>}
      {(!forms&&user)&&<LoaderDash/>} 

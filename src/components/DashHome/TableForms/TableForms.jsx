@@ -62,7 +62,18 @@ export function TableForms({ forms }) {
           
       </table> </> :null
      }
-     {!forms.length  ?<Typography>No tienes formularios en la base de datos</Typography>:null}
+     {!forms.length  ?<>
+      <Box sx={{width:'100%'}}>
+      <Box sx={{width:'100%'}}>
+        <CreateForm/>
+        
+      </Box>
+      <Box sx={{display:'flex',justifyContent:'center',alignItems:'center',flexDirection:'column'}}>
+      <Typography>No tienes formularios en la base de datos</Typography>
+      <Typography>Para crear un formulario nuevo, haz click en el botón del signo más.</Typography>
+      </Box>
+      </Box>
+     </>:null}
      
     </Box>
   );
