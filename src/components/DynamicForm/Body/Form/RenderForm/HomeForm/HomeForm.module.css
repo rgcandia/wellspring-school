@@ -12,5 +12,6 @@
   @media(max-width:850px){
     .home{
         width: 100%;
+        padding: 0 ;
     }
   }

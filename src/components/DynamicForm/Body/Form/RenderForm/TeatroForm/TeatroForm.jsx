@@ -49,11 +49,13 @@ dispatch(updateForm({...formData,teatro:{...formData.teatro,dataSobreEscenario:{
     dispatch(updateForm({...formData,teatro:{...formData.teatro,dataBajoEscenario:{...formData.teatro.dataBajoEscenario,[name]:checked}}}))
   }  
 
-  return (<Box>
+  return (<Box className={styles.teatro}>
   <Box >
          <Typography><strong>Sección Teatro</strong></Typography>
  </Box>
-    <Box>
+
+    <Box className={styles.bodyTeatro}>
+    <Box  className={styles.padres}>
     <FormControlLabel
       label='Padres'
       control={<Checkbox
@@ -74,8 +76,8 @@ dispatch(updateForm({...formData,teatro:{...formData.teatro,dataSobreEscenario:{
       />
     }
     </Box>
-    <Box>
-    <FormControlLabel
+   <Box className={styles.alumnos}>
+   <FormControlLabel
       label='Alumnos'
       control={<Checkbox
       checked={formData?.teatro.alumnos || false}
@@ -95,7 +97,8 @@ dispatch(updateForm({...formData,teatro:{...formData.teatro,dataSobreEscenario:{
       />
     }
 
-    <Box>
+   </Box>
+    <Box  >
     <FormControlLabel
       label='Sobre el Escenario'
       control={<Checkbox
@@ -106,7 +109,7 @@ dispatch(updateForm({...formData,teatro:{...formData.teatro,dataSobreEscenario:{
     />
     {
       formData.teatro.sobreEscenario &&
-      <Box sx={{display:'flex',flexDirection:'column',gap:'10px'}}>
+      <Box className={styles.sobreEscenario}>
          <TextField
          select
          name='fondoEscenario'
@@ -174,14 +177,20 @@ dispatch(updateForm({...formData,teatro:{...formData.teatro,dataSobreEscenario:{
          value={formData?.teatro.dataSobreEscenario.microfonoInalambrico || ""}
          onChange={handleChangeSobreEscenario}
          />
-             <FormControlLabel
+           
+       <Box sx={{width:'100%'}}>
+
+       <FormControlLabel
       label='Pie de micrófono'
       control={<Checkbox
       checked={formData?.teatro.dataSobreEscenario.pieMicrofono || false}
       name='pieMicrofono'
       onChange={handleCheckChangeSobreEscenario}
+      
       />}
     />
+       </Box>
+          
           <TextField
          id='lucesYPulsadores'
          type='number'
@@ -199,7 +208,8 @@ dispatch(updateForm({...formData,teatro:{...formData.teatro,dataSobreEscenario:{
          onChange={handleChangeSobreEscenario}
          />
       
-          <FormControlLabel
+<Box sx={{display:'flex',flexDirection:'column',alignItems:'flex-start',width:'100%'}}>
+<FormControlLabel
       label='Proyector sobre escenario'
       control={<Checkbox
       checked={formData?.teatro.dataSobreEscenario.proyector || false}
@@ -232,12 +242,14 @@ dispatch(updateForm({...formData,teatro:{...formData.teatro,dataSobreEscenario:{
       onChange={handleCheckChangeSobreEscenario}
       />}
     />
+
+</Box>
     
       </Box>
     }
     </Box>
 
-    <Box>
+    <Box >
     <FormControlLabel
       label='Bajo el Escenario'
       control={<Checkbox
@@ -247,7 +259,7 @@ dispatch(updateForm({...formData,teatro:{...formData.teatro,dataSobreEscenario:{
       />}
     />
     {formData.teatro.bajoEscenario &&
-    <Box sx={{display:'flex',flexDirection:'column',gap:'10px'}} className={styles.bajoEscenario}>
+    <Box className={styles.bajoEscenario}>
        <TextField
          id='pupitres'
          type='number'
@@ -296,7 +308,9 @@ dispatch(updateForm({...formData,teatro:{...formData.teatro,dataSobreEscenario:{
          value={formData?.teatro.dataBajoEscenario.microfonoInalambrico || ""}
          onChange={handleChangeBajoEscenario}
          />
-          <FormControlLabel
+         <Box sx={{display:'flex',flexDirection:'column',alignItems:'flex-start',width:'100%'}}>
+
+         <FormControlLabel
       label='Proyector Arriba'
       control={<Checkbox
       checked={formData?.teatro.dataBajoEscenario.proyector || false}
@@ -426,6 +440,7 @@ dispatch(updateForm({...formData,teatro:{...formData.teatro,dataSobreEscenario:{
       onChange={handleCheckChangeBajoEscenario}
       />}
     />
+         </Box>
     
     <TextField
          id='sandwichesMiga'
@@ -473,6 +488,7 @@ dispatch(updateForm({...formData,teatro:{...formData.teatro,dataSobreEscenario:{
          rows={5}
          value={formData?.teatro.dataBajoEscenario.observacionesComunicaciones || ""}
          onChange={handleChangeBajoEscenario}
+         fullWidth
          />
 
           <TextField
@@ -482,6 +498,7 @@ dispatch(updateForm({...formData,teatro:{...formData.teatro,dataSobreEscenario:{
          rows={5}
          value={formData?.teatro.dataBajoEscenario.observacionesCocina || ""}
          onChange={handleChangeBajoEscenario}
+         fullWidth
          />
              <TextField
          id='observacionesCompras'
@@ -490,6 +507,7 @@ dispatch(updateForm({...formData,teatro:{...formData.teatro,dataSobreEscenario:{
          rows={5}
          value={formData?.teatro.dataBajoEscenario.observacionesCompras || ""}
          onChange={handleChangeBajoEscenario}
+         fullWidth
          />
              <TextField
          id='observacionesMantenimiento'
@@ -498,6 +516,7 @@ dispatch(updateForm({...formData,teatro:{...formData.teatro,dataSobreEscenario:{
          rows={5}
          value={formData?.teatro.dataBajoEscenario.observacionesMantenimiento || ""}
          onChange={handleChangeBajoEscenario}
+         fullWidth
          />
     </Box>
     }
