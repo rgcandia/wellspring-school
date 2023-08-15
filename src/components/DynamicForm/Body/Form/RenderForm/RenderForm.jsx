@@ -48,9 +48,8 @@ export default function RenderForm({handleClose}) {
      
 
 
-     
-
-        {Teatro&& currentSection === "Home"&&
+     <Box className={styles.section}>
+     {Teatro&& currentSection === "Home"&&
         <Button onClick={()=>{handleChangeSection("Teatro")}}>Teatro</Button>
         }
          {Tinglado && currentSection === "Home"&&
@@ -63,6 +62,7 @@ export default function RenderForm({handleClose}) {
         <Button  onClick={()=>{handleChangeSection("Otro")}}>Otro</Button>
 
         }
+     </Box>
         
       {currentSection === "Home" &&
        <Box sx={{ display: 'flex', justifyContent: 'center' ,margin:'20px'}}>

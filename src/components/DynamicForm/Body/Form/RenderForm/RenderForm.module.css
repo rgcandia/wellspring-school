@@ -9,4 +9,12 @@
     width: 100%;
   
   }
- 
+  
+  
+  @media(max-width: 430px){
+    .section{
+      display: flex;
+      flex-direction: column;
+      align-items: center;justify-content: center;
+    }
+  }
