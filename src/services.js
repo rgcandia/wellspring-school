@@ -26,11 +26,37 @@ export function alertSendFormOk(){
 
 export function alertSetFormOk(){
   return Swal.fire({
+    toast: true,
     position: 'top-end',
     icon: 'success',
     title: 'Formulario creado correctamente.',
+    timerProgressBar: true,
     showConfirmButton: false,
-    timer: 2000
+    timer: 3000
   })
   
+}
+
+export function alertSingInErrorPassword(){
+  return Swal.fire({
+    toast:true,
+    position:'top-end',
+    icon:'error',
+    title:'Error de usuario o contraseña',
+    timerProgressBar: true,
+    showConfirmButton: false,
+    timer: 3000
+  })
+}
+
+export function alertSingInSuccessPassword(){
+  return Swal.fire({
+    toast:true,
+    position:'top-end',
+    icon:'success',
+    title:'Sesión iniciada correctamente',
+    timerProgressBar: true,
+    showConfirmButton: false,
+    timer: 3000
+  })
 }

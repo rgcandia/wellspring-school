@@ -1,3 +1,4 @@
+import { alertSingInErrorPassword ,alertSingInSuccessPassword} from '../services.js';
 import {auth} from './app.js'
 import {  signInWithEmailAndPassword } from "firebase/auth";
 export function login( email, password){
@@ -5,6 +6,8 @@ export function login( email, password){
   .then((userCredential) => {
     // Signed in 
     const user = userCredential.user;
+    console.log(user)
+    alertSingInSuccessPassword(user);
     // ...
   })
   .catch((error) => {
@@ -12,5 +15,7 @@ export function login( email, password){
     const errorMessage = error.message;
     console.log(errorMessage)
     console.log(errorCode)
+    alertSingInErrorPassword();
+  
   });
 }
