@@ -90,7 +90,7 @@ label='Nombre del Evento'
       </Typography>
     <TextField
     id="hora"
-    type='time'nombreEvento
+    type='time'
     value={formData.home.hora || ""}
     onChange={handleChange}
     fullWidth
