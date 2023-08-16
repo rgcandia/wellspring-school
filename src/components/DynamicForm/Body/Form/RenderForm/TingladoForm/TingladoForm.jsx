@@ -44,11 +44,14 @@ dispatch(updateForm({...formData,tinglado:{...formData.tinglado,dataSobreEscenar
     dispatch(updateForm({...formData,tinglado:{...formData.tinglado,dataBajoEscenario:{...formData.tinglado.dataBajoEscenario,[name]:checked}}}))
   }  
 
-  return (<Box>
+  return (<Box className={styles.tinglado}>
   <Box >
          <Typography><strong>Sección Tinglado</strong></Typography>
  </Box>
-    <Box>
+ 
+    <Box className={styles.bodyTinglado}>
+
+    <Box className={styles.padres}>
     <FormControlLabel
       label='Padres'
       control={<Checkbox
@@ -69,7 +72,7 @@ dispatch(updateForm({...formData,tinglado:{...formData.tinglado,dataSobreEscenar
       />
     }
     </Box>
-    <Box>
+    <Box className={styles.alumnos}>
     <FormControlLabel
       label='Alumnos'
       control={<Checkbox
@@ -89,6 +92,8 @@ dispatch(updateForm({...formData,tinglado:{...formData.tinglado,dataSobreEscenar
       fullWidth
       />
     }
+    </Box>
+  
 
     <Box>
     <FormControlLabel
@@ -101,7 +106,7 @@ dispatch(updateForm({...formData,tinglado:{...formData.tinglado,dataSobreEscenar
     />
     {
       formData.tinglado.sobreEscenario &&
-      <Box sx={{display:'flex',flexDirection:'column',gap:'10px'}}>
+      <Box className={styles.sobreEscenario}>
          <TextField
          select
          name='fondoEscenario'
@@ -169,7 +174,8 @@ dispatch(updateForm({...formData,tinglado:{...formData.tinglado,dataSobreEscenar
          value={formData?.tinglado.dataSobreEscenario.microfonoInalambrico || ""}
          onChange={handleChangeSobreEscenario}
          />
-             <FormControlLabel
+    <Box sx={{width:'100%'}}>
+    <FormControlLabel
       label='Pie de micrófono'
       control={<Checkbox
       checked={formData?.tinglado.dataSobreEscenario.pieMicrofono || false}
@@ -177,6 +183,7 @@ dispatch(updateForm({...formData,tinglado:{...formData.tinglado,dataSobreEscenar
       onChange={handleCheckChangeSobreEscenario}
       />}
     />
+    </Box>
           <TextField
          id='lucesYPulsadores'
          type='number'
@@ -194,7 +201,8 @@ dispatch(updateForm({...formData,tinglado:{...formData.tinglado,dataSobreEscenar
          onChange={handleChangeSobreEscenario}
          />
       
-          <FormControlLabel
+   <Box sx={{display:'flex',flexDirection:'column',alignItems:'flex-start',width:'100%'}}>
+   <FormControlLabel
       label='Proyector sobre escenario'
       control={<Checkbox
       checked={formData?.tinglado.dataSobreEscenario.proyector || false}
@@ -227,6 +235,7 @@ dispatch(updateForm({...formData,tinglado:{...formData.tinglado,dataSobreEscenar
       onChange={handleCheckChangeSobreEscenario}
       />}
     />
+   </Box>
     
       </Box>
     }
@@ -242,7 +251,7 @@ dispatch(updateForm({...formData,tinglado:{...formData.tinglado,dataSobreEscenar
       />}
     />
     {formData.tinglado.bajoEscenario &&
-    <Box sx={{display:'flex',flexDirection:'column',gap:'10px'}} className={styles.bajoEscenario}>
+    <Box  className={styles.bajoEscenario}>
        <TextField
          id='pupitres'
          type='number'
@@ -291,7 +300,8 @@ dispatch(updateForm({...formData,tinglado:{...formData.tinglado,dataSobreEscenar
          value={formData?.tinglado.dataBajoEscenario.microfonoInalambrico || ""}
          onChange={handleChangeBajoEscenario}
          />
-          <FormControlLabel
+       <Box sx={{display:'flex',flexDirection:'column',alignItems:'flex-start',width:'100%'}}>
+      <FormControlLabel
       label='Proyector Arriba'
       control={<Checkbox
       checked={formData?.tinglado.dataBajoEscenario.proyector || false}
@@ -421,6 +431,7 @@ dispatch(updateForm({...formData,tinglado:{...formData.tinglado,dataSobreEscenar
       onChange={handleCheckChangeBajoEscenario}
       />}
     />
+      </Box>
     
     <TextField
          id='sandwichesMiga'
@@ -468,6 +479,7 @@ dispatch(updateForm({...formData,tinglado:{...formData.tinglado,dataSobreEscenar
          rows={5}
          value={formData?.tinglado.dataBajoEscenario.observacionesComunicaciones || ""}
          onChange={handleChangeBajoEscenario}
+         fullWidth
          />
 
           <TextField
@@ -477,6 +489,7 @@ dispatch(updateForm({...formData,tinglado:{...formData.tinglado,dataSobreEscenar
          rows={5}
          value={formData?.tinglado.dataBajoEscenario.observacionesCocina || ""}
          onChange={handleChangeBajoEscenario}
+         fullWidth
          />
              <TextField
          id='observacionesCompras'
@@ -485,6 +498,7 @@ dispatch(updateForm({...formData,tinglado:{...formData.tinglado,dataSobreEscenar
          rows={5}
          value={formData?.tinglado.dataBajoEscenario.observacionesCompras || ""}
          onChange={handleChangeBajoEscenario}
+         fullWidth
          />
              <TextField
          id='observacionesMantenimiento'
@@ -493,6 +507,7 @@ dispatch(updateForm({...formData,tinglado:{...formData.tinglado,dataSobreEscenar
          rows={5}
          value={formData?.tinglado.dataBajoEscenario.observacionesMantenimiento || ""}
          onChange={handleChangeBajoEscenario}
+         fullWidth
          />
     </Box>
     }

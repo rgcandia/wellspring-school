@@ -1,7 +1,7 @@
 import { Box, FormControlLabel, TextField, Typography,Checkbox } from "@mui/material"
 import { useSelector,useDispatch } from "react-redux";
 import { updateForm } from "../../../../../../redux/slice.js";
-
+import styles from './CampoDeporteForm.module.css'
 export default function CampoDeporteForm(){
     //instancias
     const dispatch = useDispatch();
@@ -17,7 +17,7 @@ export default function CampoDeporteForm(){
      const {name, checked} = e.target;
      dispatch(updateForm({...formData,campoDeporte:{...formData.campoDeporte,[name]:checked}}))
                 }  
-  return (<Box sx={{display:'flex',flexDirection:'column',gap:'10px'}}>
+  return (<Box className={styles.campoDeporte}>
     <Box><Typography><strong> Sección Campo de deporte</strong></Typography></Box>
  
     <TextField
