@@ -1,7 +1,9 @@
 .unlog{
-    display: flex;
+    display: grid;
+    grid-template-columns:  1fr 1fr;
     justify-content:center;
     align-items: center;
     width: 100%;
-    margin:20px;
+    margin-top: 0;
+   
 }
