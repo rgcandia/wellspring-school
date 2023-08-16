@@ -20,6 +20,7 @@ export default function CampoDeporteForm(){
   return (<Box className={styles.campoDeporte}>
     <Box><Typography><strong> Sección Campo de deporte</strong></Typography></Box>
  
+    <Box className={styles.bodyCampoDeporte}>
     <TextField
       id='mesaSombrillaSillas'
       type='number'
@@ -52,7 +53,9 @@ export default function CampoDeporteForm(){
       onChange={handleChange}
       fullWidth
       />
-      <FormControlLabel
+     <Box sx={{display:'flex',flexDirection:'column',alignItems:'flex-start',width:'100%'}}>
+
+     <FormControlLabel
       label='Parlantes'
       control={<Checkbox
       checked={formData?.campoDeporte.parlantes || false}
@@ -92,6 +95,7 @@ export default function CampoDeporteForm(){
       onChange={handleCheckChange}
       />}
     />
+     </Box>
        <TextField
          id='musica'
          label='Música'
@@ -111,6 +115,7 @@ export default function CampoDeporteForm(){
          rows={5}
          value={formData.campoDeporte.observacionesComunicacion || ""}
          onChange={handleChange} 
+         fullWidth
          />
           <TextField
          id='observacionesCocina'
@@ -119,6 +124,7 @@ export default function CampoDeporteForm(){
          rows={5}
          value={formData.campoDeporte.observacionesCocina || ""}
          onChange={handleChange} 
+         fullWidth
          />
             <TextField
          id='observacionesCompras'
@@ -127,6 +133,7 @@ export default function CampoDeporteForm(){
          rows={5}
          value={formData.campoDeporte.observacionesCompras || ""}
          onChange={handleChange} 
+         fullWidth
          />
             <TextField
          id='observacionesMantenimineto'
@@ -135,6 +142,8 @@ export default function CampoDeporteForm(){
          rows={5}
          value={formData.campoDeporte.observacionesMantenimineto || ""}
          onChange={handleChange} 
+         fullWidth
          />
+    </Box>
   </Box>)
 }
