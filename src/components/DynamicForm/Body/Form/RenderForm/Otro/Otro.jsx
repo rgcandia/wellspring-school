@@ -48,10 +48,12 @@ dispatch(updateForm({...formData,otro:{...formData.otro,dataSobreEscenario:{...f
     dispatch(updateForm({...formData,otro:{...formData.otro,dataBajoEscenario:{...formData.otro.dataBajoEscenario,[name]:checked}}}))
   }  
 
-  return (<Box>
+  return (<Box className={styles.otro}>
   <Box >
          <Typography><strong>Sección Teatro</strong></Typography>
  </Box>
+  
+    <Box className={styles.bodyOtro}>
     <Box>
     <FormControlLabel
       label='Padres'
@@ -73,7 +75,6 @@ dispatch(updateForm({...formData,otro:{...formData.otro,dataSobreEscenario:{...f
       />
     }
     </Box>
-    <Box>
     <FormControlLabel
       label='Alumnos'
       control={<Checkbox
