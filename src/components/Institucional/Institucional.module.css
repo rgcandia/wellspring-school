@@ -11,7 +11,7 @@
 }
 .image{
     display: flex;
-    height: 50vh;
+    max-height: 50vh;
 }
 .image img{
     width: 100%;
