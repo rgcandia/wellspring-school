@@ -4,3 +4,11 @@
     height:auto;
     object-fit: cover;
 }
+
+.texto{
+  
+    margin-top: 20px;
+    margin-bottom: 50px;
+    margin-left: 15%;
+    margin-right:15% ;
+}
