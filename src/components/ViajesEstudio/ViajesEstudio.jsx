@@ -1,5 +1,6 @@
 import { Box } from "@mui/material"
 import imagen from '../../images/Viajes/viaje_estudio.jpg'
+import Texto from "./Texto/Texto"
 import styles from './ViajesEstudio.module.css'
 export default function ViajesEstudio (){
     return(<Box>
@@ -11,7 +12,9 @@ export default function ViajesEstudio (){
   loading='lazy'
   />
 </Box>
-<Box></Box>
+<Box>
+<Texto/>
+</Box>
 <Box></Box>
 
     </Box>)
