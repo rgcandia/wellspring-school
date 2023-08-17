@@ -39,7 +39,7 @@ export default function Imagenes() {
 
       {/* Modal para mostrar imagen en tamaño completo */}
       <Modal open={modalOpen} onClose={handleCloseModal}>
-        <div className={styles.modalContent}>
+        <div className={styles.modalContent} onClick={handleCloseModal}>
           {selectedImage && (
             <img
               src={selectedImage}
