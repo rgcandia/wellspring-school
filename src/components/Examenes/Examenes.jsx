@@ -1,13 +1,12 @@
 import { Box, Typography } from "@mui/material"
 import imagen from '../../images/Examenes/examenes.jpg'
-import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import styles from './Examenes.module.css'
 export default function Examenes (){
     return(<Box>
         <Box className={styles.image}>
         <img
   src={imagen}
-  alt='background cabecera institucional'
+  alt='background cabecera Examenes'
   loading='lazy'
   />
         </Box>
