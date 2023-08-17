@@ -3,7 +3,7 @@ import styles from './Texto.module.css'
 export default function Texto (){
     return(<Box className={styles.texto}>
 
-            <Box sx={{display:'flex',justifyContent:'center'}}>
+            <Box sx={{display:'flex',justifyContent:'center',marginBottom:'30px'}}>
                 <Typography variant="h5">VIAJES DE ESTUDIO</Typography>
             </Box>
             <Box>
