@@ -15,7 +15,16 @@ export function TableForms({ forms }) {
     
     
   }, [forms]);
+const handleDelete = (id)=>{
+const form = forms.find((e)=>{return e.id===id})
+ if(form.pending){
+  console.log('formulario pendiente , se elimina')
+ }else{
+console.log("formulario enviado, no se puede eliminar")
+ }
 
+
+}
   return (
     <Box className={styles.tablecontainer}>
     
@@ -57,7 +66,7 @@ export function TableForms({ forms }) {
                 <td>{form.pending ? "Yes" : "No"}</td>
                 <td>{form.createdAt.split("T")[0]}</td>
                 <td>{models?models.find(e=>e.id==form.model).name:form.model}</td>
-                <td><Button><DeleteForeverIcon/></Button></td>
+                <td><Button onClick={()=>{handleDelete(form.id)}}><DeleteForeverIcon/></Button></td>
               </tr>
             )
           })}
