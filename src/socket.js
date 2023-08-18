@@ -45,3 +45,7 @@ export const listenersocket = (email,dispatch,action)=>{
 export const updateForm = ({id,form,user})=>{
 socket.emit('updateForm',{id,form,user})
 }
+
+export const deleteFormPending = (id,user)=>{
+  socket.emit('deleteFormPending',{id,user})
+}

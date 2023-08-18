@@ -3,24 +3,27 @@ import { Box, Button, Typography } from "@mui/material";
 import DeleteForeverIcon from '@mui/icons-material/DeleteForever';
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import { deleteFormPending } from "../../../socket";
+import { alertDeleteFormPending,alertErrorDeleteFormPending } from "../../../services";
 import { Link } from "react-router-dom";
 import ListIcon from '@mui/icons-material/List';
 import styles from "./TableForms.module.css";
 import CreateForm from "../CreateForm/CreateForm";
 
 export function TableForms({ forms }) {
- const {models} = useSelector(state=>state.data)
+ const {models,user} = useSelector(state=>state.data)
  const dispatch = useDispatch()
   useEffect(() => {
-    
+   
     
   }, [forms]);
-const handleDelete = (id)=>{
+const handleDelete = (id,user)=>{
 const form = forms.find((e)=>{return e.id===id})
  if(form.pending){
-  console.log('formulario pendiente , se elimina')
+  deleteFormPending(id,user)
+  alertDeleteFormPending();
  }else{
-console.log("formulario enviado, no se puede eliminar")
+  alertErrorDeleteFormPending();
  }
 
 
@@ -66,7 +69,7 @@ console.log("formulario enviado, no se puede eliminar")
                 <td>{form.pending ? "Yes" : "No"}</td>
                 <td>{form.createdAt.split("T")[0]}</td>
                 <td>{models?models.find(e=>e.id==form.model).name:form.model}</td>
-                <td><Button onClick={()=>{handleDelete(form.id)}}><DeleteForeverIcon/></Button></td>
+                <td><Button onClick={()=>{handleDelete(form.id,user)}}><DeleteForeverIcon/></Button></td>
               </tr>
             )
           })}

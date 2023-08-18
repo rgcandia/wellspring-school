@@ -60,3 +60,28 @@ export function alertSingInSuccessPassword(){
     timer: 3000
   })
 }
+
+export function alertDeleteFormPending(){
+  return Swal.fire({
+    toast:true,
+    position:'top-end',
+    icon:'success',
+    title:'Se eliminó formulario pendiente',
+    timerProgressBar: true,
+    showConfirmButton: false,
+    timer: 3000
+  })
+}
+
+export function alertErrorDeleteFormPending(){
+  return Swal.fire({
+    toast:true,
+    position:'top-end',
+    icon:'error',
+    title:'El formulario ya fue enviado, no se puede eliminar',
+    timerProgressBar: true,
+    showConfirmButton: false,
+    timer: 4000
+  })
+}
+
