@@ -2,7 +2,7 @@ import { Box, Typography } from '@mui/material'
 import imagen from '../../images/proyeccion/proyeccion_comunitaria.jpg'
 import styles from './Proyeccion.module.css'
 export default function Proyeccion (){
-    return(<Box>
+    return(<Box >
         <Box className={styles.image}>
             <img
             src={imagen}
@@ -10,7 +10,7 @@ export default function Proyeccion (){
             loading='lazy'
             />
         </Box>
-        <Box>
+        <Box className={styles.text}>
             <Box sx={{display:'flex',justifyContent:'center'}}><Typography variant='h6' commponet='h4'>PROYECCION COMUNITARIA</Typography></Box>
             <Box>
                 
