@@ -1,5 +1,6 @@
 // TableForms.js
-import { Box, Typography } from "@mui/material";
+import { Box, Button, Typography } from "@mui/material";
+import DeleteForeverIcon from '@mui/icons-material/DeleteForever';
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
@@ -34,6 +35,7 @@ export function TableForms({ forms }) {
             <th>Pending</th>
             <th>Creation date</th>
             <th>Model</th>
+            <th>Delete</th>
           </tr>
         </thead>
         <tbody>
@@ -55,6 +57,7 @@ export function TableForms({ forms }) {
                 <td>{form.pending ? "Yes" : "No"}</td>
                 <td>{form.createdAt.split("T")[0]}</td>
                 <td>{models?models.find(e=>e.id==form.model).name:form.model}</td>
+                <td><Button><DeleteForeverIcon/></Button></td>
               </tr>
             )
           })}
