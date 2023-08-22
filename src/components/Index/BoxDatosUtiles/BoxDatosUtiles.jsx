@@ -5,7 +5,7 @@ export default function BoxDatosUtiles (){
     return(<Box className={styles.main} sx={{backgroundColor:'primary.main'}}>
         <Box className={styles.title}>
 
-        <Typography variant='h5' component='p' sx={{color:'secondary.main',textAlign:'center',fontStyle:'italic', padding:'5px'}} >DATOS UTILES</Typography>
+        <Typography variant='h6' component='p' sx={{color:'secondary.main',textAlign:'center',fontStyle:'italic', padding:'5px'}} >DATOS UTILES</Typography>
         </Box>
          <Box className={styles.container}>
             {getIcons.map(e=>{

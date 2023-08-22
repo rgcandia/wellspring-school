@@ -11,7 +11,7 @@ export default function Form() {
             <Box sx={{textAlign:'center'}}>
             <Typography
           component='p' 
-          variant='h5'
+          variant='h6'
           fontStyle='italic'
            >CONTACTO</Typography>
             </Box>

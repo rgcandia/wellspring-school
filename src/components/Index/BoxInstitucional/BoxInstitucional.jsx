@@ -6,7 +6,7 @@ export default function BoxInstitucional(){
         <Box
         className={styles.box1}
         >
-        <Typography  component='p' variant='h5'>INSTITUCIONAL</Typography>
+        <Typography  component='p' variant='h6'>INSTITUCIONAL</Typography>
         <Typography component='p' variant='body2'>Wellspring School ofrece a sus alumnos,
              sin distinción de raza o creencias una educación laica, 
              mixta y bilingüe basada en principios didácticos, actualizados 
