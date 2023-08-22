@@ -4,12 +4,12 @@ export default function Texto() {
     return (<Box className={styles.texto}>
 
 
-        <Typography className={styles.titulo} component='h3' variant='h4' textAlign='center' >INSTITUCIONAL</Typography>
+        <Typography className={styles.titulo} component='h3' variant='h5' textAlign='center' >INSTITUCIONAL</Typography>
 
 
 
         <Box className={styles.box}>
-            <Typography component='h6' variant='h6'>IDENTIDAD</Typography>
+            <Typography component='h6' variant='body2'><strong>IDENTIDAD</strong></Typography>
             <Typography component='p' variant='body2'>
                 Wellspring School ofrece a sus alumnos, sin distinción de raza o creencias una educación laica,
                 mixta y bilingüe basada en principios didácticos actualizados y una metodología activa personalizada que apunta a una formación integral.
@@ -17,7 +17,7 @@ export default function Texto() {
         </Box>
 
         <Box className={styles.box}>
-            <Typography component='h6' variant='h6'>NUESTRO COMIENZO</Typography>
+            <Typography component='h6' variant='body2'><strong>NUESTRO COMIENZO</strong></Typography>
             <Typography component='p' variant='body2'>
                 Fundado en el año 1992, nuestro Colegio ha sido diseñado y construido contemplando todas las necesidades de bienestar del alumno, en un entorno pensado para fomentar el acercamiento con la naturaleza.
 
@@ -28,7 +28,7 @@ export default function Texto() {
         </Box>
 
         <Box className={styles.box}>
-            <Typography component='h6' variant='h6'>IDEARIO</Typography>
+            <Typography component='h6' variant='body2'><strong>IDEARIO</strong></Typography>
             <Typography component='p' variant='body2'>
                 Tenemos como propósito ofrecer a los alumnos una educación que oriente su desarrollo integral, físico y mental y que los estimule para que sus acciones tengan sentido en su vida y en la de la sociedad de la que forman parte, asumiendo actitudes de tolerancia, solidaridad y cooperación.
 
@@ -39,7 +39,7 @@ export default function Texto() {
         </Box>
 
         <Box className={styles.box}>
-            <Typography component='h6' variant='h6'>INFRAESTRUCTURA</Typography>
+            <Typography component='h6' variant='body2'><strong>INFRAESTRUCTURA</strong></Typography>
             <Typography component='p' variant='body2'>
                 El predio cuenta con amplias aulas climatizadas por medio de aire acondicionado y calefacción central, estacionamiento interno, sanitarios y oficinas destinados a los sectores de Inicial, Primaria y Secundaria. Además, laboratorio, sala de música y canto, arte, scenery club, computación, Smartboard, biblioteca y auditorio. Un amplio comedor, huerta para experiencias prácticas de Ciencias Naturales, patio cubierto destinado a actividades de Educación Física y cómodas áreas de amplios espacios verdes para los períodos de pausa, recreación y práctica deportiva. Todos los edificios del colegio se encuentran conectados en red y con acceso individual a Internet (WIFI).
 
