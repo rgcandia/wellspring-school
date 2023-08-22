@@ -12,7 +12,7 @@ export default function Examenes (){
         </Box>
         <Box className={styles.texto}>
         <Box sx={{display:'flex',justifyContent:'center',marginBottom:'15px'}}>
-            <Typography variant='h5' component='h5'>EXAMENES</Typography>
+            <Typography variant='h6' component='h5'>EXAMENES</Typography>
         </Box>
         <Box sx={{marginBottom:'15px'}}>
             <Typography variant='body2' component='p'>
@@ -21,12 +21,12 @@ export default function Examenes (){
             </Typography>
         </Box>
         <Box sx={{marginBottom:'15px'}}>
-            <Typography> <strong>PRIMARIA</strong></Typography>
+            <Typography variant='body2'> <strong>PRIMARIA</strong></Typography>
             <Typography  variant='body2' component='p'>- Cambridge Esol Exams: KET for Schools (en 5° EP)</Typography>
         </Box>
 
         <Box>
-            <Typography><strong>SECUNDARIA</strong></Typography>
+            <Typography variant='body2'><strong>SECUNDARIA</strong></Typography>
             <Typography  variant='body2' component='p'>
            
                - Cambridge Esol Exams: PET for Schools (Preliminary English Test) en 1° ES, FCE for schools en 3° ES y CAE (Certificate in Advanced English) en 6° ES.
