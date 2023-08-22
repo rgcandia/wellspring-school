@@ -4,7 +4,7 @@ export default function Texto (){
     return(<Box className={styles.texto}>
 
             <Box sx={{display:'flex',justifyContent:'center',marginBottom:'30px'}}>
-                <Typography variant="h5">VIAJES DE ESTUDIO</Typography>
+                <Typography variant="h6">VIAJES DE ESTUDIO</Typography>
             </Box>
             <Box>
             <Box sx={{marginBottom:'10px'}}>
