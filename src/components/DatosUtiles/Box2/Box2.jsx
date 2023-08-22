@@ -2,7 +2,7 @@ import { Box, Typography } from "@mui/material"
 import styles from './Box2.module.css'
 export default function Box2 (){
     return<Box className={styles.box2}>
-        <Typography variant='h5'>DATOS UTILES</Typography>
+        <Typography variant='h6'>DATOS UTILES</Typography>
         <Typography variant='body2'>Para poder visualizar los archivos, deberá tener instalado en su computadora el programa Acrobat Reader.
             En caso de que no lo tenga,puede descargarlo gratuitamente en este link
         </Typography>
