@@ -24,7 +24,7 @@ export default function Index() {
             <BoxNiveles />
         </Box>
         <Box 
-        className={styles.box5}>
+        className={styles.box5} >
             <Mapa />
             <Form />
         </Box>

@@ -1,4 +1,4 @@
-import { Box,Typography,TextField,Button} from "@mui/material";
+import { Box,Typography,TextField,Button, ListItemSecondaryAction} from "@mui/material";
 import styles from './Form.module.css'
 
 export default function Form() {
@@ -13,6 +13,7 @@ export default function Form() {
           component='p' 
           variant='h6'
           fontStyle='italic'
+        
            >CONTACTO</Typography>
             </Box>
            
@@ -23,6 +24,7 @@ export default function Form() {
            fullWidth
            margin='dense'  
            required
+           
                />
            <TextField
            id="email"
@@ -31,6 +33,7 @@ export default function Form() {
            fullWidth
            margin='dense'  
            required   
+       
            />
            <TextField
            required
