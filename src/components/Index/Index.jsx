@@ -1,5 +1,6 @@
 import styles from './Index.module.css'
 import image from '../../images/aerea_ws.jpg'
+import imagewPng from '../../images/indexgif.gif'
 import BoxInstitucional from './BoxInstitucional/BoxInstitucional'
 import BoxDatosUtiles from './BoxDatosUtiles/BoxDatosUtiles.jsx'
 import BoxNiveles from './BoxNiveles/BoxNiveles.jsx'
@@ -11,7 +12,7 @@ export default function Index() {
      className={styles.container}>
 
         <Box className={styles.box1}>
-            <img className={styles.image} alt={image} src={image} loading='lazy'/>
+            <img className={styles.image} alt={image} src={imagewPng} loading='lazy'/>
         </Box>
         <Box className={styles.box2}>
             <BoxInstitucional />
