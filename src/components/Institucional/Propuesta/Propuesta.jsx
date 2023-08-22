@@ -3,7 +3,8 @@ import propuesta from '../../../images/institucional/propuesta_educativa.jpg'
 import styles from './Propuesta.module.css'
 export default function Propuesta(){
     return(<Box className={styles.propuesta} sx={{backgroundColor:'secondary.main'}}>
-        <Box sx={{paddingBottom:'15px'}}>
+       
+       <Box sx={{paddingBottom:'15px'}}>
         <Typography component='h6' variant='body2'> <strong>OBJETIVOS</strong></Typography>
         <Typography component='p' variant='body2'>
  Trabajamos para desarrollar estrategias que fomentan en el alumno el pensamiento crítico y la toma de decisiones,
@@ -34,5 +35,8 @@ export default function Propuesta(){
  <Box className={styles.image}>
        <img src={propuesta} alt="imagen propuesta educativa" loading='lazy' />
  </Box>
+
+
+       
   </Box>)
 }

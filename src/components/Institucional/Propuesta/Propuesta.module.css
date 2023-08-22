@@ -1,5 +1,10 @@
 .propuesta{
-    padding: 15px !important;
+  
+    padding-top: 30px;
+    padding-left: 15%;
+    padding-right: 15%;
+    padding-bottom: 50px;
+    
 }
 .image img{
     width: 100%;
