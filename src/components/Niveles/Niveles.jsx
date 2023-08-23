@@ -10,5 +10,6 @@ export default function Niveles (){
             loading='lazy'
             />
         </Box>
+        
     </Box>)
 }
