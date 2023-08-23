@@ -41,6 +41,7 @@ export default function Institucional (){
    <Button  onClick={(evento)=>{handleChange(evento,'2')}}><Typography variant='body2'>DEPARTAMENTO DE ORIENTACION</Typography></Button>
     </Box>
         
+        
     
     <Box>
         {value==='2'&&<Orientacion/>}
