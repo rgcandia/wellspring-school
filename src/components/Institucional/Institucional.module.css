@@ -32,5 +32,9 @@
  }
  .box2{
     display: block !important;
+    padding-left: 15%;
+    justify-content: center;
+    align-items: center;
+    
  }
 }

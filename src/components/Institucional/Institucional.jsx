@@ -1,4 +1,4 @@
-import { Box, Button, Tab, Tabs } from '@mui/material'
+import { Box, Button, Tab, Tabs, Typography } from '@mui/material'
 import Propuesta from './Propuesta/Propuesta.jsx'
 import Orientacion from './Orientacion/Orientacion.jsx'
 import Texto from './Texto/Texto.jsx'
@@ -36,6 +36,11 @@ export default function Institucional (){
    
     </Box>
 
+    <Box className={styles.box2}>
+   <Button onClick={(evento)=>{handleChange(evento,'1')}}><Typography variant='body2'>PROPUESTA EDUCATIVA</Typography></Button>
+   <Button  onClick={(evento)=>{handleChange(evento,'2')}}><Typography variant='body2'>DEPARTAMENTO DE ORIENTACION</Typography></Button>
+    </Box>
+        
     
     <Box>
         {value==='2'&&<Orientacion/>}
