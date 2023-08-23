@@ -1,6 +1,6 @@
 import { Box,  Typography } from "@mui/material";
 import kinder from '../../../../images/BoxNiveles/kinder.jpg'
-import primaria from '../../../../images/boxNiveles/primaria.jpg'
+import primaria from '../../../../images/BoxNiveles/primaria.jpg'
 import secundaria from '../../../../images/boxNiveles/secundaria.jpg'
 import styles from './CardNiveles.module.css'
 export default function CardNiveles(){
