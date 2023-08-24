@@ -11,7 +11,7 @@ export default function Niveles (){
             loading='lazy'
             />
         </Box>
-        <Box sx={{display:'flex',justifyContent:'center'}}>
+        <Box sx={{display:'flex',justifyContent:'center', marginBottom:'30px'}}>
             <Typography variant='h6'>NIVELES</Typography>
         </Box>
         <Inicial/>
