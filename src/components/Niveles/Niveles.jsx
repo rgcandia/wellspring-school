@@ -3,6 +3,7 @@ import styles from './Niveles.module.css'
 import niveles from '../../images/niveles/niveles.jpg'
 import Inicial from './Inicial/Inicial.jsx'
 import Primaria from './Primaria/Primaria.jsx'
+import Secundaria from './Secundaria/Secundaria'
 export default function Niveles (){
     return(<Box>
         <Box className={styles.image}>
@@ -17,6 +18,6 @@ export default function Niveles (){
         </Box>
         <Inicial/>
         <Primaria/>
-        
+        <Secundaria/>
     </Box>)
 }
