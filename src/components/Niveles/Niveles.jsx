@@ -2,6 +2,7 @@ import { Box, Typography } from '@mui/material'
 import styles from './Niveles.module.css'
 import niveles from '../../images/niveles/niveles.jpg'
 import Inicial from './Inicial/Inicial.jsx'
+import Primaria from './Primaria/Primaria.jsx'
 export default function Niveles (){
     return(<Box>
         <Box className={styles.image}>
@@ -15,6 +16,7 @@ export default function Niveles (){
             <Typography variant='h6'>NIVELES</Typography>
         </Box>
         <Inicial/>
+        <Primaria/>
         
     </Box>)
 }
