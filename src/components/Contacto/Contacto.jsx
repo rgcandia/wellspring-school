@@ -1,6 +1,12 @@
-export default function Contacto (){
-    return(<>
+import { Box, Typography } from "@mui/material";
+import Form from '../Form/Form.jsx';
 
-<h1>Contacto</h1>
-</>)
+export default function Contacto (){
+    return(<Box>
+      
+        <Box sx={{marginLeft:'20%',marginRight:'20%',marginTop:'8%'}}>
+        <Form/>
+        </Box>
+       
+    </Box>)
 }
