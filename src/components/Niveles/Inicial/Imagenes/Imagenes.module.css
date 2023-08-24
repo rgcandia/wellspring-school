@@ -1,0 +1,16 @@
+.imagenes{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+    margin-bottom: 10px;    
+}
+.imagenes img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+.imagen img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
