@@ -1,14 +1,21 @@
 import { Box, Typography } from "@mui/material"
+import flecha from '../../../../images/niveles/flecha.png'
 import styles from './Texto.module.css'
 export default function Texto (){
     return(<Box className={styles.texto}>
-        <Box><Typography><strong>INICIAL</strong></Typography></Box>
+        <Box sx={{marginBottom:'15px'}}><Typography><strong>INICIAL</strong></Typography></Box>
        <Box className={styles.subTitle}>
 
-        <Box>flecha</Box>
+        <Box className={styles.flecha}>
+            <img
+            src={flecha}
+            alt='flecha'
+            loading="lazy"
+            />
+        </Box>
         <Box>
-            <Box><Typography>SALA 1, 2, 3 Y 4 - SIMPLE/DOBLE JORNADA.</Typography></Box>
-            <Box><Typography>SALA DE 5 - DOBLE JORNADA (TURNO MAÑANA EN INGLÉS)</Typography></Box>
+            <Box><Typography color='primary.main'><strong>SALA 1, 2, 3 Y 4 - SIMPLE/DOBLE JORNADA.</strong></Typography></Box>
+            <Box><Typography color='primary.main'><strong>SALA DE 5 - DOBLE JORNADA (TURNO MAÑANA EN INGLÉS)</strong></Typography></Box>
         </Box>
        </Box>
        <Box>
